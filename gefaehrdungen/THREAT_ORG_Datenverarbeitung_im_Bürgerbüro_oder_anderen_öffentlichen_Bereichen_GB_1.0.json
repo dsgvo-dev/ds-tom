@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-ORG-012",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Zweckbindung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es werden personenbezogene Daten in einem Bereich verarbeitet, in dem Kundenverkehr stattfindet, z. B. im Bürgerbüro.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-026",
+        "TOM-ORG-040",
+        "TOM-ORG-041",
+        "TOM-ORG-044"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:26",
+        "aktualisiert_am": "2025-04-24T20:28",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "id": "TOM-CL-009",
+    "name": "Abschluss eines Vertrages mit dem Cloud-Dienstleister",
+    "kategorie": "CL",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Bei der Nutzung von Cloud-Leistungen muss geprüft werden, in welcher Form der Cloud-Dienstleister vertragliche Regelungen zum Umgang mit personenbezogenen Daten anbietet. Bietet der Dienstleister eine Auftragsverarbeitung im Sinne von Art. 28 DSGVO an, ist ein entsprechender Auftragsverarbeitungsvertrag abzuschließen. Bietet der Dienstleister keine oder nur eine eingeschränkte Auftragsverarbeitung an (z. B. bei Standardsoftware oder internationalen Anbietern), müssen ersatzweise vertragliche Schutzklauseln vereinbart werden, die die Erfüllung der datenschutzrechtlichen Schutzziele sicherstellen. Diese Klauseln sollen mindestens umfassen: Regelungen zur Zweckbindung der Verarbeitung, Vertraulichkeitsverpflichtungen, Löschpflichten nach Vertragsende, Subunternehmerregelungen sowie bei Drittlandübermittlungen geeignete Garantien nach Art. 46 DSGVO (z. B. Standardvertragsklauseln). Der Abschluss eines geeigneten Vertrages ist Voraussetzung für den rechtmäßigen Einsatz des Cloud-Dienstes.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Rechtmäßigkeit",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Speicherbegrenzung",
+            "Vertraulichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": ["Art. 28 DSGVO", "Art. 46 DSGVO"],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": ["TOM-CL-001", "TOM-CL-008"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-22T00:00",
+        "aktualisiert_am": "2026-04-22T00:00",
+        "version": "1.0"
+    }
+}

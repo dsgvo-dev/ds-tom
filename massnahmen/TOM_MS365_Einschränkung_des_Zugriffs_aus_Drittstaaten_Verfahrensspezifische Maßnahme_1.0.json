@@ -1,0 +1,37 @@
+{
+    "id": "TOM-MS365-015",
+    "name": "Einschränkung des Zugriffs aus Drittstaaten",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Auf Daten darf nicht aus Drittstaaten zugegriffen werden (siehe dazu die Liste der zugelassenen Sub-Auftragnehmer von Microsoft).",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:39",
+        "aktualisiert_am": "2025-05-09T14:39",
+        "version": "1.0"
+    }
+}

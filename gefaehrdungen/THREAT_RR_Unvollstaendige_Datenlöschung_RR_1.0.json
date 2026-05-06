@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-RR-004",
+    "kategorie": "RR",
+    "schutzziele": [
+        "Speicherbegrenzung",
+        "Richtigkeit",
+        "Intervenierbarkeit"
+    ],
+    "bedrohungstyp": "RR",
+    "beschreibung": "Restrisiko: Unvollständige Datenlöschung – Trotz definierter Löschfristen und -prozesse bestehen Schwierigkeiten bei der endgültigen, nachweisbaren Löschung personenbezogener Daten aus Backups, Archiven, Spiegelkopien und Protokolldateien. Eine vollständige Rückverfolgbarkeit aller Datenkopien ist technisch oft nicht gewährleistbar.",
+    "immer_vorausgewaehlt": true,
+    "empfohlene_massnahmen": [
+        "TOM-ORG-055",
+        "TOM-ORG-009",
+        "TOM-ORG-036",
+        "TOM-SW-008",
+        "TOM-ORG-046"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-24T00:00",
+        "aktualisiert_am": "2026-04-24T00:00",
+        "version": "1.0"
+    }
+}

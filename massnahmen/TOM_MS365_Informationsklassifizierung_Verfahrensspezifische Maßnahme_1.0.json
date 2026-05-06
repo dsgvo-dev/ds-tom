@@ -1,0 +1,35 @@
+{
+    "id": "TOM-MS365-001",
+    "name": "Informationsklassifizierung",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vor der Einführung von MS365 muss der Umgang mit den Informationen geregelt werden, die in MS365 verarbeitet werden sollen. Den Beschäftigten muss verdeutlicht werden, ob und welche personenbezogenen Daten innerhalb der dieser Software verarbeitet werden dürfen und ob. ggf. bestimmte Datenkategorien nicht zulässig sind (z.B. Sozialdaten).",
+    "organisationseinheit": "1.5",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-07T20:16",
+        "aktualisiert_am": "2025-05-09T11:41",
+        "version": "1.0"
+    }
+}

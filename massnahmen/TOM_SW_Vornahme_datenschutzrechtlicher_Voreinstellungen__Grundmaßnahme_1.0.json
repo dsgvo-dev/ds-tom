@@ -1,0 +1,35 @@
+{
+    "id": "TOM-SW-005",
+    "name": "Vornahme datenschutzrechtlicher Voreinstellungen ",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Die DSGVO sieht vor, dass Systeme in ihrer technischen Grundeinstellung datenschutzfreundlich eingerichtet werden, z.B. durch die Einstellung, dass möglichst wenige Datenfelder vorhanden sind oder dass Freitextfelder gesperrt sind.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:32",
+        "aktualisiert_am": "2025-04-30T15:32",
+        "version": "1.0"
+    }
+}

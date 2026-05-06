@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-028",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Die Offenlegung personenbezogener Daten kann zu Diskriminierung, Identitätsdiebstahl-/betrug, finanziellen Einbußen, einer Rufschädigung, gesellschaftlichen Nachteilen, dem Verlust eines Berufsgeheimnisses oder dem Verlust eines Pseudonyms führen.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-003",
+        "TOM-ORG-012",
+        "TOM-ORG-015",
+        "TOM-ORG-039",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:38",
+        "aktualisiert_am": "2025-04-25T20:56",
+        "version": "1.0"
+    }
+}

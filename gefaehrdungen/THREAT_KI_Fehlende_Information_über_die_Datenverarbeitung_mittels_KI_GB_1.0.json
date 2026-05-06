@@ -1,0 +1,22 @@
+{
+    "id": "THREAT-KI-002",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Richtigkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Wenn personenbezogene Daten von Betroffenen mithilfe Künstlicher Intelligenz (KI) verarbeitet werden, kann es aufgrund fehlender Transparenz über die der Datenverarbeitung mittels KI zu einer spezifischen Gefährdung der Rechte und Freiheiten der Betroffenen kommen. So könnten Betroffene nicht ausreichend über eine automatisierte Entscheidung oder ein Profiling informiert werden (Art. 22 DSGVO).",
+    "empfohlene_massnahmen": ["TOM-KI-007", "TOM-KI-008", "TOM-KI-011", "TOM-KI-012", "TOM-KI-014"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T18:50",
+        "aktualisiert_am": "2025-05-09T18:50",
+        "version": "1.0"
+    }
+}

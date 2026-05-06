@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-037",
+    "name": "Keine Speicherung außerhalb des Fachamts",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Daten dürfen nicht doppelt gespeichert werden – insbesondere nicht im Bürgerbüro selbst. Die Bearbeitung erfolgt nur in den zuständigen Fachämtern. Das Bürgerbüro darf keinen eigenen Datenbestand aufbauen",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T20:48",
+        "aktualisiert_am": "2025-04-29T20:48",
+        "version": "1.0"
+    }
+}

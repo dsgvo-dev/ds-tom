@@ -1,0 +1,33 @@
+{
+    "id": "TOM-AV-004",
+    "name": "Information der Betroffenen über Auftragsverarbeitung",
+    "kategorie": "AV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten nicht informiert sind.  Innerhalb der Datenschutzerklärung muss daher über eine Auftragsverarbeitung informiert werden.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Rechtmäßigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T06:55",
+        "aktualisiert_am": "2025-05-02T07:02",
+        "version": "1.0"
+    }
+}

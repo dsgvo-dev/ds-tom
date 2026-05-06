@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-048",
+    "name": "Feuer- und Rauchmeldeanlagen",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine erforderliche technische Maßnahme ist das Vorhandensein von Feuer- und Rauchmeldeanlagen. ",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:04",
+        "aktualisiert_am": "2025-04-28T19:04",
+        "version": "1.0"
+    }
+}

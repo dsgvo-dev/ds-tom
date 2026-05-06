@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-044",
+    "name": "Möglichkeit zur alternativen Antragstellung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Bürgerinnen und Bürger müssen weiterhin die Möglichkeit haben, ihre Anträge direkt beim Fachamt zu stellen – das Bürgerbüro ist ein Angebot, keine Pflicht. Die Nutzung darf nicht zur Bedingung gemacht werden",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:31",
+        "aktualisiert_am": "2025-04-29T21:31",
+        "version": "1.0"
+    }
+}

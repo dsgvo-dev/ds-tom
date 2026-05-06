@@ -1,0 +1,34 @@
+{
+    "id": "TOM-SW-009",
+    "name": "Frühzeitige Anonymisierung personenbezogener Daten",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Software muss es ermöglichen, dass personenbezogene Daten so frühzeitig wie möglich anonymisiert werden können. ",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Erforderlichkeit",
+            "Richtigkeit",
+            "Speicherbegrenzung",
+            "Vertraulichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T17:36",
+        "aktualisiert_am": "2025-04-30T17:36",
+        "version": "1.0"
+    }
+}

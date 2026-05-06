@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-049",
+    "name": "Feuerlöscher oder automatisches Löschsystem",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine erforderliche technische Maßnahme ist das Vorhandensein von Feuerlöschern oder einem automatischen Löschsystem.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:05",
+        "aktualisiert_am": "2025-04-28T19:05",
+        "version": "1.0"
+    }
+}

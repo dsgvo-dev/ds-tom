@@ -1,0 +1,28 @@
+{
+    "id": "THREAT-ORG-021",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten werden zu statistischen Zwecken verarbeitet. Dabei müssen personenbezogene Daten nach statistikrechtlichen Vorschriften und Grundsätzen behandelt werden. Dabei können Fehler auftreten, so dass z.B. Anonymisierungen nicht mehr Wirkung zeigen.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-006",
+        "TOM-ORG-009",
+        "TOM-ORG-038",
+        "TOM-ORG-056",
+        "TOM-SW-007",
+        "TOM-SW-012"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:25",
+        "aktualisiert_am": "2025-04-25T20:51",
+        "version": "1.0"
+    }
+}

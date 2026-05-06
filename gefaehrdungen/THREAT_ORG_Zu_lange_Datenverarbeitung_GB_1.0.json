@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-ORG-007",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Speicherbegrenzung",
+        "Erforderlichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass personenbezogene Daten länger über die Betroffenen verarbeitet werden, als erforderlich und das Risiko der unbefugten Datenverarbeitung steigt. ",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-009",
+        "TOM-ORG-011",
+        "TOM-ORG-046",
+        "TOM-ORG-055"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:19",
+        "aktualisiert_am": "2025-04-24T20:19",
+        "version": "1.0"
+    }
+}

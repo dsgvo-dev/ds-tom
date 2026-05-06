@@ -1,0 +1,21 @@
+{
+    "id": "THREAT-MS365-002",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten in MS365 nicht informiert sind. ",
+    "empfohlene_massnahmen": ["TOM-MS365-002", "TOM-MS365-004", "TOM-MS365-007", "TOM-ORG-045"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T09:18",
+        "aktualisiert_am": "2025-05-05T09:18",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-045",
+    "name": "Information der Betroffenen - Datenschutzerklärung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Allgemein",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Betroffenen werden gem. Art 13, 14 DSGVO informiert. Dies erfolgt mittels einer Datenschutzerklärung. Hierfür muss in dem Verfahren bzw. innerhalb der Verarbeitungstätigkeit eine spezifische Datenschutzerklärung erstellt und zur Verfügung gestellt werden.",
+    "organisationseinheit": "1.4",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T09:33",
+        "aktualisiert_am": "2025-04-30T09:33",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-ORG-008",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Verfügbarkeit",
+        "Vertraulichkeit",
+        "Integrität",
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass personenbezogene Daten durch Unbefugte erlangt und diese missbraucht werden können.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-003",
+        "TOM-ORG-015",
+        "TOM-ORG-027",
+        "TOM-ORG-039",
+        "TOM-ORG-041"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:20",
+        "aktualisiert_am": "2025-04-24T20:20",
+        "version": "1.0"
+    }
+}

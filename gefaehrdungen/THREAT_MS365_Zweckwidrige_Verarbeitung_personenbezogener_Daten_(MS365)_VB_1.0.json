@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-MS365-003",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Personenbezogene Daten von Betroffenen werden durch den Auftragnehmer Microsoft zweckwidrig verarbeitet, z.B. zu eigenen geschäftlichen Zwecken.",
+    "empfohlene_massnahmen": ["TOM-MS365-008", "TOM-MS365-006", "TOM-MS365-009", "TOM-MS365-010"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T09:19",
+        "aktualisiert_am": "2025-05-05T09:19",
+        "version": "1.0"
+    }
+}

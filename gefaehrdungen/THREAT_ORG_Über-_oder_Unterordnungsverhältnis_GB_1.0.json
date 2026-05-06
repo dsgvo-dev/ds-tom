@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-013",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Transparenz",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Zwischen dem Betroffenen und dem Verantwortlichen besteht ein Über-/Unterordnungsverhältnis.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-007",
+        "TOM-ORG-015",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:29",
+        "aktualisiert_am": "2025-04-24T20:29",
+        "version": "1.0"
+    }
+}

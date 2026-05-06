@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-RR-003",
+    "kategorie": "RR",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Verfügbarkeit"
+    ],
+    "bedrohungstyp": "RR",
+    "beschreibung": "Restrisiko: Unbekannte Sicherheitslücken (Zero-Day-Exploits) – Neue Schwachstellen in eingesetzter Software oder Systemen, die zum Zeitpunkt des Einsatzes noch nicht entdeckt oder durch Patches geschlossen wurden. Dieses Risiko ist struktureller Natur und durch kein technisches Mittel vollständig zu eliminieren.",
+    "immer_vorausgewaehlt": true,
+    "empfohlene_massnahmen": [
+        "TOM-ORG-004",
+        "TOM-ORG-057",
+        "TOM-SW-004",
+        "TOM-SW-001",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-24T00:00",
+        "aktualisiert_am": "2026-04-24T00:00",
+        "version": "1.0"
+    }
+}

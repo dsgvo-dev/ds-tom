@@ -1,0 +1,33 @@
+{
+    "id": "THREAT-SW-007",
+    "kategorie": "SW",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität",
+        "Transparenz",
+        "Erforderlichkeit",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung",
+        "Zweckbindung"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Datenschutzrechtliche Gefährdungen werden bei der Konzeption oder Beschaffung von Software nicht beachtet.",
+    "empfohlene_massnahmen": [
+        "TOM-SW-004",
+        "TOM-SW-005",
+        "TOM-SW-011",
+        "TOM-ORG-006",
+        "TOM-ORG-043",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:33",
+        "aktualisiert_am": "2025-04-30T18:33",
+        "version": "1.0"
+    }
+}

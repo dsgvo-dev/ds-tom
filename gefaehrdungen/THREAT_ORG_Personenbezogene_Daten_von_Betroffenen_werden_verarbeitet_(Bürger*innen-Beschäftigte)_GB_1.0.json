@@ -1,0 +1,29 @@
+{
+    "id": "THREAT-ORG-001",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Jede Verarbeitung personenbezogener Daten stellt eine Beeinträchtigung der Rechte und Freiheiten der Betroffenen dar. Dieser muss mit organisatorischen Mitteln begegnet werden.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-002",
+        "TOM-ORG-006",
+        "TOM-ORG-015",
+        "TOM-ORG-016",
+        "TOM-ORG-043",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T14:45",
+        "aktualisiert_am": "2025-04-24T18:37",
+        "version": "1.0"
+    }
+}

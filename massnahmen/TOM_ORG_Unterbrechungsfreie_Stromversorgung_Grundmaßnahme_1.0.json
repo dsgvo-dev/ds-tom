@@ -1,0 +1,30 @@
+{
+    "id": "TOM-ORG-053",
+    "name": "Unterbrechungsfreie Stromversorgung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine mögliche Maßnahme ist die Prüfung und ggf. Beschaffung einer unterbrechungsfreien Stromversorgung für erhöhte Bedrohungslagen bzw. erhöhten Anforderungen an die Verfügbarkeit und Integrität.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:10",
+        "aktualisiert_am": "2025-04-28T19:10",
+        "version": "1.0"
+    }
+}

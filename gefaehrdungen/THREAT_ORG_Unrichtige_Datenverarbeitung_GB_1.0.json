@@ -1,0 +1,24 @@
+{
+    "id": "THREAT-ORG-006",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass inkorrekte Daten über die Betroffenen erhoben und weiterverarbeitet, z.B. übermittelt werden.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-002",
+        "TOM-ORG-007",
+        "TOM-ORG-008",
+        "TOM-ORG-009",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:18",
+        "aktualisiert_am": "2025-04-24T20:18",
+        "version": "1.0"
+    }
+}

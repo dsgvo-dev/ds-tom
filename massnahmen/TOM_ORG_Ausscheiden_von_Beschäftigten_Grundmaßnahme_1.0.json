@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-018",
+    "name": "Ausscheiden von Beschäftigten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Personal",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Beschäftigte greifen auf personenbezogene Daten im Rahmen ihrer dienstlichen Tätigkeit zu. Zugriffskonzepte sind beim Ausscheiden von Beschäftigten anzupassen und die Zugriffsmöglichkeiten zu entziehen.",
+    "organisationseinheit": "1.1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:05",
+        "aktualisiert_am": "2025-04-28T15:05",
+        "version": "1.0"
+    }
+}

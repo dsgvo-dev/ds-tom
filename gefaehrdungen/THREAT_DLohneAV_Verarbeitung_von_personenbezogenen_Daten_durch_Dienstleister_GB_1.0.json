@@ -1,0 +1,15 @@
+{
+    "id": "THREAT-DLohneAV-001",
+    "kategorie": "DLohneAV",
+    "schutzziele": ["Rechtmäßigkeit", "Transparenz", "Zweckbindung"],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten von Betroffenen (Bürger*innen/Beschäftigte) werden durch einen Dienstleister verarbeitet, ohne dass eine Auftragsverarbeitung besteht.",
+    "empfohlene_massnahmen": ["TOM-DLohneAV-003", "TOM-DLohneAV-001", "TOM-DLohneAV-002"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T16:03",
+        "aktualisiert_am": "2025-05-15T16:03",
+        "version": "1.0"
+    }
+}

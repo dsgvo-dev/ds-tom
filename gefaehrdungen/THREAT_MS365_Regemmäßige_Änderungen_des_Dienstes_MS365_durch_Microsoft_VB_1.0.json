@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-MS365-006",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Integrität",
+        "Vertraulichkeit",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung",
+        "Transparenz"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Microsoft ändert regelmäßig Name, Umfang oder Vorhandensein von Diensten und Services innerhalb der Produktfamilie MS36. Hierdurch können unerwünschte Datenverarbeitungen entstehen.",
+    "empfohlene_massnahmen": ["TOM-MS365-005", "TOM-MS365-006", "TOM-MS365-007"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T07:30",
+        "aktualisiert_am": "2025-05-09T07:30",
+        "version": "1.0"
+    }
+}

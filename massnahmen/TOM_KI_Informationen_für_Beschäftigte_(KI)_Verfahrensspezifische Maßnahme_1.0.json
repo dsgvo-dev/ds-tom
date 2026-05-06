@@ -1,0 +1,34 @@
+{
+    "id": "TOM-KI-014",
+    "name": "Informationen für Beschäftigte (KI)",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Handreichungen und FAQ für Mitarbeitende mit Beispielen sind vorhanden und zugänglich.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:54",
+        "aktualisiert_am": "2025-05-15T15:54",
+        "version": "1.0"
+    }
+}

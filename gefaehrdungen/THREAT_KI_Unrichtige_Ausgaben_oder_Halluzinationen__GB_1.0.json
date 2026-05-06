@@ -1,0 +1,22 @@
+{
+    "id": "THREAT-KI-003",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit",
+        "Integrität",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Eine Datenverarbeitung kann dazu führen, dass z.B. bei der Nutzung von Sprachmodellen (LLM) zu unrichtigen Ausgaben oder Halluzinationen kommt (wie falschen Faktenaussagen). Es besteht die Gefahr, dass personenbezogene Daten in unrichtiger Weise verarbeitet werden und unzutreffende Aussagen entstehen, die die Rechte und Freiheiten der Betroffenen beeinträchtigen. ",
+    "empfohlene_massnahmen": ["TOM-KI-006", "TOM-KI-007", "TOM-KI-012", "TOM-KI-013", "TOM-KI-014"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T18:53",
+        "aktualisiert_am": "2025-05-09T18:53",
+        "version": "1.0"
+    }
+}

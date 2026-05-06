@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-016",
+    "name": "Schulung der Beschäftigten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Personal",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Beschäftigte des Verantwortlichen werden regelmäßig auf die Einhaltung der Datenschutzvorschriften geschult.",
+    "organisationseinheit": "11",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:00",
+        "aktualisiert_am": "2025-04-28T15:00",
+        "version": "1.0"
+    }
+}

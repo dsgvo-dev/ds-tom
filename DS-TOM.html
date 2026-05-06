@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSMS – Datenschutz-Maßnahmenplaner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --c-bg:        #f4f6f9;
+      --c-card:      #ffffff;
+      --c-border:    #dee2e8;
+      --c-text:      #1a1d23;
+      --c-muted:     #6b7280;
+      --c-accent:    #1d4ed8;
+      --c-accent-lt: #dbeafe;
+      --c-offen:     #991b1b;
+      --c-offen-lt:  #fee2e2;
+      --c-lauf:      #92400e;
+      --c-lauf-lt:   #fef3c7;
+      --c-done:      #14532d;
+      --c-done-lt:   #dcfce7;
+      --c-na:        #374151;
+      --c-na-lt:     #f3f4f6;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      background: var(--c-bg);
+      color: var(--c-text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ── Focus ring (WCAG) ── */
+    :focus-visible {
+      outline: 3px solid var(--c-accent);
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+
+    /* ── Topbar ── */
+    #topbar {
+      background: #fff;
+      border-bottom: 1px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 54px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    #app-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--c-text);
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    #app-title:hover { color: var(--c-accent); }
+
+    /* ── Step indicator ── */
+    #steps {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .step-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      color: var(--c-muted);
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .step-btn .step-num {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--c-border);
+      color: var(--c-muted);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-btn.active { color: var(--c-accent); border-color: var(--c-accent-lt); background: var(--c-accent-lt); }
+    .step-btn.active .step-num { background: var(--c-accent); color: #fff; }
+    .step-btn.done { color: var(--c-done); }
+    .step-btn.done .step-num { background: var(--c-done); color: #fff; }
+    .step-sep { color: var(--c-border); font-size: 16px; }
+
+    /* ── Folder button ── */
+    #btn-folder {
+      padding: 6px 14px;
+      background: var(--c-accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #btn-folder:hover { background: #1e40af; }
+    #btn-folder.loaded { background: var(--c-done); }
+    #folder-label {
+      font-size: 12px;
+      color: var(--c-muted);
+      max-width: 160px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    #load-status {
+      font-size: 12px;
+      color: var(--c-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Step panels ── */
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+
+    /* ── Section layout ── */
+    .section {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+    .section-wide {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: var(--c-text);
+    }
+
+    /* ── Form ── */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { font-size: 12px; font-weight: 600; color: var(--c-muted); text-transform: uppercase; letter-spacing: .04em; }
+    input[type="text"], input[type="date"], textarea, select {
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-size: 14px;
+      color: var(--c-text);
+      background: #fff;
+      font-family: inherit;
+      transition: border-color 0.15s;
+    }
+    input[type="text"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+      border-color: var(--c-accent);
+      outline: none;
+    }
+    textarea { resize: vertical; min-height: 70px; }
+
+    /* ── Folder info box ── */
+    #folder-info-box {
+      border: 2px dashed var(--c-border);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #folder-info-box.loaded {
+      border-color: var(--c-done);
+      border-style: solid;
+      background: #f0fdf4;
+    }
+    #folder-info-box p { color: var(--c-muted); margin-bottom: 14px; font-size: 13px; }
+    #folder-info-box.loaded p { color: var(--c-done); font-weight: 500; margin-bottom: 0; }
+
+    /* ── Buttons ── */
+    .btn {
+      padding: 9px 18px;
+      border: none;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+    .btn-primary { background: var(--c-accent); color: #fff; }
+    .btn-primary:hover { background: #1e40af; }
+    .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+    .btn-secondary { background: #f1f5f9; color: var(--c-text); border: 1px solid var(--c-border); }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-success { background: #16a34a; color: #fff; }
+    .btn-success:hover { background: #15803d; }
+    .btn-sm { padding: 5px 11px; font-size: 12px; }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .nav-row-right { margin-left: auto; display: flex; gap: 10px; }
+
+    /* ── Restrisiken-Sektion (immer gesperrt) ── */
+    #rr-section {
+      background: #fff8f0;
+      border: 1px solid #f97316;
+      border-left: 4px solid #ea580c;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+    #rr-section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #rr-section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #9a3412;
+      flex: 1;
+    }
+    #rr-section-sub {
+      font-size: 12px;
+      color: #c2410c;
+      margin: 6px 0 10px 0;
+    }
+    #rr-section-expand { color: #c2410c; font-size: 12px; background: none; border: none; cursor: pointer; }
+    #rr-list { display: none; }
+    #rr-list.open { display: block; }
+    .rr-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 6px;
+      border-radius: 6px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      margin-bottom: 5px;
+      opacity: 0.92;
+    }
+    .rr-row input[type="checkbox"] { cursor: not-allowed; flex-shrink: 0; width: 16px; height: 16px; accent-color: #ea580c; }
+    .rr-id    { font-size: 11px; color: #9a3412; font-family: monospace; flex-shrink: 0; }
+    .rr-name  { font-size: 13px; font-weight: 500; color: #431407; flex: 1; }
+    .rr-lock  { font-size: 11px; color: #c2410c; flex-shrink: 0; }
+
+    /* ── Grundgefährdungen-Hinweis ── */
+    .gb-indicator {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #1e3a5f; display: inline-block; margin-right: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Step 2: Threat list ── */
+    #step2-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* ── Filter panel ── */
+    #filter-panel {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 16px;
+      position: sticky;
+      top: 70px;
+    }
+    .filter-section { margin-bottom: 16px; }
+    .filter-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--c-muted);
+      margin-bottom: 8px;
+    }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 3px 0;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .filter-row input { cursor: pointer; margin: 0; }
+    .filter-row label { cursor: pointer; font-size: 13px; font-weight: 400; color: var(--c-text); text-transform: none; letter-spacing: 0; }
+    #btn-filter-reset { font-size: 12px; color: var(--c-accent); background: none; border: none; cursor: pointer; padding: 0; }
+    #btn-filter-reset:hover { text-decoration: underline; }
+
+    /* ── Threat list ── */
+    #threat-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    #threat-count { font-size: 13px; color: var(--c-muted); }
+    .btn-link { background: none; border: none; cursor: pointer; font-size: 13px; color: var(--c-accent); font-family: inherit; }
+    .btn-link:hover { text-decoration: underline; }
+
+    .threat-group-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--c-muted);
+      padding: 8px 0 4px;
+      border-bottom: 1px solid var(--c-border);
+      margin-bottom: 4px;
+    }
+
+    .threat-row {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+    .threat-row.selected { border-color: var(--c-accent); background: #f0f6ff; }
+    .threat-row-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+    .threat-row-header input[type="checkbox"] { flex-shrink: 0; cursor: pointer; width: 16px; height: 16px; }
+    .threat-id { font-size: 11px; color: var(--c-muted); font-family: monospace; white-space: nowrap; flex-shrink: 0; }
+    .threat-name { font-size: 13px; font-weight: 500; flex: 1; }
+    .threat-badges { display: flex; gap: 5px; flex-shrink: 0; }
+    .threat-expand {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--c-muted);
+      font-size: 12px;
+      padding: 2px 4px;
+      flex-shrink: 0;
+    }
+    .threat-expand:hover { color: var(--c-text); }
+    .threat-detail {
+      padding: 12px 16px 14px 38px;
+      border-top: 1px solid var(--c-border);
+      display: none;
+      font-size: 13px;
+      color: var(--c-muted);
+      line-height: 1.6;
+    }
+    .threat-detail.open { display: block; }
+    .threat-detail-row { margin-bottom: 8px; }
+    .threat-detail-row strong { color: var(--c-text); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .badge-ORG         { background: #ccfbf1; color: #0f766e; }
+    .badge-MS365       { background: #dbeafe; color: #1d4ed8; }
+    .badge-KI          { background: #ede9fe; color: #6d28d9; }
+    .badge-SW          { background: #dcfce7; color: #15803d; }
+    .badge-AV          { background: #fef3c7; color: #b45309; }
+    .badge-CL          { background: #fee2e2; color: #b91c1c; }
+    .badge-DLohneAV    { background: #f1f5f9; color: #475569; }
+    .badge-GB          { background: #1e3a5f; color: #fff; }
+    .badge-VB          { background: #4c1d95; color: #fff; }
+    .badge-RR          { background: #7f1d1d; color: #fff; }
+    .badge-status-offen      { background: var(--c-offen-lt); color: var(--c-offen); }
+    .badge-status-lauf       { background: var(--c-lauf-lt); color: var(--c-lauf); }
+    .badge-status-done       { background: var(--c-done-lt); color: var(--c-done); }
+    .badge-status-na         { background: var(--c-na-lt); color: var(--c-na); }
+    .badge-wirkung-3   { background: #fee2e2; color: #991b1b; }
+    .badge-wirkung-2   { background: #fef3c7; color: #92400e; }
+    .badge-wirkung-1   { background: #f0fdf4; color: #15803d; }
+
+    /* ── Step 3: Measure plan ── */
+    #plan-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .stat-num { font-size: 26px; font-weight: 700; }
+    .stat-label { font-size: 11px; color: var(--c-muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 3px; }
+    .stat-card.offen .stat-num { color: var(--c-offen); }
+    .stat-card.lauf  .stat-num { color: var(--c-lauf); }
+    .stat-card.done  .stat-num { color: var(--c-done); }
+    .stat-card.na    .stat-num { color: var(--c-na); }
+
+    #plan-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    #plan-toolbar label { font-size: 12px; color: var(--c-muted); text-transform: uppercase; letter-spacing: .04em; }
+    #plan-toolbar select { font-size: 13px; padding: 5px 9px; }
+
+    .measure-group-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--c-muted);
+      padding: 12px 0 5px;
+      border-bottom: 1px solid var(--c-border);
+      margin-bottom: 6px;
+    }
+
+    .measure-row {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      transition: border-color 0.15s;
+    }
+    .measure-row.status-offen { border-left: 4px solid var(--c-offen); }
+    .measure-row.status-lauf  { border-left: 4px solid #f59e0b; }
+    .measure-row.status-done  { border-left: 4px solid #22c55e; }
+    .measure-row.status-na    { border-left: 4px solid #9ca3af; opacity: 0.75; }
+
+    .measure-row-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+    }
+    .measure-status-sel {
+      font-size: 12px;
+      padding: 4px 7px;
+      border-radius: 5px;
+      border: 1px solid var(--c-border);
+      background: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      flex-shrink: 0;
+      min-width: 130px;
+    }
+    .measure-id { font-size: 11px; color: var(--c-muted); font-family: monospace; flex-shrink: 0; }
+    .measure-name { font-size: 13px; font-weight: 500; flex: 1; }
+    .measure-meta { display: flex; gap: 5px; flex-shrink: 0; flex-wrap: wrap; }
+    .measure-expand {
+      background: none; border: none; cursor: pointer;
+      color: var(--c-muted); font-size: 12px; padding: 2px 4px; flex-shrink: 0;
+    }
+    .measure-expand:hover { color: var(--c-text); }
+
+    .measure-notes-row {
+      padding: 0 12px 10px 12px;
+      display: none;
+    }
+    .measure-notes-row.open { display: flex; gap: 8px; align-items: flex-start; }
+    .measure-notes-row input {
+      flex: 1;
+      font-size: 13px;
+      padding: 6px 10px;
+      border: 1px solid var(--c-border);
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .measure-notes-row input:focus { border-color: var(--c-accent); outline: none; }
+
+    .measure-detail {
+      padding: 12px 16px 14px 16px;
+      border-top: 1px solid var(--c-border);
+      display: none;
+      font-size: 13px;
+      color: var(--c-muted);
+      line-height: 1.6;
+    }
+    .measure-detail.open { display: block; }
+    .measure-detail-row { margin-bottom: 8px; }
+    .measure-detail-row strong { color: var(--c-text); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+
+    /* ── Alert / Hinweis ── */
+    .alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
+    .alert-info { background: #dbeafe; color: #1e40af; }
+    .alert-warn { background: #fef3c7; color: #92400e; }
+    .alert-err  { background: #fee2e2; color: #991b1b; }
+
+    /* ── Empty state ── */
+    .empty { text-align: center; padding: 40px; color: var(--c-muted); font-size: 13px; }
+
+    /* ── Loading ── */
+    #loading-overlay {
+      position: fixed; inset: 0;
+      background: rgba(255,255,255,.85);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      z-index: 200;
+      gap: 16px;
+      display: none;
+    }
+    #loading-overlay.active { display: flex; }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 4px solid var(--c-border);
+      border-top-color: var(--c-accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading-text { font-size: 14px; color: var(--c-muted); }
+
+    /* ── Progress bar ── */
+    #progress-bar-wrap {
+      background: var(--c-border);
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    #progress-bar {
+      height: 100%;
+      background: var(--c-accent);
+      border-radius: 4px;
+      transition: width 0.3s;
+      width: 0%;
+    }
+
+    /* ── Import area ── */
+    #import-drop {
+      border: 2px dashed var(--c-border);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--c-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    #import-drop:hover, #import-drop.dragover { border-color: var(--c-accent); background: var(--c-accent-lt); }
+
+    /* ── Tab 4: Abhängigkeitsgraph ── */
+    #step-4 { min-height: 100vh; }
+    #graph-outer { max-width: 1300px; margin: 0 auto; padding: 16px 20px; }
+
+    #graph-controls {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .gc-group { display: flex; align-items: center; gap: 6px; }
+    .gc-label { font-size: 11px; font-weight: 700; color: var(--c-muted); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+    .gc-btn {
+      padding: 3px 11px; border-radius: 12px; border: 1px solid var(--c-border);
+      background: #f8fafc; font-size: 11px; font-weight: 600; cursor: pointer;
+      transition: all 0.13s; color: #475569; font-family: inherit;
+    }
+    .gc-btn:hover { background: #e2e8f0; }
+    .gc-btn.active { color: #fff; border-color: transparent; }
+    .gc-btn.gc-ALL.active   { background: #334155; }
+    .gc-btn.gc-ORG.active   { background: #0f766e; }
+    .gc-btn.gc-MS365.active { background: #1d4ed8; }
+    .gc-btn.gc-KI.active    { background: #6d28d9; }
+    .gc-btn.gc-SW.active    { background: #15803d; }
+    .gc-btn.gc-AV.active    { background: #b45309; }
+    .gc-btn.gc-CL.active    { background: #b91c1c; }
+    .gc-btn.gc-DLohneAV.active { background: #475569; }
+    .gc-btn.gc-RR.active    { background: #9a3412; }
+    .gc-sep { width: 1px; height: 20px; background: var(--c-border); align-self: center; }
+
+    #graph-infobar {
+      padding: 7px 14px; background: #f0f9ff; border: 1px solid #bae6fd;
+      border-radius: 8px; margin-bottom: 12px;
+      font-size: 12px; color: #0369a1; min-height: 32px;
+      line-height: 1.5;
+    }
+
+    #graph-legend {
+      display: flex; flex-wrap: wrap; gap: 10px 18px;
+      font-size: 11px; color: var(--c-muted); margin-bottom: 12px;
+      align-items: center;
+    }
+    .gl-item { display: flex; align-items: center; gap: 5px; }
+    .gl-dot  { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+    /* Canvas + Panel nebeneinander */
+    #graph-body {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    #graph-canvas-wrap {
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      overflow: auto;
+      background: #fff;
+      min-height: 200px;
+      flex: 1;
+      min-width: 0;
+    }
+    #dep-graph { display: block; }
+
+    /* Detail-Panel */
+    #graph-detail {
+      width: 310px;
+      flex-shrink: 0;
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      background: #fff;
+      display: none;
+      flex-direction: column;
+      position: sticky;
+      top: 70px;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
+    #graph-detail.open { display: flex; }
+    #gd-header {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--c-border);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    #gd-bar {
+      width: 4px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      align-self: stretch;
+      min-height: 24px;
+    }
+    #gd-header-text { flex: 1; }
+    #gd-id   { font-size: 10px; font-weight: 700; color: var(--c-muted); font-family: monospace; }
+    #gd-name { font-size: 13px; font-weight: 700; color: var(--c-text); margin-top: 2px; line-height: 1.3; }
+    #gd-close {
+      background: none; border: none; cursor: pointer; color: var(--c-muted);
+      font-size: 16px; padding: 0 0 0 4px; line-height: 1; flex-shrink: 0;
+    }
+    #gd-close:hover { color: var(--c-text); }
+    #gd-body { padding: 14px 16px; font-size: 12px; color: var(--c-muted); line-height: 1.6; }
+    .gd-row { margin-bottom: 12px; }
+    .gd-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--c-muted); margin-bottom: 4px; }
+    .gd-value { color: var(--c-text); font-size: 12px; }
+    .gd-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .gd-chip  { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: var(--c-bg); border: 1px solid var(--c-border); color: var(--c-text); font-family: monospace; }
+    .gd-chip.linked { cursor: pointer; }
+    .gd-chip.linked:hover { background: var(--c-accent-lt); border-color: var(--c-accent); }
+    .gd-status { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 10px; }
+    .gd-status.offen  { background: var(--c-offen-lt); color: var(--c-offen); }
+    .gd-status.lauf   { background: var(--c-lauf-lt); color: var(--c-lauf); }
+    .gd-status.done   { background: var(--c-done-lt); color: var(--c-done); }
+    .gd-status.na     { background: var(--c-na-lt); color: var(--c-na); }
+    #gd-hint { font-size: 11px; color: var(--c-muted); font-style: italic; padding: 8px 16px 14px; }
+
+    .g-col-header { font-family: -apple-system,sans-serif; }
+    .g-node rect { transition: opacity 0.13s; }
+    .g-edge { fill: none; opacity: 0.18; transition: opacity 0.15s, stroke-width 0.15s; pointer-events: none; }
+    .g-edge.hl  { opacity: 0.82 !important; }
+    .g-edge.dim { opacity: 0.03 !important; }
+    .g-node { cursor: pointer; transition: opacity 0.15s; }
+    .g-node.dim { opacity: 0.15; }
+
+    #graph-stats {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .gs-card {
+      background: #fff; border: 1px solid var(--c-border); border-radius: 8px;
+      padding: 10px 16px; font-size: 12px; color: var(--c-muted);
+    }
+    .gs-card strong { display: block; font-size: 20px; color: var(--c-text); }
+
+    /* ── No browser support ── */
+    #no-support {
+      display: none;
+      max-width: 500px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 40px;
+    }
+    #no-support h2 { margin-bottom: 12px; }
+    #no-support p { color: var(--c-muted); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<!-- ── No browser support ── -->
+<div id="no-support" role="alert">
+  <h2>Browser nicht unterstützt</h2>
+  <p>Dieses Tool benötigt die <strong>File System Access API</strong>, die nur in <strong>Google Chrome</strong> und <strong>Microsoft Edge</strong> (ab Version 86) verfügbar ist.<br><br>
+  Bitte öffnen Sie das Tool in Chrome oder Edge.</p>
+</div>
+
+<!-- ── Loading overlay ── -->
+<div id="loading-overlay" role="status" aria-live="polite" aria-label="Wird geladen">
+  <div class="spinner"></div>
+  <div id="loading-text">Lädt Daten …</div>
+</div>
+
+<!-- ── Topbar ── -->
+<header id="topbar">
+  <div id="app-title" role="button" tabindex="0" onclick="goToStep(1)"
+       onkeydown="if(event.key==='Enter'||event.key===' ')goToStep(1)"
+       title="Zurück zur Startseite">DSMS – Datenschutz-Maßnahmenplaner</div>
+
+  <nav id="steps" role="tablist" aria-label="Schritte">
+    <button class="step-btn active" data-step="1" role="tab" aria-selected="true"  onclick="goToStep(1)">
+      <span class="step-num" aria-hidden="true">1</span> Metadaten
+    </button>
+    <span class="step-sep" aria-hidden="true">›</span>
+    <button class="step-btn" data-step="2" role="tab" aria-selected="false" onclick="goToStep(2)" disabled>
+      <span class="step-num" aria-hidden="true">2</span> Gefährdungen
+    </button>
+    <span class="step-sep" aria-hidden="true">›</span>
+    <button class="step-btn" data-step="3" role="tab" aria-selected="false" onclick="goToStep(3)" disabled>
+      <span class="step-num" aria-hidden="true">3</span> Maßnahmenplan
+    </button>
+    <span class="step-sep" aria-hidden="true">›</span>
+    <button class="step-btn" data-step="4" role="tab" aria-selected="false" onclick="goToStep(4)" disabled>
+      <span class="step-num" aria-hidden="true">4</span> Abhängigkeitsgraph
+    </button>
+  </nav>
+
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span id="load-status"></span>
+    <button id="btn-folder" class="btn btn-primary btn-sm" onclick="ordnerOeffnen()" aria-label="toms-Ordner wählen">
+      📂 toms-Ordner wählen
+    </button>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════
+     SCHRITT 1 – METADATEN
+     ════════════════════════════════════════════ -->
+<div id="step-1" class="step-panel active" role="tabpanel" aria-label="Schritt 1: Metadaten">
+  <div class="section">
+
+    <!-- Ordner laden -->
+    <div id="folder-info-box" aria-live="polite">
+      <p>Wählen Sie den <strong>toms-Ordner</strong> aus Ihrem DSMS-Verzeichnis.<br>
+         Das Tool liest alle Gefährdungen und Maßnahmen direkt aus Ihren JSON-Dateien – keine Daten werden hochgeladen.</p>
+      <button class="btn btn-primary" onclick="ordnerOeffnen()">📂 toms-Ordner wählen</button>
+    </div>
+
+    <!-- Metadaten-Formular -->
+    <div class="card">
+      <div class="card-title">Angaben zum Verfahren</div>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label for="f-organisation">Organisation *</label>
+          <input type="text" id="f-organisation" placeholder="z. B. Gemeinde Musterhausen, Landkreis Beispiel" autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="f-verfahren">Verfahren / System</label>
+          <input type="text" id="f-verfahren" placeholder="z. B. Microsoft 365, Einwohnermeldewesen" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="f-abteilung">Organisationseinheit</label>
+          <input type="text" id="f-abteilung" placeholder="z. B. FB 1 – Hauptamt" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="f-verantwortlich">Verantwortliche Person</label>
+          <input type="text" id="f-verantwortlich" placeholder="Name, Funktion" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="f-datum">Bearbeitungsdatum</label>
+          <input type="date" id="f-datum">
+        </div>
+        <div class="form-group full">
+          <label for="f-anmerkungen">Anmerkungen</label>
+          <textarea id="f-anmerkungen" placeholder="Freie Anmerkungen …"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSV Import -->
+    <div class="card">
+      <div class="card-title">Stand wiederherstellen (CSV-Import)</div>
+      <p style="font-size:13px;color:var(--c-muted);margin-bottom:14px;">
+        Haben Sie dieses Tool bereits verwendet und einen Stand exportiert? Laden Sie die CSV-Datei hier hoch, um den Stand wiederherzustellen.
+      </p>
+      <div id="import-drop"
+           onclick="document.getElementById('import-file').click()"
+           ondragover="event.preventDefault();this.classList.add('dragover')"
+           ondragleave="this.classList.remove('dragover')"
+           ondrop="handleImportDrop(event)"
+           role="button" tabindex="0" aria-label="CSV-Datei hochladen"
+           onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('import-file').click()">
+        ⬆ CSV-Datei hierher ziehen oder klicken zum Auswählen
+      </div>
+      <input type="file" id="import-file" accept=".csv" style="display:none" onchange="handleImportFile(event)">
+      <div id="import-status" style="margin-top:8px;font-size:12px;color:var(--c-muted);"></div>
+    </div>
+
+    <div class="nav-row">
+      <div></div>
+      <button class="btn btn-primary" id="btn-to-step2" onclick="goToStep(2)" disabled>
+        Weiter zu Gefährdungen →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SCHRITT 2 – GEFÄHRDUNGSAUSWAHL
+     ════════════════════════════════════════════ -->
+<div id="step-2" class="step-panel" role="tabpanel" aria-label="Schritt 2: Gefährdungsauswahl">
+  <div class="section-wide">
+
+    <!-- ── Restrisiken (immer vorausgewählt, gesperrt) ── -->
+    <div id="rr-section" role="region" aria-label="Restrisiken – immer anwendbar">
+      <div id="rr-section-header" onclick="toggleRRSection()" role="button" tabindex="0"
+           onkeydown="if(event.key==='Enter'||event.key===' ')toggleRRSection()">
+        <span aria-hidden="true">🔒</span>
+        <span id="rr-section-title">Restrisiken – immer anwendbar (automatisch ausgewählt)</span>
+        <span class="badge badge-RR">RR</span>
+        <span id="rr-section-count" class="badge badge-status-na">0 Gefährdungen</span>
+        <button id="rr-section-expand" aria-label="Restrisiken ein-/ausblenden">▾</button>
+      </div>
+      <p id="rr-section-sub">
+        Diese Restrisiken verbleiben trotz aller Schutzmaßnahmen und werden daher immer in den Maßnahmenplan aufgenommen.
+        Sie können nicht abgewählt werden.
+      </p>
+      <div id="rr-list" role="list" aria-label="Liste der Restrisiken"></div>
+    </div>
+
+    <div id="step2-layout">
+
+      <!-- Filter -->
+      <aside id="filter-panel" aria-label="Filter">
+        <div class="filter-section">
+          <div class="filter-title">Kategorie</div>
+          <div id="filter-kat-list"></div>
+        </div>
+        <div class="filter-section">
+          <div class="filter-title">Bedrohungstyp</div>
+          <div class="filter-row">
+            <input type="radio" name="ftyp" id="ftyp-all" value="" checked onchange="applyFilter()">
+            <label for="ftyp-all">Alle</label>
+          </div>
+          <div class="filter-row">
+            <input type="radio" name="ftyp" id="ftyp-gb" value="GB" onchange="applyFilter()">
+            <label for="ftyp-gb"><span class="badge badge-GB">GB</span> Grundbedrohung</label>
+          </div>
+          <div class="filter-row">
+            <input type="radio" name="ftyp" id="ftyp-vb" value="VB" onchange="applyFilter()">
+            <label for="ftyp-vb"><span class="badge badge-VB">VB</span> Verfahrensbedrohung</label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <div class="filter-title">Schutzziel</div>
+          <div id="filter-sz-list"></div>
+        </div>
+        <button id="btn-filter-reset" onclick="resetFilter()">Filter zurücksetzen</button>
+      </aside>
+
+      <!-- Threat list -->
+      <div>
+        <div id="threat-toolbar">
+          <span id="threat-count" aria-live="polite"></span>
+          <button class="btn-link" onclick="selectAll()">Alle auswählen</button>
+          <span style="color:var(--c-border)">|</span>
+          <button class="btn-link" onclick="selectNone()">Keine</button>
+          <span style="color:var(--c-border)">|</span>
+          <button class="btn-link" onclick="selectAllGB()" title="Alle Grundgefährdungen (GB) vorauswählen – einmalig pro Anwendungsbereich">
+            <span class="badge badge-GB" style="font-size:10px">GB</span> Alle Grundgefährdungen
+          </button>
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+            <label for="sort-threats" style="font-size:12px;color:var(--c-muted)">Sortierung:</label>
+            <select id="sort-threats" onchange="renderThreats()" style="font-size:13px;padding:4px 8px;">
+              <option value="kat">Kategorie</option>
+              <option value="id">ID</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+        <div id="threat-list" aria-label="Gefährdungsliste"></div>
+      </div>
+
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="goToStep(1)">← Zurück</button>
+      <div class="nav-row-right">
+        <span id="selected-count" style="font-size:13px;color:var(--c-muted);align-self:center;"></span>
+        <button class="btn btn-primary" onclick="goToStep(3)">Weiter zum Maßnahmenplan →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SCHRITT 3 – MASSNAHMENPLAN
+     ════════════════════════════════════════════ -->
+<div id="step-3" class="step-panel" role="tabpanel" aria-label="Schritt 3: Maßnahmenplan">
+  <div class="section-wide">
+
+    <!-- Stats -->
+    <div id="plan-stats" aria-label="Zusammenfassung">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-total">–</div>
+        <div class="stat-label">Gesamt</div>
+      </div>
+      <div class="stat-card offen">
+        <div class="stat-num" id="stat-offen">–</div>
+        <div class="stat-label">Offen</div>
+      </div>
+      <div class="stat-card lauf">
+        <div class="stat-num" id="stat-lauf">–</div>
+        <div class="stat-label">In Bearbeitung</div>
+      </div>
+      <div class="stat-card done">
+        <div class="stat-num" id="stat-done">–</div>
+        <div class="stat-label">Umgesetzt</div>
+      </div>
+      <div class="stat-card na">
+        <div class="stat-num" id="stat-na">–</div>
+        <div class="stat-label">Nicht anwendbar</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div id="plan-toolbar">
+      <label for="sort-plan">Sortierung:</label>
+      <select id="sort-plan" onchange="renderPlan()">
+        <option value="status">Status</option>
+        <option value="wirkung">Wirkungspunktzahl ↓</option>
+        <option value="kat">Kategorie</option>
+        <option value="id">ID</option>
+      </select>
+      <label for="group-plan">Gruppierung:</label>
+      <select id="group-plan" onchange="renderPlan()">
+        <option value="none">Keine</option>
+        <option value="kat">Kategorie</option>
+        <option value="status">Status</option>
+        <option value="typ">Maßnahmentyp</option>
+      </select>
+      <div style="margin-left:auto;display:flex;gap:8px;">
+        <button class="btn btn-secondary btn-sm" onclick="exportCSV()">⬇ CSV exportieren</button>
+        <button class="btn btn-secondary btn-sm" onclick="setAllStatus('umgesetzt')">Alle als umgesetzt</button>
+      </div>
+    </div>
+
+    <div id="plan-list" aria-label="Maßnahmenplan"></div>
+
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="goToStep(2)">← Zurück</button>
+      <div class="nav-row-right">
+        <button class="btn btn-success" onclick="exportCSV()">⬇ Stand als CSV exportieren</button>
+        <button class="btn btn-secondary" onclick="goToStep(4)">🔗 Abhängigkeitsgraph →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SCHRITT 4 – ABHÄNGIGKEITSGRAPH
+     ════════════════════════════════════════════ -->
+<div id="step-4" class="step-panel" role="tabpanel" aria-label="Schritt 4: Abhängigkeitsgraph">
+  <div id="graph-outer">
+
+    <!-- Steuerleiste -->
+    <div id="graph-controls">
+      <div class="gc-group">
+        <span class="gc-label">Anzeige:</span>
+        <button class="gc-btn active" id="gc-sel" onclick="graphToggleSel()"
+                title="Zwischen allen und nur ausgewählten Gefährdungen wechseln">
+          Nur ausgewählte Gefährdungen
+        </button>
+      </div>
+      <div class="gc-sep"></div>
+      <div class="gc-group">
+        <span class="gc-label">Kategorie:</span>
+        <button class="gc-btn gc-ALL active" onclick="setGraphFilter('ALL')">Alle</button>
+        <button class="gc-btn gc-ORG"       onclick="setGraphFilter('ORG')">ORG</button>
+        <button class="gc-btn gc-MS365"     onclick="setGraphFilter('MS365')">MS365</button>
+        <button class="gc-btn gc-KI"        onclick="setGraphFilter('KI')">KI</button>
+        <button class="gc-btn gc-SW"        onclick="setGraphFilter('SW')">SW</button>
+        <button class="gc-btn gc-AV"        onclick="setGraphFilter('AV')">AV</button>
+        <button class="gc-btn gc-CL"        onclick="setGraphFilter('CL')">CL</button>
+        <button class="gc-btn gc-RR"        onclick="setGraphFilter('RR')">Restrisiken</button>
+      </div>
+      <div class="gc-sep"></div>
+      <div class="gc-group">
+        <span class="gc-label">Sortierung TOM:</span>
+        <button class="gc-btn active" id="gc-sort-refs" onclick="setGraphSort('refs')">Häufigkeit ↓</button>
+        <button class="gc-btn" id="gc-sort-w"    onclick="setGraphSort('wirkung')">Wirkung ↓</button>
+        <button class="gc-btn" id="gc-sort-id"   onclick="setGraphSort('id')">ID</button>
+      </div>
+    </div>
+
+    <!-- Statistik-Kacheln -->
+    <div id="graph-stats">
+      <div class="gs-card"><strong id="gs-threats">–</strong>Gefährdungen</div>
+      <div class="gs-card"><strong id="gs-toms">–</strong>Maßnahmen (TOMs)</div>
+      <div class="gs-card"><strong id="gs-edges">–</strong>Verknüpfungen</div>
+      <div class="gs-card"><strong id="gs-hub">–</strong>Zentralste Maßnahme</div>
+    </div>
+
+    <!-- Legende -->
+    <div id="graph-legend">
+      <span style="font-weight:700;color:var(--c-muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em">Kategorie:</span>
+      <div class="gl-item"><div class="gl-dot" style="background:#0f766e"></div>ORG</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#1d4ed8"></div>MS365</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#6d28d9"></div>KI</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#15803d"></div>SW</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#b45309"></div>AV</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#b91c1c"></div>CL</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#9a3412"></div>Restrisiko</div>
+      <span style="margin-left:8px;color:var(--c-muted)">|</span>
+      <div class="gl-item"><div class="gl-dot" style="background:#991b1b"></div>W3 – hohe Wirkung</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#92400e"></div>W2 – mittlere Wirkung</div>
+      <div class="gl-item"><div class="gl-dot" style="background:#15803d"></div>W1 – geringe Wirkung</div>
+      <span style="margin-left:8px;color:var(--c-muted)">|</span>
+      <span style="font-size:11px;color:var(--c-muted)">×N = von N Gefährdungen referenziert</span>
+    </div>
+
+    <!-- Info-Bar -->
+    <div id="graph-infobar">← Gefährdung oder Maßnahme anklicken, um Verknüpfungen hervorzuheben</div>
+
+    <!-- SVG-Canvas + Detail-Panel -->
+    <div id="graph-body">
+      <div id="graph-canvas-wrap">
+        <svg id="dep-graph" aria-label="Abhängigkeitsgraph Gefährdungen und Maßnahmen"></svg>
+      </div>
+
+      <!-- Detail-Panel (öffnet bei Klick auf Knoten) -->
+      <aside id="graph-detail" aria-label="Detailansicht" aria-live="polite">
+        <div id="gd-header">
+          <div id="gd-bar"></div>
+          <div id="gd-header-text">
+            <div id="gd-id"></div>
+            <div id="gd-name"></div>
+          </div>
+          <button id="gd-close" onclick="closeDetailPanel()" aria-label="Panel schließen">×</button>
+        </div>
+        <div id="gd-body"></div>
+        <div id="gd-hint">← Weiteren Knoten anklicken</div>
+      </aside>
+    </div>
+
+    <div class="nav-row" style="margin-top:16px">
+      <button class="btn btn-secondary" onclick="goToStep(3)">← Zurück zum Maßnahmenplan</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  DSMS – Datenschutz-Maßnahmenplaner
+//  Liest THREAT_*.json und TOM_*.json per File System Access API.
+//  Kein Hard-Coding von TOM-IDs.
+// ═══════════════════════════════════════════════════════════════
+
+// ── Browser-Check ──────────────────────────────────────────────
+if (!window.showDirectoryPicker) {
+  document.getElementById("no-support").style.display = "block";
+  document.getElementById("topbar").style.display = "none";
+  document.querySelectorAll(".step-panel").forEach(p => p.style.display = "none");
+}
+
+// ── Zustand ────────────────────────────────────────────────────
+let THREATS      = [];           // geladene Gefährdungen
+let TOMS         = new Map();    // id → TOM-Objekt
+let selectedIds  = new Set();    // ausgewählte THREAT-IDs
+let measureSt    = new Map();    // TOM-id → {status, notizen}
+let dirHandle    = null;
+let currentStep  = 1;
+
+// Filter (Schritt 2)
+let fKat = new Set();   // leere Menge = alle
+let fTyp = "";          // "" | "GB" | "VB"
+let fSZ  = new Set();   // leere Menge = alle
+
+const STATUS_LABELS = {
+  offen:          "Offen",
+  in_bearbeitung: "In Bearbeitung",
+  umgesetzt:      "Umgesetzt",
+  nicht_anwendbar:"Nicht anwendbar"
+};
+const STATUS_ORDER = { offen:0, in_bearbeitung:1, umgesetzt:2, nicht_anwendbar:3 };
+
+// ── IndexedDB: Handle zwischen Sitzungen merken ────────────────
+const IDB_NAME  = "dsms-planer";
+const IDB_STORE = "handles";
+const IDB_KEY   = "toms-ordner";
+
+function idbOpen() {
+  return new Promise((res, rej) => {
+    const req = indexedDB.open(IDB_NAME, 1);
+    req.onupgradeneeded = e => e.target.result.createObjectStore(IDB_STORE);
+    req.onsuccess       = e => res(e.target.result);
+    req.onerror         = e => rej(e.target.error);
+  });
+}
+async function idbSave(handle) {
+  try {
+    const db = await idbOpen();
+    const tx = db.transaction(IDB_STORE, "readwrite");
+    tx.objectStore(IDB_STORE).put(handle, IDB_KEY);
+    await new Promise((r, j) => { tx.oncomplete = r; tx.onerror = j; });
+    db.close();
+  } catch(e) { console.warn("IDB-Speichern:", e); }
+}
+async function idbLoad() {
+  try {
+    const db = await idbOpen();
+    const h  = await new Promise((r, j) => {
+      const req = db.transaction(IDB_STORE).objectStore(IDB_STORE).get(IDB_KEY);
+      req.onsuccess = e => r(e.target.result);
+      req.onerror   = e => j(e.target.error);
+    });
+    db.close();
+    return h || null;
+  } catch(e) { return null; }
+}
+
+// ── Ordner öffnen ──────────────────────────────────────────────
+async function ordnerOeffnen() {
+  if (!window.showDirectoryPicker) return;
+  try {
+    // Gespeicherten Handle prüfen
+    const gespeichert = await idbLoad();
+    if (gespeichert) {
+      try {
+        const perm = await gespeichert.requestPermission({ mode: "read" });
+        if (perm === "granted") {
+          dirHandle = gespeichert;
+          await ladeDaten();
+          return;
+        }
+      } catch(e) { /* Fallback: Picker */ }
+    }
+    const h = await window.showDirectoryPicker({ mode: "read" });
+    dirHandle = h;
+    await idbSave(h);
+    await ladeDaten();
+  } catch(e) {
+    if (e.name !== "AbortError") {
+      console.error("Ordner-Fehler:", e);
+      zeigeStatus("⚠ Fehler beim Öffnen des Ordners", "warn");
+    }
+  }
+}
+
+// ── Daten laden ────────────────────────────────────────────────
+async function ladeDaten() {
+  ladeOverlay(true, "Lade Gefährdungen …");
+  const fehler = [];
+
+  try {
+    // gefaehrdungen/
+    try {
+      const gefDir = await dirHandle.getDirectoryHandle("gefaehrdungen");
+      THREATS = [];
+      const eintraege = [];
+      for await (const [name, handle] of gefDir.entries()) {
+        if (name.startsWith("THREAT_") && name.endsWith(".json") && handle.kind === "file") {
+          try {
+            const file = await handle.getFile();
+            const text = await file.text();
+            eintraege.push(JSON.parse(text));
+          } catch(e) { fehler.push(`${name}: ${e.message}`); }
+        }
+      }
+      THREATS = eintraege;
+    } catch(e) {
+      fehler.push("Unterordner 'gefaehrdungen' nicht gefunden. Stellen Sie sicher, dass Sie den korrekten toms-Ordner ausgewählt haben.");
+    }
+
+    ladeOverlay(true, "Lade Maßnahmen …");
+
+    // massnahmen/
+    try {
+      const masDir = await dirHandle.getDirectoryHandle("massnahmen");
+      TOMS.clear();
+      for await (const [name, handle] of masDir.entries()) {
+        if (name.startsWith("TOM_") && name.endsWith(".json") && handle.kind === "file") {
+          try {
+            const file = await handle.getFile();
+            const text = await file.text();
+            const tom  = JSON.parse(text);
+            TOMS.set(tom.id, tom);
+          } catch(e) { fehler.push(`${name}: ${e.message}`); }
+        }
+      }
+    } catch(e) {
+      fehler.push("Unterordner 'massnahmen' nicht gefunden.");
+    }
+
+    // Erfolg
+    if (fehler.length === 0) {
+      zeigeStatus(`✓ ${THREATS.length} Gefährdungen, ${TOMS.size} Maßnahmen geladen`, "ok");
+    } else {
+      zeigeStatus(`⚠ Geladen mit ${fehler.length} Warnung(en)`, "warn");
+      console.warn("Ladefehler:", fehler);
+    }
+
+    // UI aktualisieren
+    document.getElementById("folder-info-box").className = "card loaded";
+    document.getElementById("folder-info-box").innerHTML =
+      `<p>✓ <strong>${dirHandle.name}</strong> verbunden — ${THREATS.length} Gefährdungen, ${TOMS.size} Maßnahmen geladen</p>`;
+    document.getElementById("btn-folder").textContent = "📂 " + dirHandle.name;
+    document.getElementById("btn-folder").classList.add("loaded");
+
+    document.getElementById("btn-to-step2").disabled = false;
+    document.querySelector('.step-btn[data-step="2"]').disabled = false;
+    document.querySelector('.step-btn[data-step="3"]').disabled = false;
+    document.querySelector('.step-btn[data-step="4"]').disabled = false;
+
+    // Restrisiken automatisch vorauswählen
+    THREATS.forEach(t => { if (t.immer_vorausgewaehlt) selectedIds.add(t.id); });
+
+    // Filter aufbauen + Restrisiken-Sektion rendern
+    bauFilterAuf();
+    renderRRSektion();
+    renderThreats();
+    renderSelectedCount();
+
+  } finally {
+    ladeOverlay(false);
+  }
+}
+
+function ladeOverlay(aktiv, text = "Lädt …") {
+  const el = document.getElementById("loading-overlay");
+  el.classList.toggle("active", aktiv);
+  document.getElementById("loading-text").textContent = text;
+}
+
+function zeigeStatus(text, typ = "ok") {
+  const el = document.getElementById("load-status");
+  el.textContent = text;
+  el.style.color = typ === "ok" ? "var(--c-done)" : typ === "warn" ? "var(--c-lauf)" : "var(--c-offen)";
+}
+
+// ── Navigation ─────────────────────────────────────────────────
+function goToStep(n) {
+  if (n > 1 && THREATS.length === 0) {
+    alert("Bitte zuerst den toms-Ordner laden.");
+    return;
+  }
+  currentStep = n;
+
+  document.querySelectorAll(".step-panel").forEach((p, i) => {
+    p.classList.toggle("active", i + 1 === n);
+  });
+  document.querySelectorAll(".step-btn").forEach(btn => {
+    const s = parseInt(btn.dataset.step);
+    btn.classList.toggle("active", s === n);
+    btn.classList.toggle("done", s < n);
+    btn.setAttribute("aria-selected", s === n ? "true" : "false");
+  });
+
+  if (n === 3) { renderPlan(); renderStats(); }
+  if (n === 4) { renderGraph(); }
+  window.scrollTo(0, 0);
+}
+
+// ── Restrisiken-Sektion ────────────────────────────────────────
+function renderRRSektion() {
+  const rrThreats = THREATS.filter(t => t.immer_vorausgewaehlt || t.bedrohungstyp === "RR");
+  const countEl = document.getElementById("rr-section-count");
+  if (countEl) countEl.textContent = rrThreats.length + " Gefährdungen";
+
+  const listEl = document.getElementById("rr-list");
+  if (!listEl) return;
+
+  if (rrThreats.length === 0) {
+    document.getElementById("rr-section").style.display = "none";
+    return;
+  }
+
+  listEl.innerHTML = rrThreats.map(t => {
+    const name = t.name || (t.beschreibung || "").slice(0, 90) + "…";
+    return `
+    <div class="rr-row" role="listitem">
+      <input type="checkbox" checked disabled aria-label="${esc(name)}" title="Restrisiko – kann nicht abgewählt werden">
+      <span class="rr-id">${esc(t.id)}</span>
+      <span class="rr-name">${esc(name)}</span>
+      <span class="rr-lock" title="Immer anwendbar – kann nicht abgewählt werden">🔒 Immer anwendbar</span>
+    </div>`;
+  }).join("");
+}
+
+function toggleRRSection() {
+  const list = document.getElementById("rr-list");
+  const btn  = document.getElementById("rr-section-expand");
+  if (list) list.classList.toggle("open");
+  if (btn)  btn.textContent = list.classList.contains("open") ? "▴" : "▾";
+}
+
+function selectAllGB() {
+  THREATS.filter(t => t.bedrohungstyp === "GB").forEach(t => selectedIds.add(t.id));
+  renderThreats();
+  renderSelectedCount();
+}
+
+// ── Filter aufbauen ────────────────────────────────────────────
+function bauFilterAuf() {
+  // Kategorien (RR wird separat oben angezeigt – hier herausfiltern)
+  const kats = [...new Set(THREATS.filter(t => !t.immer_vorausgewaehlt && t.bedrohungstyp !== "RR").map(t => t.kategorie))].sort();
+  const katList = document.getElementById("filter-kat-list");
+  katList.innerHTML = kats.map(k => `
+    <div class="filter-row">
+      <input type="checkbox" id="fkat-${k}" value="${k}" onchange="toggleFilterKat(this)" checked>
+      <label for="fkat-${k}"><span class="badge badge-${k}">${k}</span></label>
+    </div>`).join("");
+
+  // Schutzziele
+  const allSZ = new Set();
+  THREATS.forEach(t => (t.schutzziele || []).forEach(sz => allSZ.add(sz)));
+  const szList = document.getElementById("filter-sz-list");
+  szList.innerHTML = [...allSZ].sort().map(sz => `
+    <div class="filter-row">
+      <input type="checkbox" id="fsz-${sz}" value="${sz}" onchange="toggleFilterSZ(this)" checked>
+      <label for="fsz-${sz}" style="font-size:12px">${sz}</label>
+    </div>`).join("");
+}
+
+function toggleFilterKat(cb) {
+  if (!cb.checked) fKat.add(cb.value); else fKat.delete(cb.value);
+  applyFilter();
+}
+function toggleFilterSZ(cb) {
+  if (!cb.checked) fSZ.add(cb.value); else fSZ.delete(cb.value);
+  applyFilter();
+}
+function applyFilter() {
+  fTyp = document.querySelector('input[name="ftyp"]:checked')?.value || "";
+  renderThreats();
+}
+function resetFilter() {
+  fKat.clear(); fSZ.clear(); fTyp = "";
+  document.querySelectorAll("#filter-kat-list input").forEach(cb => cb.checked = true);
+  document.querySelectorAll("#filter-sz-list input").forEach(cb => cb.checked = true);
+  document.getElementById("ftyp-all").checked = true;
+  renderThreats();
+}
+
+// ── Gefährdungen filtern + rendern ─────────────────────────────
+function filteredThreats() {
+  return THREATS.filter(t => {
+    // RR-Threats werden in der gesperrten Sektion oben angezeigt – nicht hier
+    if (t.immer_vorausgewaehlt || t.bedrohungstyp === "RR") return false;
+    if (fKat.size && fKat.has(t.kategorie)) return false;
+    if (fTyp && t.bedrohungstyp !== fTyp) return false;
+    if (fSZ.size) {
+      const sz = t.schutzziele || [];
+      if (!sz.some(s => !fSZ.has(s))) return false;
+    }
+    return true;
+  });
+}
+
+function renderThreats() {
+  const sortKey = document.getElementById("sort-threats")?.value || "kat";
+  const threats = filteredThreats().sort((a, b) => {
+    if (sortKey === "kat")  return (a.kategorie||"").localeCompare(b.kategorie||"","de");
+    if (sortKey === "id")   return (a.id||"").localeCompare(b.id||"","de");
+    if (sortKey === "name") {
+      const na = a.name || a.beschreibung?.slice(0,40) || a.id;
+      const nb = b.name || b.beschreibung?.slice(0,40) || b.id;
+      return na.localeCompare(nb,"de");
+    }
+    return 0;
+  });
+
+  document.getElementById("threat-count").textContent =
+    `${threats.length} von ${THREATS.length} Gefährdungen angezeigt`;
+
+  const listEl = document.getElementById("threat-list");
+  if (threats.length === 0) {
+    listEl.innerHTML = '<div class="empty">Keine Gefährdungen entsprechen den Filterkriterien.</div>';
+    return;
+  }
+
+  // Gruppierung nach Kategorie (wenn nach Kategorie sortiert)
+  let html = "";
+  let lastKat = null;
+  for (const t of threats) {
+    if (sortKey === "kat" && t.kategorie !== lastKat) {
+      html += `<div class="threat-group-label">${t.kategorie}</div>`;
+      lastKat = t.kategorie;
+    }
+    const sel     = selectedIds.has(t.id);
+    const name    = t.name || (t.beschreibung || "").slice(0,80);
+    const sz      = (t.schutzziele || []).join(", ");
+    const anzahl  = (t.empfohlene_massnahmen || []).length;
+
+    html += `
+    <div class="threat-row${sel ? " selected" : ""}" id="tr-${esc(t.id)}">
+      <div class="threat-row-header" onclick="toggleThreat('${esc(t.id)}', event)">
+        <input type="checkbox" ${sel ? "checked" : ""} aria-label="Gefährdung auswählen: ${esc(name)}"
+               onclick="event.stopPropagation();toggleThreat('${esc(t.id)}', event)">
+        <span class="threat-id">${esc(t.id)}</span>
+        <span class="threat-name">${esc(name)}</span>
+        <div class="threat-badges">
+          <span class="badge badge-${esc(t.kategorie)}">${esc(t.kategorie)}</span>
+          <span class="badge badge-${esc(t.bedrohungstyp)}">${esc(t.bedrohungstyp)}</span>
+          <span class="badge badge-status-na" title="${anzahl} empfohlene Maßnahmen">${anzahl} TOM</span>
+        </div>
+        <button class="threat-expand" onclick="event.stopPropagation();expandThreat('${esc(t.id)}')" aria-label="Details ein-/ausblenden">▾</button>
+      </div>
+      <div class="threat-detail" id="td-${esc(t.id)}">
+        <div class="threat-detail-row">
+          <strong>Beschreibung</strong>
+          ${esc(t.beschreibung || "")}
+        </div>
+        ${sz ? `<div class="threat-detail-row"><strong>Schutzziele</strong>${esc(sz)}</div>` : ""}
+        ${anzahl ? `<div class="threat-detail-row"><strong>Empfohlene Maßnahmen (${anzahl})</strong>${(t.empfohlene_massnahmen||[]).map(id => `<span class="badge badge-status-na" style="margin-right:4px">${esc(id)}</span>`).join("")}</div>` : ""}
+      </div>
+    </div>`;
+  }
+  listEl.innerHTML = html;
+  renderSelectedCount();
+}
+
+function expandThreat(id) {
+  const el = document.getElementById("td-" + id);
+  if (el) el.classList.toggle("open");
+}
+
+function toggleThreat(id, event) {
+  // Wenn der Klick direkt auf die Checkbox war, wurde bereits gesteuert; sonst toggle
+  if (event && event.target.type === "checkbox") {
+    if (event.target.checked) selectedIds.add(id);
+    else selectedIds.delete(id);
+  } else {
+    if (selectedIds.has(id)) selectedIds.delete(id);
+    else selectedIds.add(id);
+  }
+  // Zeile aktualisieren
+  const row = document.getElementById("tr-" + id);
+  if (row) {
+    row.classList.toggle("selected", selectedIds.has(id));
+    const cb = row.querySelector("input[type='checkbox']");
+    if (cb) cb.checked = selectedIds.has(id);
+  }
+  renderSelectedCount();
+}
+
+function selectAll() {
+  filteredThreats().forEach(t => selectedIds.add(t.id));
+  renderThreats();
+}
+function selectNone() {
+  filteredThreats().forEach(t => selectedIds.delete(t.id));
+  renderThreats();
+}
+
+function renderSelectedCount() {
+  const el = document.getElementById("selected-count");
+  if (!el) return;
+  const rrCount = THREATS.filter(t => t.immer_vorausgewaehlt || t.bedrohungstyp === "RR").length;
+  const freeCount = selectedIds.size - rrCount;
+  el.textContent = `${selectedIds.size} Gefährdung(en) ausgewählt (davon ${rrCount} Restrisiken obligatorisch)`;
+}
+
+// ── Maßnahmenplan rendern ──────────────────────────────────────
+function getPlanMeasures() {
+  // Alle TOM-IDs aus den ausgewählten Gefährdungen
+  const tomIdSet = new Set();
+  const tomToThreats = new Map(); // tom-id → [threat-id, ...]
+  for (const t of THREATS) {
+    if (!selectedIds.has(t.id)) continue;
+    for (const mid of (t.empfohlene_massnahmen || [])) {
+      tomIdSet.add(mid);
+      if (!tomToThreats.has(mid)) tomToThreats.set(mid, []);
+      tomToThreats.get(mid).push(t.id);
+    }
+  }
+  // Measures aufbauen
+  const measures = [];
+  for (const mid of tomIdSet) {
+    const tom = TOMS.get(mid);
+    const st  = measureSt.get(mid) || { status: "offen", notizen: "" };
+    measures.push({
+      id:        mid,
+      tom:       tom || null,
+      name:      tom ? tom.name : mid,
+      kategorie: tom ? (tom.kategorie || "?") : "?",
+      typ:       tom ? (tom.maßnahmentyp || "") : "",
+      wirkung:   tom ? (tom.wirkungspunktzahl || 0) : 0,
+      risiko:    tom ? (tom.risikokategorie || "") : "",
+      beschr:    tom ? (tom.beschreibung || "") : "",
+      status:    st.status,
+      notizen:   st.notizen,
+      threats:   tomToThreats.get(mid) || []
+    });
+  }
+  return measures;
+}
+
+function renderPlan() {
+  const sortKey  = document.getElementById("sort-plan")?.value || "status";
+  const groupKey = document.getElementById("group-plan")?.value || "none";
+
+  let measures = getPlanMeasures();
+
+  // Sortierung
+  measures.sort((a, b) => {
+    if (sortKey === "status")  return (STATUS_ORDER[a.status]||0) - (STATUS_ORDER[b.status]||0);
+    if (sortKey === "wirkung") return b.wirkung - a.wirkung;
+    if (sortKey === "kat")     return a.kategorie.localeCompare(b.kategorie,"de");
+    if (sortKey === "id")      return a.id.localeCompare(b.id,"de");
+    return 0;
+  });
+
+  // Statistik
+  renderStats(measures);
+
+  const listEl = document.getElementById("plan-list");
+  if (measures.length === 0) {
+    listEl.innerHTML = '<div class="empty">Keine Gefährdungen ausgewählt oder keine Maßnahmen vorhanden.<br>Wählen Sie im Schritt 2 mindestens eine Gefährdung aus.</div>';
+    return;
+  }
+
+  // Gruppierung
+  let html = "";
+  let lastGroup = null;
+
+  function groupLabel(m) {
+    if (groupKey === "kat")    return m.kategorie || "Sonstige";
+    if (groupKey === "status") return STATUS_LABELS[m.status] || m.status;
+    if (groupKey === "typ")    return m.typ || "Sonstige";
+    return null;
+  }
+
+  for (const m of measures) {
+    const grp = groupLabel(m);
+    if (grp && grp !== lastGroup) {
+      html += `<div class="measure-group-label">${esc(grp)}</div>`;
+      lastGroup = grp;
+    }
+
+    const notFound = !m.tom;
+    const wBadge = m.wirkung ? `<span class="badge badge-wirkung-${m.wirkung}" title="Wirkungspunktzahl">W${m.wirkung}</span>` : "";
+    const threatBadges = m.threats.slice(0,3).map(tid => `<span class="badge badge-status-na" style="font-size:9px;padding:1px 5px">${esc(tid)}</span>`).join(" ");
+    const moreThr = m.threats.length > 3 ? `<span style="font-size:11px;color:var(--c-muted)">+${m.threats.length-3}</span>` : "";
+    const warnBadge = notFound ? `<span class="badge badge-CL" title="Maßnahme nicht in Ordner gefunden">⚠ Nicht gefunden</span>` : "";
+
+    // Abhängigkeiten prüfen
+    let abhaengigkeitenHtml = "";
+    if (m.tom && m.tom.abhängigkeiten && m.tom.abhängigkeiten.length) {
+      const deps = m.tom.abhängigkeiten.map(d => {
+        const found = TOMS.has(d);
+        return `<span class="badge ${found ? 'badge-status-na' : 'badge-CL'}" title="${found ? 'Im Plan verfügbar' : 'Nicht im aktuellen Plan'}">${esc(d)}</span>`;
+      }).join(" ");
+      abhaengigkeitenHtml = `<div class="measure-detail-row"><strong>Abhängigkeiten</strong>${deps}</div>`;
+    }
+
+    const standards = m.tom?.compliance?.standards?.join(", ") || "";
+    const zusatz    = m.tom?.compliance?.zusatzquellen?.join(", ") || "";
+    const sz        = (m.tom?.anwendbarkeit?.schutzziele || []).join(", ");
+
+    html += `
+    <div class="measure-row status-${m.status}" id="mr-${esc(m.id)}">
+      <div class="measure-row-header">
+        <select class="measure-status-sel" aria-label="Status für ${esc(m.name)}"
+                onchange="setStatus('${esc(m.id)}', this.value)">
+          <option value="offen"          ${m.status==="offen"          ?"selected":""}>⬤ Offen</option>
+          <option value="in_bearbeitung" ${m.status==="in_bearbeitung" ?"selected":""}>⬤ In Bearbeitung</option>
+          <option value="umgesetzt"      ${m.status==="umgesetzt"      ?"selected":""}>✓ Umgesetzt</option>
+          <option value="nicht_anwendbar"${m.status==="nicht_anwendbar"?"selected":""}>– Nicht anwendbar</option>
+        </select>
+        <span class="measure-id">${esc(m.id)}</span>
+        <span class="measure-name">${esc(m.name)}</span>
+        <div class="measure-meta">
+          ${warnBadge}
+          <span class="badge badge-${esc(m.kategorie)}">${esc(m.kategorie)}</span>
+          ${m.typ ? `<span class="badge badge-status-na" style="font-size:10px">${esc(m.typ.replace("Maßnahme","").trim())}</span>` : ""}
+          ${wBadge}
+          ${threatBadges}${moreThr}
+        </div>
+        <button class="measure-expand" onclick="toggleMeasureDetail('${esc(m.id)}')" aria-label="Details ein-/ausblenden">▾</button>
+      </div>
+      <div class="measure-notes-row" id="mn-${esc(m.id)}">
+        <input type="text" placeholder="Notizen (z. B. Datum, Verantwortliche, Ticket-Nr.) …"
+               value="${esc(m.notizen)}"
+               oninput="setNotizen('${esc(m.id)}', this.value)"
+               aria-label="Notizen für ${esc(m.name)}">
+      </div>
+      <div class="measure-detail" id="md-${esc(m.id)}">
+        ${notFound
+          ? `<div class="alert alert-warn">⚠ Die Maßnahme <strong>${esc(m.id)}</strong> wurde in den geladenen JSON-Dateien nicht gefunden. Möglicherweise fehlt die Datei im toms-Ordner.</div>`
+          : `
+        <div class="measure-detail-row"><strong>Beschreibung</strong>${esc(m.beschr)}</div>
+        ${sz       ? `<div class="measure-detail-row"><strong>Schutzziele</strong>${esc(sz)}</div>` : ""}
+        ${m.risiko ? `<div class="measure-detail-row"><strong>Risikokategorie</strong>${esc(m.risiko)}</div>` : ""}
+        ${standards? `<div class="measure-detail-row"><strong>Rechtsgrundlagen</strong>${esc(standards)}</div>` : ""}
+        ${zusatz   ? `<div class="measure-detail-row"><strong>Weitere Quellen</strong>${esc(zusatz)}</div>` : ""}
+        ${abhaengigkeitenHtml}
+        <div class="measure-detail-row"><strong>Referenziert von Gefährdungen</strong>${m.threats.map(tid => `<span class="badge badge-status-na" style="font-size:9px;padding:1px 5px;margin-right:3px">${esc(tid)}</span>`).join("")}</div>
+        `}
+      </div>
+    </div>`;
+  }
+
+  listEl.innerHTML = html;
+}
+
+function toggleMeasureDetail(id) {
+  const det = document.getElementById("md-" + id);
+  const not = document.getElementById("mn-" + id);
+  if (det) det.classList.toggle("open");
+  if (not) not.classList.toggle("open");
+}
+
+function setStatus(id, val) {
+  const cur = measureSt.get(id) || { status: "offen", notizen: "" };
+  measureSt.set(id, { ...cur, status: val });
+  // Zeile neu stylen
+  const row = document.getElementById("mr-" + id);
+  if (row) {
+    row.className = `measure-row status-${val}`;
+  }
+  renderStats();
+}
+
+function setNotizen(id, val) {
+  const cur = measureSt.get(id) || { status: "offen", notizen: "" };
+  measureSt.set(id, { ...cur, notizen: val });
+}
+
+function setAllStatus(val) {
+  const measures = getPlanMeasures();
+  for (const m of measures) {
+    const cur = measureSt.get(m.id) || { status: "offen", notizen: "" };
+    measureSt.set(m.id, { ...cur, status: val });
+  }
+  renderPlan();
+}
+
+function renderStats(measures) {
+  measures = measures || getPlanMeasures();
+  const total = measures.length;
+  const offen = measures.filter(m => m.status === "offen").length;
+  const lauf  = measures.filter(m => m.status === "in_bearbeitung").length;
+  const done  = measures.filter(m => m.status === "umgesetzt").length;
+  const na    = measures.filter(m => m.status === "nicht_anwendbar").length;
+  document.getElementById("stat-total").textContent = total;
+  document.getElementById("stat-offen").textContent = offen;
+  document.getElementById("stat-lauf").textContent  = lauf;
+  document.getElementById("stat-done").textContent  = done;
+  document.getElementById("stat-na").textContent    = na;
+}
+
+// ── CSV Export ─────────────────────────────────────────────────
+function exportCSV() {
+  const organisation  = document.getElementById("f-organisation").value;
+  const verfahren     = document.getElementById("f-verfahren").value;
+  const abteilung     = document.getElementById("f-abteilung").value;
+  const verantwortl   = document.getElementById("f-verantwortlich").value;
+  const datum         = document.getElementById("f-datum").value || new Date().toISOString().slice(0,10);
+  const anmerkungen   = document.getElementById("f-anmerkungen").value.replace(/\n/g," ");
+  const threats       = [...selectedIds].join("|");
+  const ordnerName    = dirHandle ? dirHandle.name : "";
+  const measures      = getPlanMeasures();
+
+  const zeilen = [
+    // Metadaten-Header
+    "# DSMS Maßnahmenplan",
+    `# Version: 1.0`,
+    `# Organisation: ${organisation}`,
+    `# Verfahren: ${verfahren}`,
+    `# Abteilung: ${abteilung}`,
+    `# Verantwortlich: ${verantwortl}`,
+    `# Datum: ${datum}`,
+    `# Anmerkungen: ${anmerkungen}`,
+    `# Ordner: ${ordnerName}`,
+    `# Gefährdungen: ${threats}`,
+    "#",
+    // Spaltenköpfe
+    csvZeile(["TOM-ID","Name","Kategorie","Maßnahmentyp","Wirkung","Status","Notizen","Gefährdungen"]),
+    // Datenzeilen
+    ...measures.map(m => csvZeile([
+      m.id,
+      m.name,
+      m.kategorie,
+      m.typ,
+      m.wirkung.toString(),
+      m.status,
+      m.notizen,
+      m.threats.join("|")
+    ]))
+  ];
+
+  const inhalt  = zeilen.join("\n");
+  const blob    = new Blob(["\uFEFF" + inhalt], { type: "text/csv;charset=utf-8;" });
+  const url     = URL.createObjectURL(blob);
+  const a       = document.createElement("a");
+  a.href        = url;
+  const namePrefix = (organisation || verfahren || "Organisation").replace(/\s+/g,"_");
+  a.download    = `DSMS_Massnahmenplan_${namePrefix}_${datum}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function csvZeile(felder) {
+  return felder.map(f => {
+    const s = (f || "").toString();
+    if (s.includes(",") || s.includes('"') || s.includes("\n")) {
+      return '"' + s.replace(/"/g, '""') + '"';
+    }
+    return s;
+  }).join(",");
+}
+
+// ── CSV Import ─────────────────────────────────────────────────
+function handleImportDrop(event) {
+  event.preventDefault();
+  event.target.classList.remove("dragover");
+  const file = event.dataTransfer.files[0];
+  if (file) leseCSV(file);
+}
+function handleImportFile(event) {
+  const file = event.target.files[0];
+  if (file) leseCSV(file);
+}
+
+function leseCSV(file) {
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      parseCSV(e.target.result);
+      document.getElementById("import-status").textContent =
+        "✓ Stand erfolgreich importiert.";
+      document.getElementById("import-status").style.color = "var(--c-done)";
+    } catch(err) {
+      document.getElementById("import-status").textContent =
+        "⚠ Fehler beim Import: " + err.message;
+      document.getElementById("import-status").style.color = "var(--c-offen)";
+    }
+  };
+  reader.readAsText(file, "utf-8");
+}
+
+function parseCSV(text) {
+  // BOM entfernen
+  if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+  const zeilen = text.split(/\r?\n/);
+
+  // Metadaten aus Kommentarzeilen
+  let threats = "";
+  for (const z of zeilen) {
+    if (!z.startsWith("#")) continue;
+    const kv = z.slice(1).trim();
+    const idx = kv.indexOf(":");
+    if (idx < 0) continue;
+    const key = kv.slice(0, idx).trim();
+    const val = kv.slice(idx + 1).trim();
+    if (key === "Organisation")   document.getElementById("f-organisation").value  = val;
+    if (key === "Verfahren")     document.getElementById("f-verfahren").value     = val;
+    if (key === "Abteilung")     document.getElementById("f-abteilung").value     = val;
+    if (key === "Verantwortlich")document.getElementById("f-verantwortlich").value = val;
+    if (key === "Datum")         document.getElementById("f-datum").value         = val;
+    if (key === "Anmerkungen")   document.getElementById("f-anmerkungen").value   = val;
+    if (key === "Gefährdungen")  threats = val;
+  }
+
+  // Ausgewählte Gefährdungen
+  selectedIds.clear();
+  if (threats) threats.split("|").filter(Boolean).forEach(id => selectedIds.add(id));
+  // Restrisiken immer wieder vorauswählen (auch wenn nicht in gespeicherten Gefährdungen)
+  THREATS.forEach(t => { if (t.immer_vorausgewaehlt || t.bedrohungstyp === "RR") selectedIds.add(t.id); });
+
+  // Maßnahmen-Status aus Datenzeilen
+  measureSt.clear();
+  let inData = false;
+  for (const z of zeilen) {
+    if (z.startsWith("#") || !z.trim()) continue;
+    if (!inData) { inData = true; continue; } // Kopfzeile überspringen
+    const felder = parseCSVZeile(z);
+    if (felder.length < 6) continue;
+    const [id,,,,, status, notizen] = felder;
+    if (id) {
+      measureSt.set(id, { status: status || "offen", notizen: notizen || "" });
+    }
+  }
+
+  renderThreats();
+  renderSelectedCount();
+}
+
+function parseCSVZeile(z) {
+  const result = [];
+  let feld = "";
+  let inQuotes = false;
+  for (let i = 0; i < z.length; i++) {
+    const c = z[i];
+    if (inQuotes) {
+      if (c === '"' && z[i+1] === '"') { feld += '"'; i++; }
+      else if (c === '"') { inQuotes = false; }
+      else { feld += c; }
+    } else {
+      if (c === '"') { inQuotes = true; }
+      else if (c === ',') { result.push(feld); feld = ""; }
+      else { feld += c; }
+    }
+  }
+  result.push(feld);
+  return result;
+}
+
+// ── Hilfsfunktionen ────────────────────────────────────────────
+function esc(str) {
+  return String(str || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  ABHÄNGIGKEITSGRAPH (Tab 4)
+// ═══════════════════════════════════════════════════════════════
+
+const GRAPH_COLORS = {
+  ORG:"#0f766e", MS365:"#1d4ed8", KI:"#6d28d9",
+  SW:"#15803d",  AV:"#b45309",   CL:"#b91c1c",
+  DLohneAV:"#475569", RR:"#9a3412"
+};
+function gCol(kat) { return GRAPH_COLORS[kat] || "#64748b"; }
+
+let gFilter     = "ALL";   // Kategorie-Filter
+let gSelOnly    = true;    // Nur ausgewählte Gefährdungen
+let gSort       = "refs";  // TOM-Sortierung: "refs" | "wirkung" | "id"
+let gHovered    = null;    // aktuell hervorgehobene ID
+
+// ── Daten für den Graphen vorbereiten ──────────────────────────
+function graphThreats() {
+  let ts = THREATS.filter(t => {
+    // Kategorie-Filter hat Vorrang: bei spezifischer Kategorie werden ALLE
+    // Threats der Kategorie gezeigt (unabhängig von gSelOnly), sonst
+    // gilt gSelOnly wie konfiguriert.
+    if (gFilter === "ALL" && gSelOnly && !selectedIds.has(t.id)) return false;
+    if (gFilter !== "ALL" && t.kategorie !== gFilter) return false;
+    return (t.empfohlene_massnahmen || []).length > 0;
+  });
+  // Sortiert: RR zuletzt, dann nach Kategorie, dann ID
+  ts.sort((a, b) => {
+    if (a.bedrohungstyp === "RR" && b.bedrohungstyp !== "RR") return 1;
+    if (a.bedrohungstyp !== "RR" && b.bedrohungstyp === "RR") return -1;
+    const kc = (a.kategorie||"").localeCompare(b.kategorie||"","de");
+    return kc !== 0 ? kc : (a.id||"").localeCompare(b.id||"","de");
+  });
+  return ts;
+}
+
+function graphToms(threats) {
+  // Alle referenzierten TOM-IDs sammeln
+  const refCount = new Map();
+  threats.forEach(t => {
+    (t.empfohlene_massnahmen || []).forEach(mid => {
+      refCount.set(mid, (refCount.get(mid) || 0) + 1);
+    });
+  });
+  // TOM-Objekte aufbauen
+  let toms = [...refCount.entries()].map(([mid, cnt]) => {
+    const tom = TOMS.get(mid);
+    return {
+      id:     mid,
+      name:   tom ? tom.name : mid,
+      kat:    tom ? (tom.kategorie || "?") : "?",
+      w:      tom ? (tom.wirkungspunktzahl || 0) : 0,
+      refs:   cnt,
+      found:  !!tom
+    };
+  });
+  // Sortierung
+  if (gSort === "refs")   toms.sort((a,b) => b.refs - a.refs || a.id.localeCompare(b.id,"de"));
+  if (gSort === "wirkung")toms.sort((a,b) => b.w - a.w || b.refs - a.refs || a.id.localeCompare(b.id,"de"));
+  if (gSort === "id")     toms.sort((a,b) => a.id.localeCompare(b.id,"de"));
+  return toms;
+}
+
+// ── Haupt-Render ───────────────────────────────────────────────
+function renderGraph() {
+  const svg = document.getElementById("dep-graph");
+  if (!svg || THREATS.length === 0) return;
+
+  const threats = graphThreats();
+  const toms    = graphToms(threats);
+
+  // Kennzahlen
+  const edgeCnt = threats.reduce((s,t) => s + (t.empfohlene_massnahmen||[]).filter(m => toms.some(x=>x.id===m)).length, 0);
+  const hub     = toms.length ? toms[gSort==="wirkung" ? 0 : toms.reduce((mi,x,i,a)=>x.refs>a[mi].refs?i:mi, 0)].id : "–";
+  document.getElementById("gs-threats").textContent = threats.length;
+  document.getElementById("gs-toms").textContent    = toms.length;
+  document.getElementById("gs-edges").textContent   = edgeCnt;
+  document.getElementById("gs-hub").textContent     = hub;
+
+  if (threats.length === 0) {
+    svg.innerHTML = '<text x="20" y="40" font-family="-apple-system,sans-serif" font-size="14" fill="#94a3b8">Keine Gefährdungen entsprechen den Filterkriterien.</text>';
+    svg.setAttribute("height","60"); svg.setAttribute("width","600");
+    return;
+  }
+
+  // ── Layout: Container-Breite ausmessen und Platz optimal verteilen ──
+  const wrap   = document.getElementById("graph-canvas-wrap");
+  const avail  = Math.max(600, (wrap ? wrap.clientWidth : 800) - 24);
+  const PAD_L  = 16, PAD_R = 16, PAD_T = 50;
+  const NT_H   = 44, ROW_G = 8;   // Knotenhöhe 44px: ID oben (10px), Name unten (12px) ohne Überlappung
+  const FS_ID  = 10, FS_NM = 12;  // feste Schriftgrößen passend zur Knotenhöhe
+  // Nodes bekommen je ~33%/34% der Breite, Rest = Kurvenraum (min. 120px)
+  const NT_W   = Math.round(avail * 0.33);
+  const NM_W   = Math.round(avail * 0.34);
+  const COL_G  = Math.max(120, avail - NT_W - NM_W - PAD_L - PAD_R);
+  const TOM_X  = PAD_L + NT_W + COL_G;
+  const svgW   = PAD_L + NT_W + COL_G + NM_W + PAD_R;
+  // Textlänge: wieviele Zeichen passen (7.2px pro Zeichen bei 12px-Schrift)
+  const NM_CHARS = Math.floor((NT_W - 30) / 7.5);
+  const MM_CHARS = Math.floor((NM_W - 48) / 7.5);
+
+  // Y-Positionen
+  const tPos = threats.map((t,i) => ({ ...t, y: PAD_T + i*(NT_H+ROW_G) }));
+  const mPos = toms.map((m,i)    => ({ ...m, y: PAD_T + i*(NT_H+ROW_G) }));
+  const mMap = Object.fromEntries(mPos.map(m => [m.id, m]));
+
+  const svgH = Math.max(tPos.length, mPos.length) * (NT_H+ROW_G) + PAD_T + 24;
+  svg.setAttribute("viewBox", `0 0 ${svgW} ${svgH}`);
+  svg.setAttribute("width",  svgW);
+  svg.setAttribute("height", svgH);
+
+  // ── Kanten ──
+  let edges = "";
+  tPos.forEach(t => {
+    const ty = t.y + NT_H/2;
+    (t.empfohlene_massnahmen || []).forEach(mid => {
+      const m = mMap[mid];
+      if (!m) return;
+      const my = m.y + NT_H/2;
+      const sw = m.w === 3 ? 2.5 : m.w === 2 ? 1.8 : 1.1;
+      edges += `<path class="g-edge"
+        d="M${PAD_L+NT_W},${ty} C${PAD_L+NT_W+COL_G*0.45},${ty} ${TOM_X-COL_G*0.45},${my} ${TOM_X},${my}"
+        stroke="${gCol(t.kat)}" stroke-width="${sw}"
+        data-t="${t.id}" data-m="${mid}" data-sw="${sw}"/>`;
+    });
+  });
+
+  // ── Threat-Knoten ──
+  let tNodes = `<text x="${PAD_L}" y="${PAD_T-14}"
+    font-family="-apple-system,sans-serif" font-size="11" font-weight="700"
+    letter-spacing=".08" fill="#94a3b8">GEFÄHRDUNGEN (${tPos.length})</text>`;
+  tPos.forEach(t => {
+    const c   = gCol(t.kat);
+    const lbl = t.name || t.id;
+    const nm  = lbl.length > NM_CHARS ? lbl.slice(0, NM_CHARS-1)+"…" : lbl;
+    const yMid = t.y + NT_H/2;
+    tNodes += `<g class="g-node" id="gnt-${esc(t.id)}"
+      onmouseenter="gHover('${esc(t.id)}')" onmouseleave="gHover(null)"
+      onclick="gClick('${esc(t.id)}')">
+      <rect x="${PAD_L}" y="${t.y}" width="${NT_W}" height="${NT_H}"
+        fill="${c}" fill-opacity=".08" stroke="${c}" stroke-width="1.5" rx="5"/>
+      <rect x="${PAD_L}" y="${t.y}" width="5" height="${NT_H}" fill="${c}" rx="3"/>
+      <text x="${PAD_L+13}" y="${t.y + NT_H*0.38}" fill="${c}" font-size="${FS_ID}" font-weight="700"
+        dominant-baseline="middle" font-family="-apple-system,sans-serif">${esc(t.id)}</text>
+      <text x="${PAD_L+13}" y="${t.y + NT_H*0.72}" fill="#1e293b" font-size="${FS_NM}"
+        dominant-baseline="middle" font-family="-apple-system,sans-serif">${esc(nm)}</text>
+      <text x="${PAD_L+NT_W-14}" y="${yMid}" fill="${c}" font-size="${FS_ID}" font-weight="700"
+        dominant-baseline="middle" text-anchor="middle"
+        font-family="-apple-system,sans-serif">${t.bedrohungstyp||""}</text>
+    </g>`;
+  });
+
+  // ── TOM-Knoten ──
+  const wColMap = {"3":"#991b1b","2":"#92400e","1":"#15803d","0":"#94a3b8"};
+  let mNodes = `<text x="${TOM_X}" y="${PAD_T-14}"
+    font-family="-apple-system,sans-serif" font-size="11" font-weight="700"
+    letter-spacing=".08" fill="#94a3b8">MASSNAHMEN / TOMs (${mPos.length})</text>`;
+  mPos.forEach(m => {
+    const c   = gCol(m.kat);
+    const wc  = wColMap[String(m.w)] || "#94a3b8";
+    const nm  = m.name.length > MM_CHARS ? m.name.slice(0, MM_CHARS-1)+"…" : m.name;
+    const notFound = !m.found;
+    const yMid = m.y + NT_H/2;
+    const badgeX = TOM_X + NM_W - 22;
+    mNodes += `<g class="g-node" id="gnm-${esc(m.id)}"
+      onmouseenter="gHover('${esc(m.id)}')" onmouseleave="gHover(null)"
+      onclick="gClick('${esc(m.id)}')">
+      <rect x="${TOM_X}" y="${m.y}" width="${NM_W}" height="${NT_H}"
+        fill="${notFound?"#fef2f2":c}" fill-opacity=".08"
+        stroke="${notFound?"#fca5a5":c}" stroke-width="${notFound?1.8:1.5}" rx="5"
+        stroke-dasharray="${notFound?"5,3":"none"}"/>
+      <rect x="${TOM_X+NM_W-5}" y="${m.y}" width="5" height="${NT_H}" fill="${c}" rx="3"/>
+      <text x="${TOM_X+12}" y="${m.y + NT_H*0.38}" fill="${c}" font-size="${FS_ID}" font-weight="700"
+        dominant-baseline="middle" font-family="-apple-system,sans-serif">${esc(m.id)}</text>
+      <text x="${TOM_X+12}" y="${m.y + NT_H*0.72}" fill="#1e293b" font-size="${FS_NM}"
+        dominant-baseline="middle" font-family="-apple-system,sans-serif">${esc(nm)}</text>
+      ${m.refs > 1 ? `<text x="${badgeX-28}" y="${yMid}" fill="#64748b" font-size="${FS_ID}"
+        dominant-baseline="middle" text-anchor="middle"
+        font-family="-apple-system,sans-serif">×${m.refs}</text>` : ""}
+      <circle cx="${badgeX}" cy="${yMid}" r="${NT_H*0.28}"
+        fill="${wc}" fill-opacity=".18" stroke="${wc}" stroke-width="1.2"/>
+      <text x="${badgeX}" y="${yMid}" fill="${wc}" font-size="${FS_ID}" font-weight="800"
+        dominant-baseline="middle" text-anchor="middle"
+        font-family="-apple-system,sans-serif">${m.w?"W"+m.w:"?"}</text>
+    </g>`;
+  });
+
+  svg.innerHTML = `<g id="g-edges">${edges}</g><g id="g-threats">${tNodes}</g><g id="g-toms">${mNodes}</g>`;
+}
+
+// ── Interaktion ────────────────────────────────────────────────
+let gClickedId = null;  // angeklickter Knoten – Highlight gesperrt bis Klick/✕
+
+// ── Kernfunktion: Highlight eines Knotens via CSS-Klassen ──────────────────
+// Wird von gHover (wenn kein Klick aktiv) UND von gClick aufgerufen.
+function applyHighlight(id) {
+  const connected = new Set(id ? [id] : []);
+  if (id) {
+    const thr = THREATS.find(x => x.id === id);
+    if (thr) {
+      (thr.empfohlene_massnahmen||[]).forEach(m => connected.add(m));
+    } else {
+      THREATS.forEach(x => { if ((x.empfohlene_massnahmen||[]).includes(id)) connected.add(x.id); });
+    }
+  }
+  document.querySelectorAll(".g-node").forEach(n => {
+    const nid = n.id.replace(/^gn[tm]-/, "");
+    n.classList.toggle("dim", id ? !connected.has(nid) : false);
+  });
+  document.querySelectorAll(".g-edge").forEach(e => {
+    const et = e.getAttribute("data-t");
+    const em = e.getAttribute("data-m");
+    const sw = parseFloat(e.getAttribute("data-sw") || "1");
+    const hl = id && (et === id || em === id);
+    e.classList.toggle("hl",  !!hl);
+    e.classList.toggle("dim", id ? !hl : false);
+    e.setAttribute("stroke-width", hl ? sw * 2.2 : sw);
+  });
+}
+
+// ── Hover: Infobar + visueller Highlight – NUR wenn kein Klick gesperrt ──
+function gHover(id) {
+  gHovered = id;
+  const bar = document.getElementById("graph-infobar");
+
+  // Infobar immer aktualisieren
+  if (!id) {
+    bar.textContent = gClickedId
+      ? `← Nochmal klicken zum Aufheben · Aktiv: „${gClickedId}"`
+      : "← Knoten anklicken zum Feststellen der Verbindungen";
+  } else {
+    const t = THREATS.find(x => x.id === id);
+    if (t) {
+      const cnt = (t.empfohlene_massnahmen||[]).length;
+      bar.innerHTML = `<strong>${esc(id)}</strong> &nbsp;·&nbsp; ${esc((t.beschreibung||"").slice(0,80))}… &nbsp;|&nbsp; ${cnt} Maßnahme(n)${gClickedId ? "" : " → klicken zum Feststellen"}`;
+    } else {
+      const tomObj = TOMS.get(id);
+      if (tomObj) {
+        const refCnt = THREATS.filter(x => (x.empfohlene_massnahmen||[]).includes(id)).length;
+        bar.innerHTML = `<strong>${esc(id)}</strong> &nbsp;·&nbsp; ${esc(tomObj.name)} &nbsp;|&nbsp; ${refCnt} Gefährdung(en)${gClickedId ? "" : " → klicken zum Feststellen"}`;
+      }
+    }
+  }
+
+  // Visuellen Highlight NUR ändern wenn kein Klick aktiv ist
+  if (!gClickedId) {
+    applyHighlight(id);
+  }
+}
+
+// ── Klick: Highlight feststellen + Detailpanel öffnen ─────────────────────
+function gClick(id) {
+  if (gClickedId === id) { closeDetailPanel(); return; }
+  gClickedId = id;
+  applyHighlight(id);   // Highlight sofort feststellen
+  openDetailPanel(id);
+}
+
+function openDetailPanel(id) {
+  const panel = document.getElementById("graph-detail");
+  const bar   = document.getElementById("gd-bar");
+  const elId  = document.getElementById("gd-id");
+  const elNm  = document.getElementById("gd-name");
+  const body  = document.getElementById("gd-body");
+
+  // Threat?
+  const t = THREATS.find(x => x.id === id);
+  if (t) {
+    const c  = gCol(t.kategorie);
+    bar.style.background = c;
+    elId.textContent  = t.id;
+    elId.style.color  = c;
+    elNm.textContent  = t.name || (t.beschreibung||"").slice(0,60)+"…";
+
+    const sz    = (t.schutzziele||[]);
+    const toms  = (t.empfohlene_massnahmen||[]);
+    const tomChips = toms.map(mid => {
+      const found = TOMS.has(mid);
+      return `<span class="gd-chip${found?" linked":""}" title="${found? esc(TOMS.get(mid).name) : "Nicht gefunden"}"
+                    onclick="gClick('${esc(mid)}')">${esc(mid)}</span>`;
+    }).join("");
+
+    body.innerHTML = `
+      <div class="gd-row">
+        <div class="gd-label">Typ</div>
+        <div class="gd-value"><span class="badge badge-${esc(t.bedrohungstyp)}">${esc(t.bedrohungstyp)}</span>
+        &nbsp;<span class="badge badge-${esc(t.kategorie)}">${esc(t.kategorie)}</span></div>
+      </div>
+      <div class="gd-row">
+        <div class="gd-label">Beschreibung</div>
+        <div class="gd-value">${esc(t.beschreibung||"")}</div>
+      </div>
+      ${sz.length ? `<div class="gd-row">
+        <div class="gd-label">Schutzziele</div>
+        <div class="gd-chips">${sz.map(s=>`<span class="gd-chip">${esc(s)}</span>`).join("")}</div>
+      </div>` : ""}
+      <div class="gd-row">
+        <div class="gd-label">Empfohlene Maßnahmen (${toms.length}) – anklicken zum Wechseln</div>
+        <div class="gd-chips">${tomChips}</div>
+      </div>`;
+    panel.classList.add("open");
+    return;
+  }
+
+  // TOM?
+  const tom = TOMS.get(id);
+  if (tom) {
+    const c   = gCol(tom.kategorie);
+    bar.style.background = c;
+    elId.textContent = tom.id;
+    elId.style.color = c;
+    elNm.textContent = tom.name;
+
+    const refThreats = THREATS.filter(x => (x.empfohlene_massnahmen||[]).includes(id));
+    const st  = measureSt.get(id) || { status:"offen", notizen:"" };
+    const stLbl = { offen:"Offen", in_bearbeitung:"In Bearbeitung", umgesetzt:"Umgesetzt", nicht_anwendbar:"Nicht anwendbar" };
+    const wc  = tom.wirkungspunktzahl===3?"#991b1b":tom.wirkungspunktzahl===2?"#92400e":"#15803d";
+    const sz  = (tom.anwendbarkeit?.schutzziele || []);
+    const dep = (tom.abhängigkeiten || []);
+    const std = (tom.compliance?.standards || []);
+
+    const refChips = refThreats.map(x =>
+      `<span class="gd-chip linked" onclick="gClick('${esc(x.id)}')" title="${esc((x.beschreibung||"").slice(0,60))}">${esc(x.id)}</span>`
+    ).join("");
+
+    body.innerHTML = `
+      <div class="gd-row">
+        <div class="gd-label">Kategorie / Typ</div>
+        <div class="gd-value">
+          <span class="badge badge-${esc(tom.kategorie)}">${esc(tom.kategorie)}</span>
+          &nbsp;<span style="font-size:11px;color:var(--c-muted)">${esc(tom.maßnahmentyp||"")}</span>
+        </div>
+      </div>
+      <div class="gd-row">
+        <div class="gd-label">Wirkungspunktzahl</div>
+        <div class="gd-value" style="font-weight:700;color:${wc}">W${tom.wirkungspunktzahl||"?"}</div>
+      </div>
+      <div class="gd-row">
+        <div class="gd-label">Status im Maßnahmenplan</div>
+        <div class="gd-value"><span class="gd-status ${st.status==="in_bearbeitung"?"lauf":st.status==="umgesetzt"?"done":st.status==="nicht_anwendbar"?"na":"offen"}">${stLbl[st.status]||st.status}</span>
+        ${st.notizen ? `<div style="margin-top:5px;font-size:11px;color:var(--c-muted)">${esc(st.notizen)}</div>` : ""}
+        </div>
+      </div>
+      <div class="gd-row">
+        <div class="gd-label">Beschreibung</div>
+        <div class="gd-value">${esc(tom.beschreibung||"")}</div>
+      </div>
+      ${sz.length ? `<div class="gd-row">
+        <div class="gd-label">Schutzziele</div>
+        <div class="gd-chips">${sz.map(s=>`<span class="gd-chip">${esc(s)}</span>`).join("")}</div>
+      </div>` : ""}
+      ${std.length ? `<div class="gd-row">
+        <div class="gd-label">Rechtsgrundlagen</div>
+        <div class="gd-value" style="font-size:11px">${esc(std.join(" · "))}</div>
+      </div>` : ""}
+      ${dep.length ? `<div class="gd-row">
+        <div class="gd-label">Abhängigkeiten</div>
+        <div class="gd-chips">${dep.map(d=>`<span class="gd-chip${TOMS.has(d)?" linked":""}" onclick="if(TOMS.has('${esc(d)}'))gClick('${esc(d)}')">${esc(d)}</span>`).join("")}</div>
+      </div>` : ""}
+      <div class="gd-row">
+        <div class="gd-label">Referenziert von (${refThreats.length}) – anklicken zum Wechseln</div>
+        <div class="gd-chips">${refChips || '<span style="font-size:11px;color:var(--c-muted)">Keine im aktuellen Filter</span>'}</div>
+      </div>`;
+    panel.classList.add("open");
+  }
+}
+
+function closeDetailPanel() {
+  document.getElementById("graph-detail").classList.remove("open");
+  gClickedId = null;
+  gHovered   = null;
+  applyHighlight(null);  // Alle dim/hl-Klassen zurücksetzen
+  const bar = document.getElementById("graph-infobar");
+  if (bar) bar.textContent = "← Knoten anklicken zum Feststellen der Verbindungen";
+}
+
+function setGraphFilter(f) {
+  gFilter = f;
+  document.querySelectorAll(".gc-btn[class*='gc-']").forEach(b => {
+    const cls = [...b.classList].find(c => c.startsWith("gc-") && c !== "gc-btn");
+    if (cls) b.classList.toggle("active", cls === "gc-"+f);
+  });
+  gHovered = null; gClickedId = null;
+  document.getElementById("graph-detail").classList.remove("open");
+  renderGraph();
+}
+
+function graphToggleSel() {
+  gSelOnly = !gSelOnly;
+  const btn = document.getElementById("gc-sel");
+  if (btn) {
+    btn.classList.toggle("active", gSelOnly);
+    btn.textContent = gSelOnly ? "Nur ausgewählte Gefährdungen" : "Alle Gefährdungen";
+  }
+  gHovered = null; gClickedId = null;
+  document.getElementById("graph-detail").classList.remove("open");
+  renderGraph();
+}
+
+function setGraphSort(s) {
+  gSort = s;
+  ["refs","wirkung","id"].forEach(k => {
+    const btn = document.getElementById("gc-sort-"+k);
+    if (btn) btn.classList.toggle("active", k === s);
+  });
+  gHovered = null; gClickedId = null;
+  document.getElementById("graph-detail").classList.remove("open");
+  renderGraph();
+}
+
+// ── Initialisierung ────────────────────────────────────────────
+(async function init() {
+  // Heutiges Datum vorbelegen
+  document.getElementById("f-datum").value = new Date().toISOString().slice(0,10);
+
+  // Gespeicherten Handle versuchen (still – kein Dialog)
+  try {
+    const h = await idbLoad();
+    if (h) {
+      const perm = await h.queryPermission({ mode: "read" });
+      if (perm === "granted") {
+        dirHandle = h;
+        await ladeDaten();
+      }
+    }
+  } catch(e) { /* kein gespeicherter Handle */ }
+})();
+</script>
+</body>
+</html>

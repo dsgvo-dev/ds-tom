@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-MS365-001",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Transparenz",
+        "Zweckbindung",
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Speicherbegrenzung",
+        "Erforderlichkeit",
+        "Nichtverkettung",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten von Betroffenen werden in MS365 verarbeitet (Bürger*innen/Beschäftigte). Neben der Verarbeitung dieser personenbezogener Daten entsteht eine separate Gefährdungslage.",
+    "empfohlene_massnahmen": ["TOM-MS365-001", "TOM-MS365-008", "TOM-MS365-009", "TOM-MS365-006", "TOM-MS365-010", "TOM-MS365-005"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T08:54",
+        "aktualisiert_am": "2025-06-05T19:55",
+        "version": "1.0"
+    }
+}

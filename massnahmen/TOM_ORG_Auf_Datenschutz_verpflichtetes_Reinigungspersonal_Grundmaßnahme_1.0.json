@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-029",
+    "name": "Auf Datenschutz verpflichtetes Reinigungspersonal",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine denkbare Maßnahme ist die datenschutzrechtliche Verpflichtung des Reinigungspersonals über die Verpflichtung nach dem Verpflichtungsgesetz hinaus.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T18:48",
+        "aktualisiert_am": "2025-04-28T18:48",
+        "version": "1.0"
+    }
+}

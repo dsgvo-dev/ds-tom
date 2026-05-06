@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-ORG-030",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Richtigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Der Verlust von Datenträgern wie Akten oder mobilen Geräten (Tablets, Smartphones, Notebooks) ist potenziell möglich. ",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-014",
+        "TOM-ORG-033",
+        "TOM-ORG-036",
+        "TOM-ORG-041",
+        "TOM-ORG-003"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:39",
+        "aktualisiert_am": "2025-04-25T20:59",
+        "version": "1.0"
+    }
+}

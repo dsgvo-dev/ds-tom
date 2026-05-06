@@ -1,0 +1,32 @@
+{
+    "id": "TOM-SW-017",
+    "name": "Protokollierung",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Handlungen der User und der Admins sind zu protokollieren.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Zweckbindung",
+            "Verfügbarkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:41",
+        "aktualisiert_am": "2025-04-30T18:41",
+        "version": "1.0"
+    }
+}

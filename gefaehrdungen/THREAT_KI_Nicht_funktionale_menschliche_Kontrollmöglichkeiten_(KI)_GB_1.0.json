@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-KI-009",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Bei der Verarbeitung personenbezogener Daten mittels KI besteht die Gefährdung der nicht funktionierenden menschlichen Kontrollmöglichkeit über die Auswirkung der KI-Ausgabe (sog. Human in the Loop). Es muss eine zu unkritische Übernahme von KI-Ausgaben in nachgelagerte Verarbeitungsprozesse.",
+    "empfohlene_massnahmen": ["TOM-KI-009", "TOM-KI-006", "TOM-KI-007", "TOM-KI-011", "TOM-KI-012"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "",
+        "erstellt_am": "2025-05-09T19:07",
+        "aktualisiert_am": "2025-05-09T19:15",
+        "version": "1.0"
+    }
+}

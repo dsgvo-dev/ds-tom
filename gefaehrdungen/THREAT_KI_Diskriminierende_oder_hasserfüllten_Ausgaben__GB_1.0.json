@@ -1,0 +1,22 @@
+{
+    "id": "THREAT-KI-006",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit",
+        "Integrität",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Bei der Verarbeitung personenbezogener Daten kann es zur Ausgabe von diskriminierenden oder hasserfüllten Ausgaben kommen (z.B. Ausschluss anhand einer Religionszugehörigkeit) oder eine erhöhte Fehlerrate bei in den Trainingsdaten unterrepräsentierten Gruppen.",
+    "empfohlene_massnahmen": ["TOM-KI-009", "TOM-KI-006", "TOM-KI-007", "TOM-KI-012", "TOM-KI-013"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T18:58",
+        "aktualisiert_am": "2025-05-09T19:03",
+        "version": "1.0"
+    }
+}

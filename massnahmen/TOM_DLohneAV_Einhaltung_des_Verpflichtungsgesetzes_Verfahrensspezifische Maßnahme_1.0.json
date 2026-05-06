@@ -1,0 +1,36 @@
+{
+    "id": "TOM-DLohneAV-002",
+    "name": "Einhaltung des Verpflichtungsgesetzes",
+    "kategorie": "DLohneAV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Prüfung und ggf. vertragliche Regelung der Verpflichtung nach dem Verpflichtungsgesetz.",
+    "organisationseinheit": "10",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T16:08",
+        "aktualisiert_am": "2025-05-15T16:08",
+        "version": "1.0"
+    }
+}

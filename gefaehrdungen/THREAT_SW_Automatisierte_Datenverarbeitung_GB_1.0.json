@@ -1,0 +1,35 @@
+{
+    "id": "THREAT-SW-001",
+    "kategorie": "SW",
+    "schutzziele": [
+        "Verfügbarkeit",
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Zweckbindung",
+        "Speicherbegrenzung",
+        "Erforderlichkeit",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Die personenbezogenen Daten werden automatisiert, z. B. in einem Fachverfahren verarbeitet. Damit sind grundsätzlich andere Gefährdungen verbunden als mit einer rein analogen Datenverarbeitung (S. Urteil des Bundesverfassungsgerichts zur Volkszählung).",
+    "empfohlene_massnahmen": [
+        "TOM-SW-001",
+        "TOM-SW-004",
+        "TOM-SW-005",
+        "TOM-SW-013",
+        "TOM-SW-015",
+        "TOM-SW-017",
+        "TOM-SW-018",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T11:54",
+        "aktualisiert_am": "2025-04-30T11:54",
+        "version": "1.0"
+    }
+}

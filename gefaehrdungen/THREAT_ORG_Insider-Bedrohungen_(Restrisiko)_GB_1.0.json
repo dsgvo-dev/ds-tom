@@ -1,0 +1,30 @@
+{
+    "id": "THREAT-ORG-032",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Richtigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Rechtmäßigkeit",
+        "Erforderlichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Mitarbeitende mit Zugangsberechtigungen könnten Daten missbrauchen oder unbefugt weitergeben.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-015",
+        "TOM-ORG-027",
+        "TOM-ORG-038",
+        "TOM-ORG-039",
+        "TOM-ORG-003",
+        "TOM-ORG-013"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:45",
+        "aktualisiert_am": "2025-04-25T21:02",
+        "version": "1.0"
+    }
+}

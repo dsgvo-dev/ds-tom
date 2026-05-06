@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-KI-005",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit",
+        "Integrität",
+        "Intervernierbarkeit",
+        "Erforderlichkeit",
+        "Vertraulichkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Wenn personenbezogene Daten für das Training von KI-Modellen genutzt werden, besteht die Gefährdung, dass Trainingsdaten bei Ausgaben mit ausgegeben werden (sog. Memorization: Trainingsdaten im Klartext werden teilweise als KI-Ausgabe generiert).",
+    "empfohlene_massnahmen": ["TOM-KI-004", "TOM-KI-007", "TOM-KI-010", "TOM-KI-012", "TOM-KI-013"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T19:02",
+        "aktualisiert_am": "2025-05-09T19:02",
+        "version": "1.0"
+    }
+}

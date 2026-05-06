@@ -1,0 +1,34 @@
+{
+    "id": "TOM-CL-006",
+    "name": "Festlegung von automatisierten Löschzyklen (Cloud)",
+    "kategorie": "CL",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vor der Einführung einer Cloud-Software muss geprüft werden, ob automatisierte Löschzyklen für die Cloud-Nutzung festgelegt werden müssen.",
+    "organisationseinheit": "1.6",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:44",
+        "aktualisiert_am": "2025-05-06T13:02",
+        "version": "1.0"
+    }
+}

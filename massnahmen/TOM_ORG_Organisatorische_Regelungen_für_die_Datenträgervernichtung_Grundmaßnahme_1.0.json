@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-036",
+    "name": "Organisatorische Regelungen für die Datenträgervernichtung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine erforderliche Maßnahme ist die über die Sicherstellung organisatorischer Regelungen für die Datenträgervernichtung (z.B. nach DIN 66399). Notwendig ist dabei die organisatorische Festlegung von Zuständigkeiten. Die Regelungen für die Datenträgervernichtung sind dabei für die  Mitarbeitenden verbindlich zu gestalten und bei Auftragsvergaben ggf. zu berücksichtigen.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:03",
+        "aktualisiert_am": "2025-04-28T19:03",
+        "version": "1.0"
+    }
+}

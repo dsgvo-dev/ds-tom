@@ -1,0 +1,31 @@
+{
+    "id": "TOM-DLohneAV-004",
+    "name": "Anpassung der Datenschutzerklärung (DLohneAV)",
+    "kategorie": "DLohneAV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Bei dem Einsatz von Dienstleistern ohne Auftragsverarbeitungsvertrag (DLohneAV), die personenbezogene Daten der Betroffenen verarbeiten, sind die Betroffenen hierüber gemäß Art. 13 bzw. Art. 14 DSGVO zu informieren. Die bestehende Datenschutzerklärung ist daher vor Beginn der Dienstleistung zu ergänzen um: (1) den Dienstleister als Empfänger der personenbezogenen Daten, (2) den Zweck der Weitergabe, (3) soweit zutreffend, Angaben zu Drittlandübermittlungen sowie die hierfür bestehenden geeigneten Garantien nach Art. 46 DSGVO. Da kein Auftragsverarbeitungsvertrag besteht, sind die Informationspflichten nach Art. 13 bzw. Art. 14 DSGVO in besonderem Maße zu beachten, um die Transparenz der Verarbeitung gegenüber den Betroffenen sicherzustellen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Intervernierbarkeit"
+        ]
+    },
+    "compliance": {
+        "standards": ["Art. 13 DSGVO", "Art. 14 DSGVO"],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": ["TOM-ORG-045"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-22T00:00",
+        "aktualisiert_am": "2026-04-22T00:00",
+        "version": "1.0"
+    }
+}

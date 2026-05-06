@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-005",
+    "name": "Business Continuity Management - BCM",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Grundlegende organisatorische Maßnahmen für die Informationssicherheit sind zu schaffen. Grundlage hierfür sind die Regelungen des BSI Grundschutzes. Unter anderem sind organisatorische Maßnahmen nach dem Standard 200-4 vorzunehmen (Business Continuity Management - BCM).",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T06:37",
+        "aktualisiert_am": "2025-04-28T06:37",
+        "version": "1.0"
+    }
+}

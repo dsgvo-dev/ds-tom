@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-046",
+    "name": "Festlegen einer Löschfrist",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Allgemein",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Personenbezogene Daten müssen grundsätzlich gelöscht werden (Art. 17 DSGVO). Dies muss für das jeweilige Verfahren oder die Verarbeitungstätigkeit beachtet werden. Für das jeweilige Verfahren bzw. die Verarbeitungstätigkeit ist eine verbindliche Löschfrist organisatorisch festzulegen und ggf. technisch zu berücksichtigen.",
+    "organisationseinheit": "1.4",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T09:37",
+        "aktualisiert_am": "2025-04-30T09:37",
+        "version": "1.0"
+    }
+}

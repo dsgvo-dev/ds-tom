@@ -1,0 +1,31 @@
+{
+    "id": "THREAT-SW-002",
+    "kategorie": "SW",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Zweckbindung",
+        "Speicherbegrenzung",
+        "Erforderlichkeit",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es werden durch nicht notwendige/genutzte Module zusätzliche personenbezogene Daten erhoben. Der Grundsatz der Erforderlichkeit ist bedroht.",
+    "empfohlene_massnahmen": [
+        "TOM-SW-004",
+        "TOM-SW-005",
+        "TOM-SW-006",
+        "TOM-SW-001",
+        "TOM-ORG-006",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T11:57",
+        "aktualisiert_am": "2025-04-30T11:57",
+        "version": "1.0"
+    }
+}

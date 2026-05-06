@@ -1,0 +1,35 @@
+{
+    "id": "TOM-SW-006",
+    "name": "Plausibilitätskontrolle zur Beschränkung der  Datenerhebung",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Software sollte es ermöglichen, dass bei der Eingabe personenbezogener Daten eine Plausibilitätskontrolle erfolgt, um Fehleingaben zu verringern oder zu verhindern.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:35",
+        "aktualisiert_am": "2025-04-30T15:35",
+        "version": "1.0"
+    }
+}

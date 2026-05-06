@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-RR-006",
+    "kategorie": "RR",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "RR",
+    "beschreibung": "Restrisiko: Physische Sicherheitsrisiken – Einbrüche, Diebstahl von Datenträgern oder Geräten, Vandalismus sowie Naturereignisse können trotz baulicher und organisatorischer Sicherheitsmaßnahmen nicht vollständig verhindert werden. Ein Restrisiko für den physischen Zugriff auf Datenverarbeitungseinrichtungen bleibt bestehen.",
+    "immer_vorausgewaehlt": true,
+    "empfohlene_massnahmen": [
+        "TOM-ORG-021",
+        "TOM-ORG-023",
+        "TOM-ORG-024",
+        "TOM-ORG-028",
+        "TOM-ORG-026",
+        "TOM-ORG-052"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-24T00:00",
+        "aktualisiert_am": "2026-04-24T00:00",
+        "version": "1.0"
+    }
+}

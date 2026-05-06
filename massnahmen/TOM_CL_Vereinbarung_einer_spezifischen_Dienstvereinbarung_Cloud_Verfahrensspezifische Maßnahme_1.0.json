@@ -1,0 +1,36 @@
+{
+    "id": "TOM-CL-007",
+    "name": "Vereinbarung einer spezifischen Dienstvereinbarung Cloud",
+    "kategorie": "CL",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Neben der Prüfung, ob eine grundlegende Dienstvereinbarung für den Einsatz von Cloud-Software notwendig oder sinnvoll ist, muss geprüft werden, ob für den Einsatz spezifischer Cloud-Software gesonderte Dienstvereinbarungen geschlossen werden müssen. Dies kann notwendig sein, wenn über das grundlegende Maß hinaus Beschäftigtendaten verarbeitet und ausgewertet werden können.",
+    "organisationseinheit": "11",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:54",
+        "aktualisiert_am": "2025-05-07T19:40",
+        "version": "1.0"
+    }
+}

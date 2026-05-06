@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-024",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten werden im Rahmen des Mobilen Arbeitens oder im Homeoffice verarbeitet.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-019",
+        "TOM-ORG-020",
+        "TOM-ORG-014",
+        "TOM-ORG-041",
+        "TOM-ORG-015"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:31",
+        "aktualisiert_am": "2025-04-25T20:53",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "id": "TOM-MS365-013",
+    "name": "Begrenzung der Administratorrechte auf das erforderliche Maß ",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der mögliche Zugriff von Administratoren in MS365 auf Daten von Betroffenen ist auf das erforderliche Maß zu beschränken.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:36",
+        "aktualisiert_am": "2025-05-09T14:36",
+        "version": "1.0"
+    }
+}

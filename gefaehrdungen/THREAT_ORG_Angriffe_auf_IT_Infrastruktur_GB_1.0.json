@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-ORG-010",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Verfügbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass durch Angriffe auf die IT-Infrastruktur eine Verarbeitung der personenbezogenen Daten nicht möglich ist.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-003",
+        "TOM-ORG-004",
+        "TOM-ORG-005",
+        "TOM-ORG-021",
+        "TOM-ORG-022",
+        "TOM-ORG-025",
+        "TOM-ORG-042",
+        "TOM-ORG-043",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:25",
+        "aktualisiert_am": "2025-04-24T20:25",
+        "version": "1.0"
+    }
+}

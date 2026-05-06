@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-051",
+    "name": "Schutz vor Hochwasser",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine mögliche Maßnahme ist der Schutz vor Hochwasser sowie geografisch geboten.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:07",
+        "aktualisiert_am": "2025-04-28T19:07",
+        "version": "1.0"
+    }
+}

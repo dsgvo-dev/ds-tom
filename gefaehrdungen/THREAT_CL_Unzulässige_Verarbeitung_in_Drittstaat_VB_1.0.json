@@ -1,0 +1,21 @@
+{
+    "id": "THREAT-CL-004",
+    "kategorie": "CL",
+    "schutzziele": [
+        "Transparenz",
+        "Intervernierbarkeit",
+        "Nichtverkettung",
+        "Zweckbindung",
+        "Rechtmäßigkeit"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass der Cloud-Dienstleister die personenbezogenen Daten der Betroffenen in einem Drittstaat ohne ausreichend Rechtsgrundlage seitens des Verantwortlichen verarbeitet (Art. 44 DSGVO).",
+    "empfohlene_massnahmen": ["TOM-CL-004", "TOM-CL-007", "TOM-CL-008", "TOM-CL-003", "TOM-CL-009"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:51",
+        "aktualisiert_am": "2025-05-05T07:51",
+        "version": "1.0"
+    }
+}

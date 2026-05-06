@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-042",
+    "name": "Sichere Aktenaufbewahrung und Datenvernichtung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Personenbezogene Unterlagen müssen in abschließbaren Schränken aufbewahrt und nach Dienstschluss gesichert werden. Sensible Daten sind mit einem Aktenvernichter zu entsorgen – nicht im Papierkorb​. Datenschutzrelevanter Datenmüll darf nicht auf dem Schreibtisch verwahrt werden, sondern außer Reichweite der Besucher*innen.",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:28",
+        "aktualisiert_am": "2025-04-29T21:28",
+        "version": "1.0"
+    }
+}

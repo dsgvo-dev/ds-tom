@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-003",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Transparenz"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten nicht informiert sind. ",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-007",
+        "TOM-ORG-008",
+        "TOM-ORG-009",
+        "TOM-ORG-045",
+        "TOM-ORG-047",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:12",
+        "aktualisiert_am": "2025-04-24T20:12",
+        "version": "1.0"
+    }
+}

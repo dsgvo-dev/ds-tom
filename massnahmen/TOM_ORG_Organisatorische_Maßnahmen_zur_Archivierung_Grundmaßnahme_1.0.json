@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-011",
+    "name": "Organisatorische Maßnahmen zur Archivierung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Verpflichtungen zur Archivierung personenbezogener Daten können aus verschiedenen Rechtsbereichen stimmen, z.B. aus dem allgemeinen Archivrecht oder speziellen Rechtsvorschriften ergeben. Diese müssen durch organisatorische Maßnahmen umgesetzt werden.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Zweckbindung",
+            "Rechtmäßigkeit",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:40",
+        "aktualisiert_am": "2025-04-28T14:40",
+        "version": "1.0"
+    }
+}

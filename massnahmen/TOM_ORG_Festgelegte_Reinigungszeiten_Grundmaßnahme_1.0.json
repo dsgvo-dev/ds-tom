@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-030",
+    "name": "Festgelegte Reinigungszeiten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine denkbare Maßnahme ist die Festlegung von bestimmten Zeiträumen für die Vornahme der Reinigungsdienstleistung.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T18:49",
+        "aktualisiert_am": "2025-04-28T18:49",
+        "version": "1.0"
+    }
+}

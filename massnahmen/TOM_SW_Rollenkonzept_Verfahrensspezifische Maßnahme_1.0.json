@@ -1,0 +1,33 @@
+{
+    "id": "TOM-SW-013",
+    "name": "Rollenkonzept",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Implementierung eines Rollen- und Berechtigungskonzept („Least Privilege“, „Need to know“).\n",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:37",
+        "aktualisiert_am": "2025-04-30T18:37",
+        "version": "1.0"
+    }
+}

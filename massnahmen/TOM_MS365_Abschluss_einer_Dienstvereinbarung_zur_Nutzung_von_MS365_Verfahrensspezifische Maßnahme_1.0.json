@@ -1,0 +1,36 @@
+{
+    "id": "TOM-MS365-004",
+    "name": "Abschluss einer Dienstvereinbarung zur Nutzung von MS365",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Neben der Wirkung einer Dienstvereinbarung bei der förmlichen Mitbestimmung bedarf die Verarbeitung der Beschäftigtendaten in MS365 (Entra-ID; Telemetrie- und Diagnoisedaten, verbundene Erfahungen etc.) eine Rechtsgrundlage für den Arbeitgeber / Dienstherrn. Dies ist die Schaffung einer Dienstvereinbarung im Sinne von Art. 88 DSGVO, § 88 NBG, § 12 NDSG.",
+    "organisationseinheit": "11",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "",
+        "erstellt_am": "2025-05-09T13:37",
+        "aktualisiert_am": "2025-05-09T13:37",
+        "version": "1.0"
+    }
+}

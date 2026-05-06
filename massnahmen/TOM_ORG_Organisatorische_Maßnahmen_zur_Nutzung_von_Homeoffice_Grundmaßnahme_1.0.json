@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-019",
+    "name": "Organisatorische Maßnahmen zur Nutzung von Homeoffice",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Homeoffice",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Verantwortliche muss technische und organisatorische Maßnahmen treffen, wenn Beschäftigte vom Homeoffice aus oder im Wege der mobilen Tätigkeit ihre Tätigkeit wahrnehmen, z.B. Dienstvereinbarung, individuelle Vereinbarungen.\n",
+    "organisationseinheit": "11",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:10",
+        "aktualisiert_am": "2025-04-28T15:10",
+        "version": "1.0"
+    }
+}

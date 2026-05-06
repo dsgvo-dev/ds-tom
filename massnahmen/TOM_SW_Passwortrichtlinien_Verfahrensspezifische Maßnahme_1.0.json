@@ -1,0 +1,32 @@
+{
+    "id": "TOM-SW-016",
+    "name": "Passwortrichtlinien",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Dem Zweck angemessene Passwortrichtlinien sind in der konkreten Software zu prüfen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Zweckbindung",
+            "Verfügbarkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:41",
+        "aktualisiert_am": "2025-04-30T18:41",
+        "version": "1.0"
+    }
+}

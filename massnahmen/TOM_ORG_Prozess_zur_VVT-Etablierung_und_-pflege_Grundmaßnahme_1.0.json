@@ -1,0 +1,39 @@
+{
+    "id": "TOM-ORG-006",
+    "name": "Prozess zur VVT-Etablierung und -pflege",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die gesetzliche Pflicht zur Etablierung eines Verzeichnisses der Verarbeitungstätigkeiten nach Art. 30 DSGVO muss durch organisatorische Maßnahmen gesichert werden. Hierzu gehört die Festlegung von Zuständigkeiten.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:29",
+        "aktualisiert_am": "2025-04-28T14:29",
+        "version": "1.0"
+    }
+}

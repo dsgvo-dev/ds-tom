@@ -1,0 +1,33 @@
+{
+    "id": "TOM-SW-003",
+    "name": "Erhebungsformulare mit Attributen",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Erhebungsformulare in der Software müssen es erlauben, dass Erhebungsformulare und Datensätze mit Zweckattributen und Datenfeldern versehen werden können, damit z.B. die Herkunft von Daten oder Zweckbeschränkungen gespeichert werden können.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:28",
+        "aktualisiert_am": "2025-04-30T15:28",
+        "version": "1.0"
+    }
+}

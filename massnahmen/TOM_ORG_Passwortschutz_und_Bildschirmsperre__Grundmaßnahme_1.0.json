@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-041",
+    "name": "Passwortschutz und Bildschirmsperre ",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Alle Computer im Bürgerbüro müssen mit einem individuellen Passwort und einer automatischen Bildschirmsperre mit kurzer Inaktivitätszeit geschützt sein. Passwörter dürfen nicht offen aufbewahrt werden​.",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:27",
+        "aktualisiert_am": "2025-04-29T21:27",
+        "version": "1.0"
+    }
+}

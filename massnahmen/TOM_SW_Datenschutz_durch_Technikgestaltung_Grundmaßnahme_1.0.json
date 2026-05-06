@@ -1,0 +1,35 @@
+{
+    "id": "TOM-SW-004",
+    "name": "Datenschutz durch Technikgestaltung",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Die DSGVO sieht vor, dass Systeme bereits in ihrer Konzeption auf datenschutzrechtliche Grundsätze hin ausgerichtet werden, z.B. zur Minimierung der zu erhebenden Daten. ",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:30",
+        "aktualisiert_am": "2025-04-30T15:30",
+        "version": "1.0"
+    }
+}

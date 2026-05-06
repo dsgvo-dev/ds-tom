@@ -1,0 +1,34 @@
+{
+    "id": "TOM-CL-005",
+    "name": "Festlegung von Löschfristen (Cloud)",
+    "kategorie": "CL",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vor der Einführung einer Cloud-Software muss geprüft werden, ob spezifische Löschfristen für die Cloud-Nutzung festgelegt werden müssen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:43",
+        "aktualisiert_am": "2025-05-05T07:43",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "id": "TOM-MS365-018",
+    "name": "Vorherige Anzeige der beabsichtigten Verarbeitung von Sozialdaten",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Verarbeitung von personenbezogenen Sozialdaten im Auftrag ist nur unter Maßgabe des § 80 SGB X rechtmäßig. Hierzu gehört auch die vorherige Anzeige der geplanten Verarbeitung von Sozialdaten durch Microsoft gegenüber der Rechts- oder Fachaufsichtsbehörde nach § 80 Abs. 1 SGB X.",
+    "organisationseinheit": "",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-06-05T20:37",
+        "aktualisiert_am": "2025-06-05T20:37",
+        "version": "1.0"
+    }
+}

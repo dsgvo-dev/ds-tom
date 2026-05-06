@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-057",
+    "name": "Einsatz kryptografischer Verfahren zur Integritätssicherung (Signaturen, Hashverfahren)",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Technische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Zur Sicherstellung der Integrität und Unverfälschtheit personenbezogener Daten sind geeignete kryptografische Verfahren einzusetzen. Dies umfasst insbesondere: (1) Hashverfahren (z. B. SHA-256 oder höher): Zur Erkennung nachträglicher Veränderungen an Datensätzen, Dateien oder Protokolleinträgen. Durch den Vergleich von Hashwerten kann festgestellt werden, ob Daten nach ihrer Erstellung manipuliert wurden. (2) Digitale Signaturen: Zur kryptografisch gesicherten Zuordnung von Daten oder Dokumenten zu einer bestimmten Person oder Stelle sowie zur Sicherstellung, dass Daten nach der Signierung nicht verändert wurden. Die eingesetzten Verfahren müssen dem Stand der Technik entsprechen. Als Orientierung dienen die Empfehlungen des Bundesamts für Sicherheit in der Informationstechnik (BSI), insbesondere die technische Richtlinie BSI TR-02102 (Kryptografische Verfahren: Empfehlungen und Schlüssellängen). Die Verfahren sind regelmäßig auf ihre Aktualität zu prüfen und bei Bedarf zu erneuern.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Integrität",
+            "Verfügbarkeit",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": ["Art. 25 DSGVO", "Art. 32 DSGVO"],
+        "zusatzquellen": ["BSI TR-02102 (Kryptografische Verfahren: Empfehlungen und Schlüssellängen)"]
+    },
+    "abhängigkeiten": ["TOM-ORG-004"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-22T00:00",
+        "aktualisiert_am": "2026-04-22T00:00",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "id": "TOM-KI-011",
+    "name": "Schaffung einer Dienstvereinbarung (KI)",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Schaffung einer Dienstvereinbarung (bzgl. Protokollierung und ggf. anderen Mitbestimmungstatbeständen), falls nicht bereits durch Baustein Cloud abgedeckt.",
+    "organisationseinheit": "11",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:51",
+        "aktualisiert_am": "2025-05-15T15:51",
+        "version": "1.0"
+    }
+}

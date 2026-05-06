@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-014",
+    "name": "Regelung zum Umgang mit mobilen Datenträgern",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Allgemeine Prozesse",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Personenbezogene Daten werden auch auf mobilen Datenträgern gespeichert. Es müssen Regelungen zum Umgang mit mobilen Datenträgern wie USB-Sticks, externe Festplatte, Magnetdatenbänder usw. geschaffen werden.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Zweckbindung",
+            "Rechtmäßigkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Verfügbarkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:50",
+        "aktualisiert_am": "2025-04-28T14:50",
+        "version": "1.0"
+    }
+}

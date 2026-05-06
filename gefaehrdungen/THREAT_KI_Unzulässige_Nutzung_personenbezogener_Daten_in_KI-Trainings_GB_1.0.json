@@ -1,0 +1,24 @@
+{
+    "id": "THREAT-KI-007",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit",
+        "Integrität",
+        "Intervernierbarkeit",
+        "Erforderlichkeit",
+        "Vertraulichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Eine spezifische Gefährdung kann entstehen, wenn personenbezogene Daten für das Training der KI-Modelle durch Anbieter entstehen.",
+    "empfohlene_massnahmen": ["TOM-KI-015", "TOM-KI-009", "TOM-KI-010", "TOM-KI-007", "TOM-KI-012"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T19:00",
+        "aktualisiert_am": "2025-05-09T19:03",
+        "version": "1.0"
+    }
+}

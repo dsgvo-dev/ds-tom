@@ -1,0 +1,34 @@
+{
+    "id": "TOM-SW-012",
+    "name": "Anonymisierung von Daten",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Anonymisierung von personenbezogenen Daten, wenn die Identifikation der Betroffenen nicht mehr notwendig ist.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:36",
+        "aktualisiert_am": "2025-04-30T18:36",
+        "version": "1.0"
+    }
+}

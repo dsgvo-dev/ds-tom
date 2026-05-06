@@ -1,0 +1,37 @@
+{
+    "id": "TOM-KI-013",
+    "name": "Schulung von Beschäftigten (KI)",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Verbindliche Schulungen oder Maßnahmen nach Art. 4 KI-VO werden für alle Beschäftigten durchgeführt, die KI nutzen wollen",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T16:01",
+        "aktualisiert_am": "2025-05-15T16:01",
+        "version": "1.0"
+    }
+}

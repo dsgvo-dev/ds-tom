@@ -1,0 +1,38 @@
+{
+    "id": "TOM-CL-001",
+    "name": "Erstellung einer Cloud-Strategie",
+    "kategorie": "CL",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vor der Einführung einer Cloud-Software sollte eine grundlegende Cloud-Strategie für die Gesamtorganisation erstellt werden, in der Festlegungen z.B. für die zulässigen Architekturen oder Dienstleistungsarten getroffen werden. ",
+    "organisationseinheit": "1",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "BSI"
+        ],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:31",
+        "aktualisiert_am": "2025-05-05T07:31",
+        "version": "1.0"
+    }
+}

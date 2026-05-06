@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-015",
+    "name": "Verpflichtung der Beschäftigten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Personal",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Verpflichtung der Beschäftigten auf die Beachtung der \nAnforderungen der DSGVO sowie des NDSG sowie dienst- und arbeitsrechtiche Verschwiegenheit.",
+    "organisationseinheit": "11",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:59",
+        "aktualisiert_am": "2025-04-28T14:59",
+        "version": "1.0"
+    }
+}

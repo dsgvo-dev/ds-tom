@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-ORG-027",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Fehlgeleitete Nachrichten sind potenziell möglich. Dies kann z.B. für herkömmliche postalische Versendung, Telefax oder E-Mail gelten.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-015",
+        "TOM-ORG-016",
+        "TOM-ORG-003",
+        "TOM-ORG-033"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:34",
+        "aktualisiert_am": "2025-04-25T20:55",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-026",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "„Offenes Haus“, d.h. Kunden oder Bürger können die Geschäftsräume der Verwaltung frei betreten. Ein unbefugter Zugang zu Büros oder Räumen ist potenziell möglich.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-022",
+        "TOM-ORG-023",
+        "TOM-ORG-024",
+        "TOM-ORG-026",
+        "TOM-ORG-040",
+        "TOM-ORG-041"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:32",
+        "aktualisiert_am": "2025-04-25T20:55",
+        "version": "1.0"
+    }
+}

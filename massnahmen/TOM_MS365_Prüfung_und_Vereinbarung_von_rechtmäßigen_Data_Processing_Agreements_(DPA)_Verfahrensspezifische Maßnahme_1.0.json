@@ -1,0 +1,41 @@
+{
+    "id": "TOM-MS365-008",
+    "name": "Prüfung und Vereinbarung von rechtmäßigen Data Processing Agreements (DPA)",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": [
+            "Mit Microsoft müssen ausreichende vertragliche Regelungen geschlossen werden, insbesondere Data Protection Addemdums (DPA) sowie Regelungen über die Lokalität der Datenverarbeitung (Art. 44 DSGVO)."
+        ]
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:12",
+        "aktualisiert_am": "2025-05-09T14:15",
+        "version": "1.0"
+    }
+}

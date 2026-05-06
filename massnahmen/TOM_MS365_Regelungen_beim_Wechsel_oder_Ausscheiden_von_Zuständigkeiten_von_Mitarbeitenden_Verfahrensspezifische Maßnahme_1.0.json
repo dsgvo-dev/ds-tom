@@ -1,0 +1,39 @@
+{
+    "id": "TOM-MS365-012",
+    "name": "Regelungen beim Wechsel oder Ausscheiden von Zuständigkeiten von Mitarbeitenden",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Wenn Beschäftigte die Organisationseinheit wechseln oder die Organisation verlassen, muss sichergestellt sein, dass diese Personen nach dem Wechsel nur noch auf die sodann zulässigen Daten oder gar nicht mehr auf Daten zugreifen können. Dies wird sichergestellt durch eine laufende und tagesaktuelle Pflege des Verzeichnisdienstes Active Directory sowie der Entra-ID, da diese die Zugriffsberechtigungen steuern.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:22",
+        "aktualisiert_am": "2025-05-09T14:22",
+        "version": "1.0"
+    }
+}

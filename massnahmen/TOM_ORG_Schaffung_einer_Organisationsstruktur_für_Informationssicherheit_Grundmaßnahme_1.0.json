@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-004",
+    "name": "Schaffung einer Organisationsstruktur für Informationssicherheit",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Eine geeignete Organisationstruktur für Informationssicherheit ist  vorhanden und die Informationssicherheit ist in die organisationsweiten Prozesse und Abläufe integriert.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "ISO 27001"
+        ],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T06:33",
+        "aktualisiert_am": "2025-04-28T06:33",
+        "version": "1.0"
+    }
+}

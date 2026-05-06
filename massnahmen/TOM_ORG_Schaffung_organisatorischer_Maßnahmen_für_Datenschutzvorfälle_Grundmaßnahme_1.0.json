@@ -1,0 +1,34 @@
+{
+    "id": "TOM-ORG-003",
+    "name": "Schaffung organisatorischer Maßnahmen für Datenschutzvorfälle",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Im Fall einer Datenschutzverletzung im Sinne von Art. 4 Nr. 12 DSGVO sind Maßnahmen nach Art. 33 bzw. Art. 34 DSGVO zu ergreifen. Die Aufsichtsbehörden für den Datenschutz und ggf. weitere Aufsichtsbehörden (z.B. nach § 83a SGB X) oder auch die Betroffenen sind zu informieren. Zuvor muss das Vorliegen einer Datenschutzverletzung geprüft werden. Organisatorisch müssen Zuständigkeiten für die Meldung und Prüfung geregelt werden.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Intervernierbarkeit",
+            "Zweckbindung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T06:31",
+        "aktualisiert_am": "2025-04-28T06:31",
+        "version": "1.0"
+    }
+}

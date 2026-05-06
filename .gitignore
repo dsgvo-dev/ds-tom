@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Editor-Dateien
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Benutzerdaten (werden nicht versioniert)
+*.csv
+exports/
+
+# Node / npm (falls später Tools hinzukommen)
+node_modules/
+npm-debug.log*

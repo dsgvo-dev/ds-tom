@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-009",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Integrität",
+        "Verfügbarkeit",
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die personenbezogenen Daten nicht ausreichend gegen unbefugte Veränderung geschützt sind.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-004",
+        "TOM-ORG-027",
+        "TOM-ORG-039",
+        "TOM-ORG-041",
+        "TOM-ORG-057"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:22",
+        "aktualisiert_am": "2025-04-24T20:22",
+        "version": "1.0"
+    }
+}

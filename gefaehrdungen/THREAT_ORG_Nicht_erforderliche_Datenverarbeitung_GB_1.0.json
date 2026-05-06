@@ -1,0 +1,24 @@
+{
+    "id": "THREAT-ORG-005",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Erforderlichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass mehr personenbezogene Daten über Betroffene als notwendig verarbeitet werden.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-006",
+        "TOM-ORG-037",
+        "TOM-ORG-047",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:15",
+        "aktualisiert_am": "2025-04-24T20:17",
+        "version": "1.0"
+    }
+}

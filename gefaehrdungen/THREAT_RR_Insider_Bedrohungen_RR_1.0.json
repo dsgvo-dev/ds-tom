@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-RR-002",
+    "kategorie": "RR",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Zweckbindung"
+    ],
+    "bedrohungstyp": "RR",
+    "beschreibung": "Restrisiko: Insider-Bedrohungen – Mitarbeiter mit legitimen Zugangsberechtigungen könnten personenbezogene Daten missbrauchen, unbefugt weitergeben oder für eigene Zwecke verwenden. Trotz Berechtigungskonzepten und Kontrollen verbleibt ein Restrisiko, das nicht vollständig ausgeschlossen werden kann.",
+    "immer_vorausgewaehlt": true,
+    "empfohlene_massnahmen": [
+        "TOM-ORG-039",
+        "TOM-ORG-038",
+        "TOM-ORG-027",
+        "TOM-ORG-017",
+        "TOM-ORG-018"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-24T00:00",
+        "aktualisiert_am": "2026-04-24T00:00",
+        "version": "1.0"
+    }
+}

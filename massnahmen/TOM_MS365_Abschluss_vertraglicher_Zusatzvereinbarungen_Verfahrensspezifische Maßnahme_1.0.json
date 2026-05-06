@@ -1,0 +1,37 @@
+{
+    "id": "TOM-MS365-009",
+    "name": "Abschluss vertraglicher Zusatzvereinbarungen",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Zusätzlich zu den Data Protection Addendum (DPA)-Regelungen im Vertrag müssen bei Vorliegen der Voraussetzungen ggf. Zusatzvereinbarungen geschlossen werden, z.B. über Berufsgeheimnisträger oder die Verarbeitung von Sozialdaten.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": [
+            "Mit Microsoft müssen ausreichende vertragliche Regelungen geschlossen werden, insbesondere Data Protection Addemdums (DPA) sowie Regelungen über die Lokalität der Datenverarbeitung (Art. 44 DSGVO)."
+        ]
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:14",
+        "aktualisiert_am": "2025-05-09T14:14",
+        "version": "1.0"
+    }
+}

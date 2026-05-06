@@ -1,0 +1,33 @@
+{
+    "id": "TOM-SW-007",
+    "name": "Pseudonymisierung der Daten bei Weiterverarbeitung oder Übermittlung",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Software sollte es ermöglichen, dass personenbezogene Daten vor. der Weitergabe an andere Stellen pseudonymisiert werden können.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Erforderlichkeit",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:36",
+        "aktualisiert_am": "2025-04-30T15:36",
+        "version": "1.0"
+    }
+}

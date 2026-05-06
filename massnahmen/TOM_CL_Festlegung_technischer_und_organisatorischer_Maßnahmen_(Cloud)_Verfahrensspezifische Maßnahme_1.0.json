@@ -1,0 +1,36 @@
+{
+    "id": "TOM-CL-008",
+    "name": "Festlegung technischer und organisatorischer Maßnahmen (Cloud)",
+    "kategorie": "CL",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Neben der Prüfung und Festlegung technischer und organisatorischer Maßnahmen im Sinne der Auftragsverarbeitung (Art. 28 DSGVO) kann es notwendig sein, solche Maßnahmen in besonderer Weise mit dem Anbieter von Cloud-Software vertraglich zu vereinbaren. Dies kann notwendig werden, wenn der Cloud-Anbieter seine Leistungen nicht als Auftragsverarbeitung anbietet oder spezielle Gefährdungen auftreten.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:56",
+        "aktualisiert_am": "2025-05-05T07:56",
+        "version": "1.0"
+    }
+}

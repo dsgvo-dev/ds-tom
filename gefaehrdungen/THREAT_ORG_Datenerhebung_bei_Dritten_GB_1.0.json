@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-014",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Transparenz",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es werden personenbezogene Daten bei Dritten, z.B. anderen Behörden erhoben.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-006",
+        "TOM-ORG-007",
+        "TOM-ORG-012",
+        "TOM-ORG-045"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:30",
+        "aktualisiert_am": "2025-04-24T20:30",
+        "version": "1.0"
+    }
+}

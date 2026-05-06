@@ -1,0 +1,36 @@
+{
+    "id": "TOM-KI-005",
+    "name": "Strategie für den Einsatz Künstlicher Intelligenz",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der Verantwortliche sollte eine Strategie zum Einsatz Künstlicher Intelligenz verabschieden.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:42",
+        "aktualisiert_am": "2025-05-15T15:42",
+        "version": "1.0"
+    }
+}

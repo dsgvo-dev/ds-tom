@@ -1,0 +1,36 @@
+{
+    "id": "TOM-MS365-003",
+    "name": "Festlegung verbindlicher Löschfristen für MS365",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Verantwortliche muss Löschregeln für die personenbezogenen Daten in MS365 erlassen. Dies beinhaltet auch die Beschäftigtendaten.",
+    "organisationseinheit": "1.6",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Speicherbegrenzung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-07T21:39",
+        "aktualisiert_am": "2025-05-07T21:39",
+        "version": "1.0"
+    }
+}

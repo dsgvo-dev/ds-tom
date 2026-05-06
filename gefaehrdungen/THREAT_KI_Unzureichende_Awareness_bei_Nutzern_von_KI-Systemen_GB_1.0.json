@@ -1,0 +1,24 @@
+{
+    "id": "THREAT-KI-012",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Unzureichende Awareness bei Nutzern von KI-Systemen (z.B. Nutzung einer KI zur Bewerberauswahl durch einen Mitarbeiter, obwohl das Unternehmen eine solche KI-Verarbeitung gar nicht einsetzen will)",
+    "empfohlene_massnahmen": ["TOM-KI-012", "TOM-KI-013", "TOM-KI-014"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:33",
+        "aktualisiert_am": "2025-05-15T15:33",
+        "version": "1.0"
+    }
+}

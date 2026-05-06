@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-MS365-009",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Verfügbarkeit",
+        "Vertraulichkeit",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Die Verarbeitung personenbezogener Daten in Drittstaaten ist nur unter Beachtung der Regelungen in Art. 44 ff. DSGVO zulässig. Es besteht eine besondere und zusätzliche Gefährdung über die eigentliche Verarbeitung hinaus durch den Ort der Datenverarbeitung und die dortige Rechtslage.",
+    "empfohlene_massnahmen": ["TOM-MS365-006", "TOM-MS365-008", "TOM-MS365-009", "TOM-MS365-014", "TOM-MS365-015", "TOM-MS365-016"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-06-05T20:00",
+        "aktualisiert_am": "2025-06-05T20:00",
+        "version": "1.0"
+    }
+}

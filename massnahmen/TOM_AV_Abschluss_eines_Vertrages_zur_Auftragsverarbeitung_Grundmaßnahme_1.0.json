@@ -1,0 +1,36 @@
+{
+    "id": "TOM-AV-003",
+    "name": "Abschluss eines Vertrages zur Auftragsverarbeitung",
+    "kategorie": "AV",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Bei der Vergabe von Aufträgen zur Auftragsverarbeitung müssen die Verantwortlichen Verträge zur Auftragsverarbeitung schließen (Art. 28 Abs. 3 DSGVO).",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Rechtmäßigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T06:47",
+        "aktualisiert_am": "2025-05-02T06:47",
+        "version": "1.0"
+    }
+}

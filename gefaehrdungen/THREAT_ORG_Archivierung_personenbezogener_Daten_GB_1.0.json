@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-ORG-020",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Zweckbindung",
+        "Rechtmäßigkeit",
+        "Nichtverkettung",
+        "Erforderlichkeit",
+        "Speicherbegrenzung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten werden archiviert. Hierbei kann es durch nicht korrekte Aufbewahrungsfristen oder unrichtige Umgangsweisen mit gesperrten Daten zu Datenschutzverletzungen kommen.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-009",
+        "TOM-ORG-011",
+        "TOM-ORG-046",
+        "TOM-ORG-055",
+        "TOM-ORG-042"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T15:46",
+        "aktualisiert_am": "2025-04-25T15:46",
+        "version": "1.0"
+    }
+}

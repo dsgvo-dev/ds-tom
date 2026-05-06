@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-017",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Vertraulichkeit",
+        "Nichtverkettung",
+        "Speicherbegrenzung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Bei der Verarbeitung personenbezogener Daten wird durch den Verantwortlichen keine Löschfrist festgelegt oder geprüft - Art. 17 DSGVO.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-009",
+        "TOM-ORG-046",
+        "TOM-ORG-055",
+        "TOM-ORG-006"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T15:37",
+        "aktualisiert_am": "2025-04-25T15:37",
+        "version": "1.0"
+    }
+}

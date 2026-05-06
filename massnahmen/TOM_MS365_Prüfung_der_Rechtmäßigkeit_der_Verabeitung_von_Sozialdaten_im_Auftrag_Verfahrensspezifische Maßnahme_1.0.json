@@ -1,0 +1,32 @@
+{
+    "id": "TOM-MS365-017",
+    "name": "Prüfung der Rechtmäßigkeit der Verabeitung von Sozialdaten im Auftrag",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Die Verarbeitung personenbezogener Sozialdaten durch einen Auftragsverarbeiter ist nur unter den Voraussetzungen des § 80 SGB X erlaubt. Daher müssen die Verantwortlichen die Voraussetzungen des § 80 SGB X prüfen, insbesondere bei  der Verarbeitung durch Microsoft § 80 Abs. 3 SGB X.",
+    "organisationseinheit": "",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-06-05T20:33",
+        "aktualisiert_am": "2025-06-05T20:33",
+        "version": "1.0"
+    }
+}

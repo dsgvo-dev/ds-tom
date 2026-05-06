@@ -1,0 +1,30 @@
+{
+    "id": "TOM-ORG-054",
+    "name": "Überspannungsschutz",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine mögliche Maßnahme ist die Prüfung und ggf. Beschaffung von technischen Vorrichtungen zur Vermeidung von elektrischen Überspannungen und damit der Beschädigung oder des Verlustes technischer Einrichtungen.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T19:11",
+        "aktualisiert_am": "2025-04-28T19:11",
+        "version": "1.0"
+    }
+}

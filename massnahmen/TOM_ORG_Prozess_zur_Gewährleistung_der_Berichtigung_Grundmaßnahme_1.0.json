@@ -1,0 +1,39 @@
+{
+    "id": "TOM-ORG-010",
+    "name": "Prozess zur Gewährleistung der Berichtigung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die gesetzliche Pflicht zur Gewährleistung der Ansprüche der Betroffenen auf Berichtigung  nach Art. 16 DSGVO muss durch organisatorische Maßnahmen gesichert werden. Hierzu gehört die Festlegung von Zuständigkeiten und Abläufen.",
+    "organisationseinheit": "11",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:35",
+        "aktualisiert_am": "2025-05-06T06:02",
+        "version": "1.0"
+    }
+}

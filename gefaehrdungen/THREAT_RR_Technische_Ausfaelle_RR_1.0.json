@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-RR-005",
+    "kategorie": "RR",
+    "schutzziele": [
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "RR",
+    "beschreibung": "Restrisiko: Technische Ausfälle – Hardware- oder Softwarefehler können trotz Redundanzmaßnahmen und Notfallplanung zu unbeabsichtigter Datenoffenlegung, Datenverlust oder eingeschränkter Verfügbarkeit personenbezogener Daten führen. Ein vollständiger Ausschluss technischer Versagensfälle ist nicht möglich.",
+    "immer_vorausgewaehlt": true,
+    "empfohlene_massnahmen": [
+        "TOM-ORG-005",
+        "TOM-ORG-053",
+        "TOM-ORG-054",
+        "TOM-ORG-048",
+        "TOM-ORG-003"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-24T00:00",
+        "aktualisiert_am": "2026-04-24T00:00",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "id": "TOM-MS365-007",
+    "name": "Regelmäßiger Austausch mit der Personalvertretung (MS365)",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Microsoft verändert regelmäßig Dienste und Services in MS365 als auch vertragliche Inhalte, z.B. das Data Protection Addemdum (DPA). Diese Inhalte sind regelmäßig mitbestimmungspflichtig. Die Dienstvereinbarung stellt auch die notwendige Rechtsgrundlage für die Verarbeitung der Beschäftigtendaten durch den Arbeitgeber / Dienstherrn dar. Daher ist es notwendig, dass auf Grundlage der durch Microsoft bereitgestellten Informationen eine regelmäßige Information und ein Austausch hierüber mit der Personalvertretung erfolgt.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Speicherbegrenzung",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T13:47",
+        "aktualisiert_am": "2025-05-09T13:47",
+        "version": "1.0"
+    }
+}

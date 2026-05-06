@@ -1,0 +1,22 @@
+{
+    "id": "THREAT-KI-004",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Richtigkeit",
+        "Integrität",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Wenn Künstliche Intelligenz personenbezogene Daten verarbeitet, besteht die Gefährdung, dass diese Daten bzw. das Ergebnis der Bearbeitung durch Verzerrungen oder einen Biss beeinträchtigt werden. Eine solche Verzerrung oder Bis könnte durch eine fehlerhafte oder einseitige Nutzung von Trainingsdaten entstehen.",
+    "empfohlene_massnahmen": ["TOM-KI-009", "TOM-KI-006", "TOM-KI-007", "TOM-KI-010", "TOM-KI-013"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T18:56",
+        "aktualisiert_am": "2025-05-09T18:56",
+        "version": "1.0"
+    }
+}

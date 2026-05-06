@@ -1,0 +1,38 @@
+{
+    "id": "TOM-ORG-001",
+    "name": "Organisatorische Maßnahmen zum Datenschutz",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Vorhandensein organisatorischer Maßnahmen zur Schaffung und Aufrechterhaltung der organisatorischen Grundsätze des Datenschuztes bei dem Verantwortlichen.",
+    "organisationseinheit": "1.1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Verfügbarkeit",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-03-20T14:40:17.903744Z",
+        "aktualisiert_am": "2025-04-28T06:21",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "THREAT-KI-010",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Richtigkeit",
+        "Intervernierbarkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Bei der Nutzung Künstlicher Intelligenz beseht die Gefährdung der mangelhaften Security in Bezug auf die Integrität von Trainingsdaten und KI-Modellen (z.B. Möglichkeit durch Cyberkriminelle, „Backdoors“ in KI-Modelle einzubauen oder die Trainingsdaten zu manipulieren)",
+    "empfohlene_massnahmen": ["TOM-KI-001", "TOM-KI-002", "TOM-KI-003", "TOM-KI-004", "TOM-KI-007"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "",
+        "erstellt_am": "2025-05-09T19:13",
+        "aktualisiert_am": "2025-05-09T19:13",
+        "version": "1.0"
+    }
+}

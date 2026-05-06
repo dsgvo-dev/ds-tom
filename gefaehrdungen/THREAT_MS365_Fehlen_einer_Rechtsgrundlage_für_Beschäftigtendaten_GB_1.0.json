@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-MS365-005",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Fehlen einer Rechtsgrundlage für die Verantwortliche, um Beschäftigtendaten durch Microsoft verarbeiten zu lassen. Die Beschäftigten stehen in keinem Rechtsverhältnis zu Microsoft. Die Vereinbarung einer Dienstvereinbarung ist notwendig.",
+    "empfohlene_massnahmen": ["TOM-MS365-002", "TOM-MS365-004", "TOM-MS365-007", "TOM-MS365-008"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T07:14",
+        "aktualisiert_am": "2025-05-09T07:28",
+        "version": "1.0"
+    }
+}

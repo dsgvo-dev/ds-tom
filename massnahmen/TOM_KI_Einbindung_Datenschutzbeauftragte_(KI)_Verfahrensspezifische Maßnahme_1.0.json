@@ -1,0 +1,36 @@
+{
+    "id": "TOM-KI-008",
+    "name": "Einbindung Datenschutzbeauftragte (KI)",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der Verantwortliche muss vor der Einführung von Künstlicher Intelligenz die oder den Datenschutzbeauftragten einbinden (Artt. 22, 35 DSGVO,",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:46",
+        "aktualisiert_am": "2025-05-15T15:46",
+        "version": "1.0"
+    }
+}

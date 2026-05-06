@@ -1,0 +1,39 @@
+{
+    "id": "TOM-MS365-006",
+    "name": "Regelmäßige Überprüfung und Einbeziehung Data Protection Addendum (DPA)",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Microsoft verändert regelmäßig die vertraglichen Inhalte des sog. Data Protection Addendum (DPA) (Vertragsergänzung zur Auftragsverarbeitung). Grundsätzlich finden nur die DPA Anwendung, die zum Zeitpunkt des Vertragsschlusses veröffentlicht wurden. Daher müssen die Verantwortlichen regelmäßig prüfen, ob Microsoft Änderungen an den DPA vornimmt und diese ggf. gegenüber Microsoft in den laufenden Vertrag einbeziehen.\n",
+    "organisationseinheit": "",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Richtigkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T13:43",
+        "aktualisiert_am": "2025-06-05T20:30",
+        "version": "1.0"
+    }
+}

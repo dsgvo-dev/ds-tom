@@ -1,0 +1,36 @@
+{
+    "id": "TOM-CL-003",
+    "name": "Informationsklassifizierung",
+    "kategorie": "CL",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vor der Einführung einer Cloud-Software muss der Umgang mit den Informationen geregelt werden, die in der Cloud-Software verarbeitet werden sollen. Den Beschäftigten muss verdeutlicht werden, ob und welche personenbezogenen Daten innerhalb der Cloud-Software verarbeitet werden dürfen und ob. ggf. bestimmte Datenkategorien nicht zulässig sind (z.B. Sozialdaten).",
+    "organisationseinheit": "1.6",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T07:36",
+        "aktualisiert_am": "2025-05-07T19:43",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "THREAT-KI-008",
+    "kategorie": "KI",
+    "schutzziele": ["Transparenz", "Intervenierbarkeit"],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Bei der Verarbeitung personenbezogener Daten mittels KI besteht die Gefährdung, dass die Ergebnisse nur mangelhaft erklärbar und nicht transparent sind (z.B. Unklarheit, aus welchen Datenquellen eine diskriminierende Aussage zusammengesetzt wird).",
+    "empfohlene_massnahmen": ["TOM-KI-007", "TOM-KI-006", "TOM-KI-008"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "",
+        "erstellt_am": "2025-05-09T19:05",
+        "aktualisiert_am": "2025-05-09T19:05",
+        "version": "1.0"
+    }
+}

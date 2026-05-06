@@ -1,0 +1,39 @@
+{
+    "id": "TOM-ORG-009",
+    "name": "Prozess zur Gewährleistung der Löschung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die gesetzliche Pflicht zur Gewährleistung der Ansprüche der Betroffenen auf Löschung nach Art. 17 DSGVO muss durch organisatorische Maßnahmen gesichert werden. Hierzu gehört die Festlegung von Zuständigkeiten und Abläufen.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:34",
+        "aktualisiert_am": "2025-04-28T14:36",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-022",
+    "name": "Elektronisches Zugangskontrollsystem",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Die Verantwortliche muss durch technische und organisatorische Maßnahmen die Sicherheit der personenbezogenen Daten  sicherstellen. Hierzu gehören grundlegende Sicherungsmaßnahmen wie ein elektronisches Zugangskontrollsystem für die Gebäude.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:18",
+        "aktualisiert_am": "2025-04-28T15:18",
+        "version": "1.0"
+    }
+}

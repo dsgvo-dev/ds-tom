@@ -1,0 +1,31 @@
+{
+    "id": "TOM-KI-009",
+    "name": "Prüfung der KI-Verordnung",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der Verantwortliche hat vor dem Einsatz Künstlicher Intelligenz die Einhaltung der KI-Verordnung zu prüfen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Rechtmäßigkeit",
+            "Transparenz",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:48",
+        "aktualisiert_am": "2025-05-15T15:49",
+        "version": "1.0"
+    }
+}

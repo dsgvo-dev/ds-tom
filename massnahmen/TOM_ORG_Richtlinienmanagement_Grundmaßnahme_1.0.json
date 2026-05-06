@@ -1,0 +1,38 @@
+{
+    "id": "TOM-ORG-002",
+    "name": "Richtlinienmanagement",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Regelmäßige Überprüfung und Anpassung der Sicherheitsrichtlinien.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Verfügbarkeit",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-03-20T14:40:17.903744Z",
+        "aktualisiert_am": "2025-04-28T06:24",
+        "version": "1.0"
+    }
+}

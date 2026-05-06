@@ -1,0 +1,36 @@
+{
+    "id": "TOM-DLohneAV-003",
+    "name": "Abschluss eines Vertrages mit Schutzklauseln (DLohneAV)",
+    "kategorie": "DLohneAV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "In den Vertrag mit dem Dienstleister sind Klauseln zum Schutz der Betroffnen aufzunehmen (z.B. zur Einhaltung der Zweckbindung und dem Verbot der Nutzung der Daten zu geschäftlichen Zwecken des Dienstleisters).",
+    "organisationseinheit": "10",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T16:09",
+        "aktualisiert_am": "2025-05-15T16:09",
+        "version": "1.0"
+    }
+}

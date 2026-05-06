@@ -1,0 +1,39 @@
+{
+    "id": "TOM-ORG-056",
+    "name": "Durchführung einer Risikoanalyse und ggf. DSFA",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Allgemein",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Vor Inbetriebnahme eines Verfahrens mit personenbezogenen Daten ist eine Risikoanalyse durchzuführen, um das Risiko für die Rechte und Freiheiten der Betroffenen zu bewerten. Ergibt die Risikoanalyse ein voraussichtlich hohes Risiko, ist gemäß Art. 35 DSGVO eine Datenschutz-Folgenabschätzung (DSFA) durchzuführen. Die DSFA umfasst eine systematische Beschreibung der Verarbeitung, eine Bewertung der Notwendigkeit und Verhältnismäßigkeit sowie eine Bewertung der Risiken und der Maßnahmen zu ihrer Eindämmung. Die Ergebnisse sind zu dokumentieren und bei wesentlichen Änderungen des Verfahrens zu wiederholen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Integrität",
+            "Verfügbarkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": ["Art. 35 DSGVO", "Art. 36 DSGVO"],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": ["TOM-ORG-043"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-22T00:00",
+        "aktualisiert_am": "2026-04-22T00:00",
+        "version": "1.0"
+    }
+}

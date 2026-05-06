@@ -1,0 +1,35 @@
+{
+    "id": "TOM-AV-001",
+    "name": "Organisatorische Maßnahmen für Auftragsverarbeitung",
+    "kategorie": "AV",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Vorhandensein organisatorischer Maßnahmen zur Schaffung und Aufrechterhaltung der organisatorischen Grundsätze des Datenschutzes bei der Verantwortlichen (Interne Datenschutzregelungen/DA Datenschutz) in Bezug auf Auftragsverarbeitung. Innerhalb der Regelungen zur Auftragsverarbeitung sind Verantwortlichkeiten zu bestimmen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T06:44",
+        "aktualisiert_am": "2025-05-02T06:44",
+        "version": "1.0"
+    }
+}

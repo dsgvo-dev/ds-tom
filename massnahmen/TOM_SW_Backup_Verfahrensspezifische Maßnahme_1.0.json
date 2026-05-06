@@ -1,0 +1,32 @@
+{
+    "id": "TOM-SW-018",
+    "name": "Backup",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Es ist ein verfahrensspezifisches Sicherungs- und Wiederherstellungskonzept (Backup und Recovery) zu implementieren.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Zweckbindung",
+            "Verfügbarkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:42",
+        "aktualisiert_am": "2025-04-30T18:42",
+        "version": "1.0"
+    }
+}

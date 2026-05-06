@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-023",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Ein unbefugter Zutritt zu den Datenverarbeitungssystemen ist möglich. Dadurch könnten Unbefugte Zugriff zu den Anlagen erhalten.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-021",
+        "TOM-ORG-022",
+        "TOM-ORG-023",
+        "TOM-ORG-024",
+        "TOM-ORG-026",
+        "TOM-ORG-028"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:27",
+        "aktualisiert_am": "2025-04-25T20:52",
+        "version": "1.0"
+    }
+}

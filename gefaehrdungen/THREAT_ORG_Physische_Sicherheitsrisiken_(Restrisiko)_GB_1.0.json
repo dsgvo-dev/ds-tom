@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-035",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Zweckbindung",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Einbrüche, Diebstahl oder Vandalismus, die nicht vollständig verhindert werden können.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-021",
+        "TOM-ORG-022",
+        "TOM-ORG-023",
+        "TOM-ORG-028",
+        "TOM-ORG-003",
+        "TOM-ORG-042"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:48",
+        "aktualisiert_am": "2025-04-25T21:07",
+        "version": "1.0"
+    }
+}

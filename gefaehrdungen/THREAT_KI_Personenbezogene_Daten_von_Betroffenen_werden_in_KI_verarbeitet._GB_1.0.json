@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-KI-001",
+    "kategorie": "KI",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Erforderlichkeit",
+        "Speicherbegrenzung",
+        "Intervernierbarkeit",
+        "Richtigkeit",
+        "Nichtverkettung",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Wenn personenbezogene Daten von Betroffenen mithilfe Künstlicher Intelligenz (KI) verarbeitet werden, kann es aufgrund dieser Umstände der Datenverarbeitung zu einer spezifischen Gefährdung der Rechte und Freiheiten der Betroffenen kommen (z.B. durch besondere Gefahren wie das Training der KI-Modelle) mit personenbezogenen Daten.",
+    "empfohlene_massnahmen": ["TOM-KI-001", "TOM-KI-005", "TOM-KI-007", "TOM-KI-008", "TOM-KI-009", "TOM-KI-010"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T18:47",
+        "aktualisiert_am": "2025-05-09T18:47",
+        "version": "1.0"
+    }
+}

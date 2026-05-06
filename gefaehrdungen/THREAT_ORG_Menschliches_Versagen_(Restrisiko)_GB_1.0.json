@@ -1,0 +1,29 @@
+{
+    "id": "THREAT-ORG-031",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Richtigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Rechtmäßigkeit",
+        "Erforderlichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Trotz Schulungen können Mitarbeitende Fehler machen, die zu Datenverlust oder unberechtigter Offenlegung führen.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-015",
+        "TOM-ORG-016",
+        "TOM-ORG-002",
+        "TOM-ORG-003",
+        "TOM-ORG-047"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:44",
+        "aktualisiert_am": "2025-04-25T21:01",
+        "version": "1.0"
+    }
+}

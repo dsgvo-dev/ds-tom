@@ -1,0 +1,21 @@
+{
+    "id": "THREAT-MS365-007",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Microsoft ändert regelmäßig seine Vertragsbedingungen, insbesondere die sog. Data Protection Addendum (DPA). Diese  Änderungen werden nicht regelhaft Vertragsbestandteil, sondern müssen vom Kunden speziell einbezogen werden. ",
+    "empfohlene_massnahmen": ["TOM-MS365-006", "TOM-MS365-008", "TOM-MS365-009"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T11:38",
+        "aktualisiert_am": "2025-05-09T11:38",
+        "version": "1.0"
+    }
+}

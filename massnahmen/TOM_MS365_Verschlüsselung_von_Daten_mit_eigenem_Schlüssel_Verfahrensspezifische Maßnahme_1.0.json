@@ -1,0 +1,37 @@
+{
+    "id": "TOM-MS365-014",
+    "name": "Verschlüsselung von Daten mit eigenem Schlüssel",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Daten sind \"at rest\" (ruhend) zu verschlüsseln. Hierfür ist ein nur bei den Verantwortlichen vorhandener Schlüssel zu nutzen. ",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:37",
+        "aktualisiert_am": "2025-05-09T14:37",
+        "version": "1.0"
+    }
+}

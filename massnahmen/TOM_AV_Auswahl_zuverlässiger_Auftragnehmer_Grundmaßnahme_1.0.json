@@ -1,0 +1,35 @@
+{
+    "id": "TOM-AV-002",
+    "name": "Auswahl zuverlässiger Auftragnehmer",
+    "kategorie": "AV",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Bei der Vergabe von Aufträgen zur Auftragsverarbeitung müssen die Verantwortlichen zuverlässige Auftragsverarbeiter / Auftragnehmer aussuchen.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T06:46",
+        "aktualisiert_am": "2025-05-02T06:46",
+        "version": "1.0"
+    }
+}

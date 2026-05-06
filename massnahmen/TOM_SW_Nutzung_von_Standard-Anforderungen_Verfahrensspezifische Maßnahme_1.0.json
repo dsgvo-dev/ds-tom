@@ -1,0 +1,39 @@
+{
+    "id": "TOM-SW-011",
+    "name": "Nutzung von Standard-Anforderungen",
+    "kategorie": "SW",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Bei Beschaffung / Ausschreibung von Software: Prüfung und Einfügung datenschutzrechtlicher Anforderungen in die Ausschreibung (Muster-Anforderungen). Dadurch wird eine grundsätzliche und gleichförmige Berücksichtigung von Datenschutz-Maßnahmen gefördert.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T18:35",
+        "aktualisiert_am": "2025-04-30T18:35",
+        "version": "1.0"
+    }
+}

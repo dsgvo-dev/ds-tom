@@ -1,0 +1,38 @@
+{
+    "id": "TOM-ORG-047",
+    "name": "Erlass eine speziellen Dienstanweisung oder Richtlinie",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Allgemein",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die verfahrensspezifischen organisatorischen Maßnahmen müssen umgesetzt werden. Hierfür kann es erforderlich sein, eine spezifische Dienstanweisung oder Richtlinie zu erlassen, z.B. über bestimmte Verfahrensabläufe, Zuständigkeiten, Ge- oder Verbote.",
+    "organisationseinheit": "1.4",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung",
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Richtigkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T09:41",
+        "aktualisiert_am": "2025-04-30T09:41",
+        "version": "1.0"
+    }
+}

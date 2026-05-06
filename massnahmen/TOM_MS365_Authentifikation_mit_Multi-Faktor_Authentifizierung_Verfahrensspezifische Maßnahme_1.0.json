@@ -1,0 +1,39 @@
+{
+    "id": "TOM-MS365-011",
+    "name": "Authentifikation mit Multi-Faktor Authentifizierung",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Mit der verbindlichen Vorgabe der Nutzung einer Mehr-Faktor-Authentifizierung wird sichergestellt, dass nur berechtigte Nutzende MS365 verwenden können.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:20",
+        "aktualisiert_am": "2025-05-09T14:20",
+        "version": "1.0"
+    }
+}

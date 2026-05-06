@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-024",
+    "name": "Schlüsselregelung",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Verantwortliche muss durch technische und organisatorische Maßnahmen die Sicherheit der personenbezogenen Daten  sicherstellen. Hierzu gehören grundlegende Sicherungsmaßnahmen wie die Schaffung einer Organisation einer Schlüsselregelung für die Gebäude wie z.B. das Vorhandensein von Schließkreisen oder das Vorhandensein organisatorischer Regelungen zur Ausgabe und Verwaltung von Schlüsseln.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:20",
+        "aktualisiert_am": "2025-04-28T15:25",
+        "version": "1.0"
+    }
+}

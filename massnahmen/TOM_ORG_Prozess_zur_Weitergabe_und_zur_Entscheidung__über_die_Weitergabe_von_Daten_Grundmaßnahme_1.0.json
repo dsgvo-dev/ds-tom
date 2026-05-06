@@ -1,0 +1,33 @@
+{
+    "id": "TOM-ORG-012",
+    "name": "Prozess zur Weitergabe und zur Entscheidung  über die Weitergabe von Daten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die Verantwortliche muss gewährleisten, dass die Übermittlung personenbezogener Daten nur dann erfolgt, wenn eine ausreichende Ermächtigungsgrundlage vorliegt, z.B. eine gesetzliche Grundlage oder eine Einwilligung. Dies muss über eine Beschreibung der Zuständigkeit erfolgen, welche Stelle innerhalb der Organisationseinheit dies sicherstellen muss.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Zweckbindung",
+            "Rechtmäßigkeit",
+            "Erforderlichkeit",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:43",
+        "aktualisiert_am": "2025-04-28T14:43",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "id": "TOM-KI-007",
+    "name": "Zuständigkeit und Durchführung der Datenschutzprüfung inkl. Dokumentation für das KI-System",
+    "kategorie": "KI",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der Verantwortliche muss Zuständigkeiten für die Durchführung der Datenschutzprüfung inkl. Dokumentation für das KI-System festlegen (Eintrag in das Verzeichnis der Verarbeitungstätigkeiten, Risikoanalyse, Datenschutz-Folgenabschätzung).",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T15:45",
+        "aktualisiert_am": "2025-05-15T15:45",
+        "version": "1.0"
+    }
+}

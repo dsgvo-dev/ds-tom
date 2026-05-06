@@ -1,0 +1,31 @@
+{
+    "id": "TOM-CL-010",
+    "name": "Anpassung der Datenschutzerklärung für Cloud-Verarbeitung",
+    "kategorie": "CL",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Bei dem Einsatz von Cloud-Software müssen Betroffene über die spezifischen Umstände der Cloud-Verarbeitung informiert werden. Die bestehende Datenschutzerklärung ist daher vor Inbetriebnahme der Cloud-Software zu ergänzen um: (1) den Cloud-Anbieter als Empfänger oder Auftragsverarbeiter der personenbezogenen Daten, (2) Angaben zu möglichen Drittlandübermittlungen sowie die hierfür bestehenden geeigneten Garantien nach Art. 46 DSGVO (z. B. Standardvertragsklauseln, Angemessenheitsbeschluss), (3) Informationen zu eingesetzten Unterauftragnehmern des Cloud-Anbieters, sofern bekannt. Die Aktualisierung der Datenschutzerklärung ist Voraussetzung für den rechtmäßigen Betrieb der Cloud-Software. Bietet der Cloud-Anbieter keine vollständige Auftragsverarbeitung an, sind die Informationspflichten nach Art. 13 bzw. Art. 14 DSGVO in besonderem Maße zu beachten.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Intervernierbarkeit"
+        ]
+    },
+    "compliance": {
+        "standards": ["Art. 13 DSGVO", "Art. 14 DSGVO", "Art. 46 DSGVO"],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": ["TOM-ORG-045", "TOM-CL-009"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-04-22T00:00",
+        "aktualisiert_am": "2026-04-22T00:00",
+        "version": "1.0"
+    }
+}

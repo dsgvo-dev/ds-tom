@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-018",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Transparenz",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Rechtmäßigkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Wenn die Herkunft oder der Empfänger personenbezogener Daten unklar ist, können Verantwortliche und Betroffene die Rechtmäßigkeit des Handelns nicht sicher feststellen, insbesondere besteht die Gefahr der unzulässigen Zweckänderung und der Nicht-Intervenierbarkeit für Betroffene.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-006",
+        "TOM-ORG-007",
+        "TOM-ORG-012",
+        "TOM-ORG-045"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T15:43",
+        "aktualisiert_am": "2025-04-25T15:43",
+        "version": "1.0"
+    }
+}

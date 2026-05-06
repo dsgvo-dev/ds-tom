@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-038",
+    "name": "Trennung sensibler Aufgabenbereiche",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Aufgaben, die besonders sensible Daten betreffen (z. B. Sozialleistungen, Steuerangelegenheiten, Standesamt), dürfen nicht im Bürgerbüro bearbeitet werden. Diese unterliegen besonderen Geheimhaltungspflichten",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:25",
+        "aktualisiert_am": "2025-04-29T21:25",
+        "version": "1.0"
+    }
+}

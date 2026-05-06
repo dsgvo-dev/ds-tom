@@ -1,0 +1,29 @@
+{
+    "id": "THREAT-SW-003",
+    "kategorie": "SW",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Transparenz",
+        "Zweckbindung",
+        "Speicherbegrenzung",
+        "Erforderlichkeit",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es werden Freitextfelder verwendet, wozu es zu unerwünschten Dateneingaben kommen kann. Der Grundsatz der Erforderlichkeit wird gefährdet.",
+    "empfohlene_massnahmen": [
+        "TOM-SW-003",
+        "TOM-SW-004",
+        "TOM-SW-006",
+        "TOM-ORG-015",
+        "TOM-ORG-016"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T11:58",
+        "aktualisiert_am": "2025-04-30T11:58",
+        "version": "1.0"
+    }
+}

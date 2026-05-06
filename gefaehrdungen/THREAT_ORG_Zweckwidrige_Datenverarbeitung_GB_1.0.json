@@ -1,0 +1,18 @@
+{
+    "id": "THREAT-ORG-004",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Zweckbindung",
+        "Rechtmäßigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die Verantwortlichen die personenbezogenen Daten der Betroffenen nicht dem Zweck entsprechend verarbeiten.",
+    "empfohlene_massnahmen": ["TOM-ORG-001", "TOM-ORG-002", "TOM-ORG-006", "TOM-ORG-007", "TOM-ORG-015", "TOM-ORG-016"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:13",
+        "aktualisiert_am": "2025-04-24T20:13",
+        "version": "1.0"
+    }
+}

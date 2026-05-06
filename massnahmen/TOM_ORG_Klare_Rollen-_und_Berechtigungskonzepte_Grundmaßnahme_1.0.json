@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-039",
+    "name": "Klare Rollen- und Berechtigungskonzepte",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 1,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Es müssen Dienstanweisungen und ein Zugriffs- und Rollenkonzept erstellt werden, die regeln, welche Mitarbeitenden welche Daten einsehen oder verarbeiten dürfen",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:26",
+        "aktualisiert_am": "2025-04-29T21:26",
+        "version": "1.0"
+    }
+}

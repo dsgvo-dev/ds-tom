@@ -1,0 +1,39 @@
+{
+    "id": "TOM-SW-001",
+    "name": "Organisatorische Regelungen",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Vorhandensein organisatorischer Maßnahmen zur Schaffung und Aufrechterhaltung der organisatorischen Grundsätze des Datenschutzes bei der Verantwortlichen (Interne Datenschutzregelungen/DA Datenschutz).",
+    "organisationseinheit": "1.4",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:16",
+        "aktualisiert_am": "2025-04-30T15:16",
+        "version": "1.0"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": "TOM-ORG-033",
+    "name": "Sichere Behältnisse bei Transport von Datenträgern",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Haustechnik",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine denkbare Maßnahme ist die Nutzung sichere Behältnisse bei physischem Transport von Akten oder anderen Datenträgern z.B. bei der Verlagerung der Daten bei einen Umzug oder Verbringung der Datenträger zu einem Dienstleister. Denkbar sind dabei eine externe Datenlagerung, Scan-Dienstleistungen oder die Vernichtung von Datenträgern.",
+    "organisationseinheit": "65",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T18:55",
+        "aktualisiert_am": "2025-04-28T18:55",
+        "version": "1.0"
+    }
+}

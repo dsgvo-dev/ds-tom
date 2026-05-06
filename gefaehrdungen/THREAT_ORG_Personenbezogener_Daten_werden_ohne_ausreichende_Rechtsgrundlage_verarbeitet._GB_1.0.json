@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-002",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogener Daten werden ohne ausreichende Rechtsgrundlage verarbeitet, z.B. Datenerhebungen von Bürger*innen ohne Rechtsgrundlage, Datenübermittlungen in Drittstaaten oder Beschäftigtendaten ohne Dienstvereinbarung.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-002",
+        "TOM-ORG-006",
+        "TOM-ORG-012",
+        "TOM-ORG-016",
+        "TOM-ORG-047",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T14:48",
+        "aktualisiert_am": "2025-04-24T20:10",
+        "version": "1.0"
+    }
+}

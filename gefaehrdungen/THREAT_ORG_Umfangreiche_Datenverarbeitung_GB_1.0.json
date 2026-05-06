@@ -1,0 +1,26 @@
+{
+    "id": "THREAT-ORG-019",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Zweckbindung",
+        "Rechtmäßigkeit",
+        "Nichtverkettung",
+        "Erforderlichkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es wird ein umfangreicher Datensatz erhoben. Dadurch erhöht sich das Bedrohungspotenzial für Betroffene. Ihre personenbezogenen Daten könnten eher mit anderen Daten unzulässig verarbeitet werden. ",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-006",
+        "TOM-ORG-037",
+        "TOM-ORG-038",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T15:45",
+        "aktualisiert_am": "2025-04-25T15:45",
+        "version": "1.0"
+    }
+}

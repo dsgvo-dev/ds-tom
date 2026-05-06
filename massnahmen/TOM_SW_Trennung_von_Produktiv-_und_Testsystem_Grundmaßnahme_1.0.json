@@ -1,0 +1,39 @@
+{
+    "id": "TOM-SW-002",
+    "name": "Trennung von Produktiv- und Testsystem",
+    "kategorie": "SW",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Wenn Software-Systeme eingeführt werden, müssen diese getestet werden. Bevor personenbezogene Daten verarbeitet werden, müssen die Systeme mit nicht-personenbezogenen Testdaten (Dummy-Daten) getestet werden. Soweit in weiteren Test- oder Produktivszenarien personenbezogene Daten verarbeitet werden, müssen diese gelöscht werden, bevor das Produktivsystem in Betrieb genommen wird.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-30T15:19",
+        "aktualisiert_am": "2025-04-30T15:24",
+        "version": "1.0"
+    }
+}

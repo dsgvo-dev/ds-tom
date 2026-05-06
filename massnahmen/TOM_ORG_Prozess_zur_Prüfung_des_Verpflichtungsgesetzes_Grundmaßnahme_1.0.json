@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-013",
+    "name": "Prozess zur Prüfung des Verpflichtungsgesetzes",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Bei der Beauftragung von Dienstleistern sind u.a. gesetzliche Voraussetzungen einzuhalten. Hierzu gehören auch die Verpflichtungen nach dem Verpflichtungsgesetz des Bundes. Die internen Zuständigkeiten für die Gewährleistung der Beachtung des Verpflichtungsgesetzes durch die Verantwortlichen ist durch Zuständigkeitsregelungen sind zu schaffen.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Zweckbindung",
+            "Rechtmäßigkeit",
+            "Vertraulichkeit",
+            "Integrität"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:47",
+        "aktualisiert_am": "2025-04-28T14:47",
+        "version": "1.0"
+    }
+}

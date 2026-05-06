@@ -1,0 +1,27 @@
+{
+    "id": "THREAT-ORG-016",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Zweckbindung",
+        "Rechtmäßigkeit",
+        "Transparenz",
+        "Vertraulichkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Durch die Verarbeitung werden Persönlichkeitsaspekte bewertet, z. B. werden Analysen/Prognosen erstellt über die Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche Vorlieben oder Interessen, die Zuverlässigkeit einer Person in Bezug auf eine Tätigkeit, das Verhalten, den Aufenthaltsort.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-001",
+        "TOM-ORG-006",
+        "TOM-ORG-007",
+        "TOM-ORG-038",
+        "TOM-ORG-056"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T15:36",
+        "aktualisiert_am": "2025-04-25T15:36",
+        "version": "1.0"
+    }
+}

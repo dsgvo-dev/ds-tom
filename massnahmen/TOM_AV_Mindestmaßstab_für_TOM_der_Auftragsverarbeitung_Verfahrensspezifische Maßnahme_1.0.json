@@ -1,0 +1,35 @@
+{
+    "id": "TOM-AV-005",
+    "name": "Mindestmaßstab für TOM der Auftragsverarbeitung",
+    "kategorie": "AV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Mindestmaßstab an technischen und organisatorischen Maßnahmen für Auftragsverarbeitung (Anlage zum Vertrag zur Auftragsverarbeitung). Diese sind als Anlage zum Vertrag gem. Art. 28 Abs. 3 DSGVO festzulegen.",
+    "organisationseinheit": "11",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T07:12",
+        "aktualisiert_am": "2025-05-06T14:50",
+        "version": "1.0"
+    }
+}

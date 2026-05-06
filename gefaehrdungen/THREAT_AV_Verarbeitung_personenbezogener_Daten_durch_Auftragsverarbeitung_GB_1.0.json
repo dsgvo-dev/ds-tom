@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-AV-001",
+    "kategorie": "AV",
+    "schutzziele": [
+        "Verfügbarkeit",
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Nichtverkettung",
+        "Richtigkeit"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Personenbezogene Daten von Betroffenen werden verarbeitet (Bürger*innen/Beschäftigte). Neben der grundsätzlichen Gefährdung wirkt sich die Verarbeitung durch Auftragsverarbeiter in spezifischem Maß auf die Verarbeitung aus.",
+    "empfohlene_massnahmen": ["TOM-AV-003", "TOM-AV-005", "TOM-AV-002", "TOM-AV-001", "TOM-AV-004"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-02T07:30",
+        "aktualisiert_am": "2025-05-02T07:30",
+        "version": "1.0"
+    }
+}

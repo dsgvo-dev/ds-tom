@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-022",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Ein unbefugter Zugriff auf die Datenverarbeitungssysteme und damit die personenbezogenen Daten ist möglich. Hierdurch könnten Unbefugte durch den Zugriff Vertraulichkeit, Verfügbarkeit oder Integrität verletzen.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-027",
+        "TOM-ORG-039",
+        "TOM-ORG-041",
+        "TOM-ORG-003",
+        "TOM-ORG-004"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-25T20:30",
+        "aktualisiert_am": "2025-04-25T20:30",
+        "version": "1.0"
+    }
+}

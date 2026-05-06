@@ -1,0 +1,23 @@
+{
+    "id": "THREAT-MS365-004",
+    "kategorie": "MS365",
+    "schutzziele": [
+        "Vertraulichkeit",
+        "Integrität",
+        "Transparenz",
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Intervernierbarkeit",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "VB",
+    "beschreibung": "Microsoft ändert regelmäßig Benennungen, Funktionen und Abläufe von Software-Komponenten oder Apps in MS365. Die personenbezogenen Daten werden durch diese geänderten Abläufe und ggf. fehlende Maßnahmen gefährdet.",
+    "empfohlene_massnahmen": ["TOM-MS365-005", "TOM-MS365-006", "TOM-MS365-007"],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-05T09:20",
+        "aktualisiert_am": "2025-05-05T09:20",
+        "version": "1.0"
+    }
+}

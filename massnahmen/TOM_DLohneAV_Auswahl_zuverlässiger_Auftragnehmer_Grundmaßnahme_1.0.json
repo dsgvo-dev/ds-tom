@@ -1,0 +1,38 @@
+{
+    "id": "TOM-DLohneAV-001",
+    "name": "Auswahl zuverlässiger Auftragnehmer",
+    "kategorie": "DLohneAV",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Wenn Dienstleister personenbezogene Daten auch ohne Auftragsverarbeitung verarbeiten, sind diese nach Aspekten der Zuverlässigkeit auszuwählen (BSI OPS.2.3)",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "BSI"
+        ],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-15T16:05",
+        "aktualisiert_am": "2025-05-15T16:05",
+        "version": "1.0"
+    }
+}

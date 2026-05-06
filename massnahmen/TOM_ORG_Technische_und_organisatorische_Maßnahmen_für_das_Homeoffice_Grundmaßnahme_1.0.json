@@ -1,0 +1,32 @@
+{
+    "id": "TOM-ORG-020",
+    "name": "Technische und organisatorische Maßnahmen für das Homeoffice",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Homeoffice",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Neben den rein organisatorischen Maßnahmen für das Homeoffice wie Dienstvereinbarung oder vertraglichen Regelungen mit den Beschäftigten muss der Einsatz im Homeoffice durch weitere technische Maßnahmen wie zusätzliche Datenverschlüsselung, Signaturen etc. abgesichert werden.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T15:13",
+        "aktualisiert_am": "2025-04-28T15:13",
+        "version": "1.0"
+    }
+}

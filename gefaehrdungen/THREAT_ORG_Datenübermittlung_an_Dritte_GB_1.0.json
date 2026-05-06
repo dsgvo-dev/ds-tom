@@ -1,0 +1,25 @@
+{
+    "id": "THREAT-ORG-015",
+    "kategorie": "ORG",
+    "schutzziele": [
+        "Rechtmäßigkeit",
+        "Zweckbindung",
+        "Transparenz",
+        "Nichtverkettung"
+    ],
+    "bedrohungstyp": "GB",
+    "beschreibung": "Es werden personenbezogene Daten an eine andere Stelle/Behörde übermittelt. Bei Dritten können die Daten zu einem anderen Zweck verarbeitet werden.",
+    "empfohlene_massnahmen": [
+        "TOM-ORG-006",
+        "TOM-ORG-007",
+        "TOM-ORG-012",
+        "TOM-ORG-015"
+    ],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-24T20:30",
+        "aktualisiert_am": "2025-04-25T15:34",
+        "version": "1.0"
+    }
+}

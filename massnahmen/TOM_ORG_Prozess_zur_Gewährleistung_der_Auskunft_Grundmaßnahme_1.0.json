@@ -1,0 +1,39 @@
+{
+    "id": "TOM-ORG-008",
+    "name": "Prozess zur Gewährleistung der Auskunft",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Die gesetzliche Pflicht zur Gewährleistung der Auskunftsrechte der Betroffenen nach Art. 15 DSGVO muss durch organisatorische Maßnahmen gesichert werden. Hierzu gehört die Festlegung von Zuständigkeiten und Abläufen.",
+    "organisationseinheit": "1",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung",
+            "Erforderlichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-28T14:33",
+        "aktualisiert_am": "2025-04-28T14:33",
+        "version": "1.0"
+    }
+}

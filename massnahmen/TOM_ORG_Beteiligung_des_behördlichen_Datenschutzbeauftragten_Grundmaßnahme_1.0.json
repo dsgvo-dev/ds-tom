@@ -1,0 +1,35 @@
+{
+    "id": "TOM-ORG-043",
+    "name": "Beteiligung des behördlichen Datenschutzbeauftragten",
+    "kategorie": "ORG",
+    "maßnahmentyp": "Grundmaßnahme",
+    "wirkungspunktzahl": 2,
+    "risikokategorie": "Bürgerbüro",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Der behördliche Datenschutzbeauftragte ist in die Planung, Einrichtung und Kontrolle des Bürgerbüros mit einzubeziehen, insbesondere bei baulichen, technischen oder organisatorischen Maßnahmen",
+    "organisationseinheit": "33",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Zweckbindung",
+            "Intervernierbarkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-04-29T21:29",
+        "aktualisiert_am": "2025-04-29T21:29",
+        "version": "1.0"
+    }
+}

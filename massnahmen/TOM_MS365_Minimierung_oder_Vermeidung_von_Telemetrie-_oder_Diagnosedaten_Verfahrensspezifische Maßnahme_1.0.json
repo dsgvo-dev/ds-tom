@@ -1,0 +1,39 @@
+{
+    "id": "TOM-MS365-010",
+    "name": "Minimierung oder Vermeidung von Telemetrie- oder Diagnosedaten",
+    "kategorie": "MS365",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "wirkungspunktzahl": 3,
+    "risikokategorie": "",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "MS365 verarbeitet eine Vielzahl von Telemetrie- und Diagnosedaten, falls diese nicht eingeschränkt werden. Dies hat durch technische Maßnahmen, z.B. die Konfiguration der Dienste zu erfolgen und muss mit den Inhalten der Dienstvereinbarung abgestimmt werden.",
+    "organisationseinheit": "15",
+    "transfer_drittland": true,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Verfügbarkeit",
+            "Vertraulichkeit",
+            "Integrität",
+            "Transparenz",
+            "Rechtmäßigkeit",
+            "Zweckbindung",
+            "Erforderlichkeit",
+            "Speicherbegrenzung",
+            "Intervernierbarkeit",
+            "Richtigkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [],
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2025-05-09T14:19",
+        "aktualisiert_am": "2025-05-09T14:19",
+        "version": "1.0"
+    }
+}
