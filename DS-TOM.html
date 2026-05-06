@@ -448,6 +448,63 @@
     #plan-toolbar label { font-size: 12px; color: var(--c-muted); text-transform: uppercase; letter-spacing: .04em; }
     #plan-toolbar select { font-size: 13px; padding: 5px 9px; }
 
+    /* ── Gefährdungs-zentrierte Ansicht ── */
+    .threat-cat-group { margin-bottom: 28px; }
+    .threat-cat-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-text);
+      padding: 8px 12px;
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: 8px 8px 0 0;
+      border-bottom: 2px solid var(--c-border);
+    }
+    .threat-block {
+      border: 1px solid var(--c-border);
+      border-top: none;
+      background: var(--c-bg);
+    }
+    .threat-block:last-child { border-radius: 0 0 8px 8px; }
+    .threat-block-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .threat-block-id {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--c-muted);
+      flex-shrink: 0;
+    }
+    .threat-block-desc {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c-text);
+      flex: 1;
+      line-height: 1.4;
+    }
+    .threat-block-sz {
+      font-size: 11px;
+      color: var(--c-muted);
+      flex-shrink: 0;
+    }
+    .threat-block-measures { padding: 6px 10px 10px 10px; }
+    .threat-block-measures .measure-row { margin-bottom: 5px; }
+    .threat-block-empty {
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--c-muted);
+      font-style: italic;
+    }
+
     .measure-group-label {
       font-size: 11px;
       font-weight: 700;
@@ -523,6 +580,10 @@
     .measure-detail.open { display: block; }
     .measure-detail-row { margin-bottom: 8px; }
     .measure-detail-row strong { color: var(--c-text); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+    .threat-ref-list { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
+    .threat-ref-item { display: flex; align-items: baseline; gap: 8px; font-size: 12px; }
+    .threat-ref-item .badge { flex-shrink: 0; font-size: 9px; padding: 1px 5px; }
+    .threat-ref-desc { color: var(--c-text); line-height: 1.4; }
 
     /* ── Alert / Hinweis ── */
     .alert { padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
@@ -969,19 +1030,11 @@
 
     <!-- Toolbar -->
     <div id="plan-toolbar">
-      <label for="sort-plan">Sortierung:</label>
+      <label for="sort-plan">Maßnahmen sortieren nach:</label>
       <select id="sort-plan" onchange="renderPlan()">
         <option value="status">Status</option>
         <option value="wirkung">Wirkungspunktzahl ↓</option>
-        <option value="kat">Kategorie</option>
         <option value="id">ID</option>
-      </select>
-      <label for="group-plan">Gruppierung:</label>
-      <select id="group-plan" onchange="renderPlan()">
-        <option value="none">Keine</option>
-        <option value="kat">Kategorie</option>
-        <option value="status">Status</option>
-        <option value="typ">Maßnahmentyp</option>
       </select>
       <div style="margin-left:auto;display:flex;gap:8px;">
         <button class="btn btn-secondary btn-sm" onclick="exportCSV()">⬇ CSV exportieren</button>
@@ -1127,6 +1180,15 @@ const STATUS_LABELS = {
   nicht_anwendbar:"Nicht anwendbar"
 };
 const STATUS_ORDER = { offen:0, in_bearbeitung:1, umgesetzt:2, nicht_anwendbar:3 };
+const KAT_LABELS = {
+  ORG:   "Allgemein-organisatorische Maßnahmen",
+  SW:    "Software und technische Systeme",
+  MS365: "Microsoft 365",
+  KI:    "Künstliche Intelligenz",
+  AV:    "Auftragsverarbeitung",
+  CL:    "Cloud-Dienste",
+  RR:    "Restrisiken"
+};
 
 // ── IndexedDB: Handle zwischen Sitzungen merken ────────────────
 const IDB_NAME  = "dsms-planer";
@@ -1540,117 +1602,160 @@ function getPlanMeasures() {
   return measures;
 }
 
+function renderMeasureRow(m, threatId) {
+  const domKey  = esc(threatId + "__" + m.id);
+  const notFound = !m.tom;
+  const wBadge   = m.wirkung ? `<span class="badge badge-wirkung-${m.wirkung}" title="Wirkungspunktzahl">W${m.wirkung}</span>` : "";
+  const warnBadge = notFound ? `<span class="badge badge-CL" title="Maßnahme nicht in Ordner gefunden">⚠ Nicht gefunden</span>` : "";
+
+  let abhaengigkeitenHtml = "";
+  if (m.tom && m.tom.abhängigkeiten && m.tom.abhängigkeiten.length) {
+    const deps = m.tom.abhängigkeiten.map(d => {
+      const found = TOMS.has(d);
+      return `<span class="badge ${found ? "badge-status-na" : "badge-CL"}" title="${found ? "Im Plan verfügbar" : "Nicht im aktuellen Plan"}">${esc(d)}</span>`;
+    }).join(" ");
+    abhaengigkeitenHtml = `<div class="measure-detail-row"><strong>Abhängigkeiten</strong>${deps}</div>`;
+  }
+
+  const standards = m.tom?.compliance?.standards?.join(", ") || "";
+  const zusatz    = m.tom?.compliance?.zusatzquellen?.join(", ") || "";
+  const sz        = (m.tom?.anwendbarkeit?.schutzziele || []).join(", ");
+
+  return `
+  <div class="measure-row status-${m.status}" id="mr-${domKey}" data-tom-id="${esc(m.id)}">
+    <div class="measure-row-header">
+      <select class="measure-status-sel" aria-label="Status für ${esc(m.name)}"
+              onchange="setStatus('${esc(m.id)}', this.value)">
+        <option value="offen"          ${m.status==="offen"          ?"selected":""}>⬤ Offen</option>
+        <option value="in_bearbeitung" ${m.status==="in_bearbeitung" ?"selected":""}>⬤ In Bearbeitung</option>
+        <option value="umgesetzt"      ${m.status==="umgesetzt"      ?"selected":""}>✓ Umgesetzt</option>
+        <option value="nicht_anwendbar"${m.status==="nicht_anwendbar"?"selected":""}>– Nicht anwendbar</option>
+      </select>
+      <span class="measure-id">${esc(m.id)}</span>
+      <span class="measure-name">${esc(m.name)}</span>
+      <div class="measure-meta">
+        ${warnBadge}
+        <span class="badge badge-${esc(m.kategorie)}">${esc(m.kategorie)}</span>
+        ${m.typ ? `<span class="badge badge-status-na" style="font-size:10px">${esc(m.typ.replace("Maßnahme","").trim())}</span>` : ""}
+        ${wBadge}
+      </div>
+      <button class="measure-expand" onclick="toggleMeasureDetail('${domKey}')" aria-label="Details ein-/ausblenden">▾</button>
+    </div>
+    <div class="measure-notes-row" id="mn-${domKey}">
+      <input type="text" placeholder="Notizen (z. B. Datum, Verantwortliche, Ticket-Nr.) …"
+             value="${esc(m.notizen)}"
+             oninput="setNotizen('${esc(m.id)}', this.value)"
+             aria-label="Notizen für ${esc(m.name)}">
+    </div>
+    <div class="measure-detail" id="md-${domKey}">
+      ${notFound
+        ? `<div class="alert alert-warn">⚠ Die Maßnahme <strong>${esc(m.id)}</strong> wurde in den geladenen JSON-Dateien nicht gefunden.</div>`
+        : `
+      <div class="measure-detail-row"><strong>Beschreibung</strong>${esc(m.beschr)}</div>
+      ${sz        ? `<div class="measure-detail-row"><strong>Schutzziele</strong>${esc(sz)}</div>` : ""}
+      ${m.risiko  ? `<div class="measure-detail-row"><strong>Risikokategorie</strong>${esc(m.risiko)}</div>` : ""}
+      ${standards ? `<div class="measure-detail-row"><strong>Rechtsgrundlagen</strong>${esc(standards)}</div>` : ""}
+      ${zusatz    ? `<div class="measure-detail-row"><strong>Weitere Quellen</strong>${esc(zusatz)}</div>` : ""}
+      ${abhaengigkeitenHtml}
+      `}
+    </div>
+  </div>`;
+}
+
 function renderPlan() {
-  const sortKey  = document.getElementById("sort-plan")?.value || "status";
-  const groupKey = document.getElementById("group-plan")?.value || "none";
+  const sortKey = document.getElementById("sort-plan")?.value || "status";
 
-  let measures = getPlanMeasures();
+  // Alle ausgewählten Gefährdungen, sortiert nach Kategorie dann ID
+  const selectedThreats = THREATS
+    .filter(t => selectedIds.has(t.id))
+    .sort((a, b) => {
+      const ca = a.kategorie || "?", cb = b.kategorie || "?";
+      if (ca !== cb) return ca.localeCompare(cb, "de");
+      return a.id.localeCompare(b.id, "de");
+    });
 
-  // Sortierung
-  measures.sort((a, b) => {
-    if (sortKey === "status")  return (STATUS_ORDER[a.status]||0) - (STATUS_ORDER[b.status]||0);
-    if (sortKey === "wirkung") return b.wirkung - a.wirkung;
-    if (sortKey === "kat")     return a.kategorie.localeCompare(b.kategorie,"de");
-    if (sortKey === "id")      return a.id.localeCompare(b.id,"de");
-    return 0;
-  });
-
-  // Statistik
-  renderStats(measures);
+  // Statistik über eindeutige TOM-IDs
+  const allMeasures = getPlanMeasures();
+  renderStats(allMeasures);
 
   const listEl = document.getElementById("plan-list");
-  if (measures.length === 0) {
+  if (selectedThreats.length === 0 || allMeasures.length === 0) {
     listEl.innerHTML = '<div class="empty">Keine Gefährdungen ausgewählt oder keine Maßnahmen vorhanden.<br>Wählen Sie im Schritt 2 mindestens eine Gefährdung aus.</div>';
     return;
   }
 
-  // Gruppierung
-  let html = "";
-  let lastGroup = null;
-
-  function groupLabel(m) {
-    if (groupKey === "kat")    return m.kategorie || "Sonstige";
-    if (groupKey === "status") return STATUS_LABELS[m.status] || m.status;
-    if (groupKey === "typ")    return m.typ || "Sonstige";
-    return null;
+  // Gefährdungen nach Kategorie gruppieren
+  const catGroups = new Map();
+  for (const t of selectedThreats) {
+    const cat = t.kategorie || "?";
+    if (!catGroups.has(cat)) catGroups.set(cat, []);
+    catGroups.get(cat).push(t);
   }
 
-  for (const m of measures) {
-    const grp = groupLabel(m);
-    if (grp && grp !== lastGroup) {
-      html += `<div class="measure-group-label">${esc(grp)}</div>`;
-      lastGroup = grp;
-    }
+  let html = "";
+  for (const [cat, threats] of catGroups) {
+    const catLabel = KAT_LABELS[cat] || cat;
+    html += `<div class="threat-cat-group">
+      <div class="threat-cat-label">
+        <span class="badge badge-${esc(cat)}">${esc(cat)}</span>
+        ${esc(catLabel)}
+      </div>`;
 
-    const notFound = !m.tom;
-    const wBadge = m.wirkung ? `<span class="badge badge-wirkung-${m.wirkung}" title="Wirkungspunktzahl">W${m.wirkung}</span>` : "";
-    const threatBadges = m.threats.slice(0,3).map(tid => `<span class="badge badge-status-na" style="font-size:9px;padding:1px 5px">${esc(tid)}</span>`).join(" ");
-    const moreThr = m.threats.length > 3 ? `<span style="font-size:11px;color:var(--c-muted)">+${m.threats.length-3}</span>` : "";
-    const warnBadge = notFound ? `<span class="badge badge-CL" title="Maßnahme nicht in Ordner gefunden">⚠ Nicht gefunden</span>` : "";
+    for (const threat of threats) {
+      const tomIds = threat.empfohlene_massnahmen || [];
 
-    // Abhängigkeiten prüfen
-    let abhaengigkeitenHtml = "";
-    if (m.tom && m.tom.abhängigkeiten && m.tom.abhängigkeiten.length) {
-      const deps = m.tom.abhängigkeiten.map(d => {
-        const found = TOMS.has(d);
-        return `<span class="badge ${found ? 'badge-status-na' : 'badge-CL'}" title="${found ? 'Im Plan verfügbar' : 'Nicht im aktuellen Plan'}">${esc(d)}</span>`;
-      }).join(" ");
-      abhaengigkeitenHtml = `<div class="measure-detail-row"><strong>Abhängigkeiten</strong>${deps}</div>`;
-    }
+      // Maßnahmen für diese Gefährdung aufbauen
+      let measures = tomIds.map(mid => {
+        const tom = TOMS.get(mid);
+        const st  = measureSt.get(mid) || { status: "offen", notizen: "" };
+        return {
+          id:        mid,
+          tom:       tom || null,
+          name:      tom ? tom.name : mid,
+          kategorie: tom ? (tom.kategorie || "?") : "?",
+          typ:       tom ? (tom.maßnahmentyp || "") : "",
+          wirkung:   tom ? (tom.wirkungspunktzahl || 0) : 0,
+          risiko:    tom ? (tom.risikokategorie || "") : "",
+          beschr:    tom ? (tom.beschreibung || "") : "",
+          status:    st.status,
+          notizen:   st.notizen,
+        };
+      });
 
-    const standards = m.tom?.compliance?.standards?.join(", ") || "";
-    const zusatz    = m.tom?.compliance?.zusatzquellen?.join(", ") || "";
-    const sz        = (m.tom?.anwendbarkeit?.schutzziele || []).join(", ");
+      // Sortierung innerhalb der Gefährdung
+      measures.sort((a, b) => {
+        if (sortKey === "status")  return (STATUS_ORDER[a.status]||0) - (STATUS_ORDER[b.status]||0);
+        if (sortKey === "wirkung") return b.wirkung - a.wirkung;
+        if (sortKey === "id")      return a.id.localeCompare(b.id, "de");
+        return 0;
+      });
 
-    html += `
-    <div class="measure-row status-${m.status}" id="mr-${esc(m.id)}">
-      <div class="measure-row-header">
-        <select class="measure-status-sel" aria-label="Status für ${esc(m.name)}"
-                onchange="setStatus('${esc(m.id)}', this.value)">
-          <option value="offen"          ${m.status==="offen"          ?"selected":""}>⬤ Offen</option>
-          <option value="in_bearbeitung" ${m.status==="in_bearbeitung" ?"selected":""}>⬤ In Bearbeitung</option>
-          <option value="umgesetzt"      ${m.status==="umgesetzt"      ?"selected":""}>✓ Umgesetzt</option>
-          <option value="nicht_anwendbar"${m.status==="nicht_anwendbar"?"selected":""}>– Nicht anwendbar</option>
-        </select>
-        <span class="measure-id">${esc(m.id)}</span>
-        <span class="measure-name">${esc(m.name)}</span>
-        <div class="measure-meta">
-          ${warnBadge}
-          <span class="badge badge-${esc(m.kategorie)}">${esc(m.kategorie)}</span>
-          ${m.typ ? `<span class="badge badge-status-na" style="font-size:10px">${esc(m.typ.replace("Maßnahme","").trim())}</span>` : ""}
-          ${wBadge}
-          ${threatBadges}${moreThr}
+      const szText = (threat.schutzziele || []).join(", ");
+      html += `
+      <div class="threat-block">
+        <div class="threat-block-header">
+          <span class="threat-block-id">${esc(threat.id)}</span>
+          <span class="threat-block-desc">${esc(threat.beschreibung || "")}</span>
+          ${szText ? `<span class="threat-block-sz">${esc(szText)}</span>` : ""}
         </div>
-        <button class="measure-expand" onclick="toggleMeasureDetail('${esc(m.id)}')" aria-label="Details ein-/ausblenden">▾</button>
-      </div>
-      <div class="measure-notes-row" id="mn-${esc(m.id)}">
-        <input type="text" placeholder="Notizen (z. B. Datum, Verantwortliche, Ticket-Nr.) …"
-               value="${esc(m.notizen)}"
-               oninput="setNotizen('${esc(m.id)}', this.value)"
-               aria-label="Notizen für ${esc(m.name)}">
-      </div>
-      <div class="measure-detail" id="md-${esc(m.id)}">
-        ${notFound
-          ? `<div class="alert alert-warn">⚠ Die Maßnahme <strong>${esc(m.id)}</strong> wurde in den geladenen JSON-Dateien nicht gefunden. Möglicherweise fehlt die Datei im toms-Ordner.</div>`
-          : `
-        <div class="measure-detail-row"><strong>Beschreibung</strong>${esc(m.beschr)}</div>
-        ${sz       ? `<div class="measure-detail-row"><strong>Schutzziele</strong>${esc(sz)}</div>` : ""}
-        ${m.risiko ? `<div class="measure-detail-row"><strong>Risikokategorie</strong>${esc(m.risiko)}</div>` : ""}
-        ${standards? `<div class="measure-detail-row"><strong>Rechtsgrundlagen</strong>${esc(standards)}</div>` : ""}
-        ${zusatz   ? `<div class="measure-detail-row"><strong>Weitere Quellen</strong>${esc(zusatz)}</div>` : ""}
-        ${abhaengigkeitenHtml}
-        <div class="measure-detail-row"><strong>Referenziert von Gefährdungen</strong>${m.threats.map(tid => `<span class="badge badge-status-na" style="font-size:9px;padding:1px 5px;margin-right:3px">${esc(tid)}</span>`).join("")}</div>
-        `}
-      </div>
-    </div>`;
+        <div class="threat-block-measures">
+          ${measures.length === 0
+            ? `<div class="threat-block-empty">Keine Maßnahmen zugeordnet.</div>`
+            : measures.map(m => renderMeasureRow(m, threat.id)).join("")
+          }
+        </div>
+      </div>`;
+    }
+
+    html += `</div>`;
   }
 
   listEl.innerHTML = html;
 }
 
-function toggleMeasureDetail(id) {
-  const det = document.getElementById("md-" + id);
-  const not = document.getElementById("mn-" + id);
+function toggleMeasureDetail(domKey) {
+  const det = document.getElementById("md-" + domKey);
+  const not = document.getElementById("mn-" + domKey);
   if (det) det.classList.toggle("open");
   if (not) not.classList.toggle("open");
 }
@@ -1658,11 +1763,12 @@ function toggleMeasureDetail(id) {
 function setStatus(id, val) {
   const cur = measureSt.get(id) || { status: "offen", notizen: "" };
   measureSt.set(id, { ...cur, status: val });
-  // Zeile neu stylen
-  const row = document.getElementById("mr-" + id);
-  if (row) {
+  // Alle Zeilen mit dieser TOM-ID aktualisieren (TOM kann unter mehreren Gefährdungen erscheinen)
+  document.querySelectorAll(`[data-tom-id="${id}"]`).forEach(row => {
     row.className = `measure-row status-${val}`;
-  }
+    const sel = row.querySelector(".measure-status-sel");
+    if (sel) sel.value = val;
+  });
   renderStats();
 }
 
