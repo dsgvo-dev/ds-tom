@@ -1,0 +1,95 @@
+{
+    "id": "TOM-AV-006",
+    "name": "Prüfung der Zulässigkeit der Verarbeitung von Sozialdaten im Auftrag (§ 80 SGB X)",
+    "kategorie": "AV",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "risikokategorie": "",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Werden Sozialdaten im Auftrag verarbeitet, ist der Auftrag nur unter den Voraussetzungen des § 80 SGB X zulässig. Vor der Auftragserteilung ist zu prüfen und zu dokumentieren: der Ort der Verarbeitung (Inland, EU, gleichgestellter Staat oder Drittstaat mit Angemessenheitsbeschluss, § 80 Abs. 2), bei nicht-öffentlichen Auftragsverarbeitern die Voraussetzungen des § 80 Abs. 3 (Störungen im Betriebsablauf oder erheblich kostengünstiger; Ausnahme für IT-Dienstleister in Mehrheitsbesitz von Bund oder Ländern mit Genehmigung der obersten Dienstbehörde) sowie die Ausnahme für Prüfung und Wartung (§ 80 Abs. 5).",
+    "organisationseinheit": "",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Rechtmäßigkeit",
+            "Zweckbindung"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "§ 80 Abs. 2, 3 und 5 SGB X"
+        ],
+        "zusatzquellen": []
+    },
+    "abhängigkeiten": [
+        "TOM-AV-003"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
+    "metadaten": {
+        "quelle": "Intern",
+        "erstellt_von": "Datenschutzbeauftragter",
+        "erstellt_am": "2026-11-13T00:00",
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "hinweis": "Allgemeine Fassung für jeden Auftragsverarbeiter; für Microsoft 365 gelten daneben TOM-MS365-017/018 (bewusst getrennt, Entscheidung DSB 13.11.2026).",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "Auftragsverarbeitung",
+        "zusaetzliche_bedingung": "Sozialdaten (Besonderheiten art.sensitive_daten.sozialdaten)"
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "§ 80 Abs. 2, 3 und 5 SGB X",
+        "fundstellen_recht": [
+            {
+                "norm": "§ 80 Abs. 2, 3 und 5 SGB X",
+                "datei": "facts/gesetze/bund/SGB/SGB_X.md"
+            }
+        ],
+        "begruendung": "Pflicht nur bei Sozialdaten im Auftrag",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Frage 2 (§ 80 SGB X), Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 2,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit",
+                "Transparenz"
+            ],
+            "regel": "R6",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
+    }
+}

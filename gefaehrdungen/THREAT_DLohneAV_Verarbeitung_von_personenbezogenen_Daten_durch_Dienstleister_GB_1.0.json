@@ -5,6 +5,10 @@
     "bedrohungstyp": "GB",
     "beschreibung": "Personenbezogene Daten von Betroffenen (Bürger*innen/Beschäftigte) werden durch einen Dienstleister verarbeitet, ohne dass eine Auftragsverarbeitung besteht.",
     "empfohlene_massnahmen": ["TOM-DLohneAV-003", "TOM-DLohneAV-001", "TOM-DLohneAV-002"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

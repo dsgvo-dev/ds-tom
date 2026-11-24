@@ -1,0 +1,116 @@
+{
+    "id": "TOM-VIDEO-006",
+    "name": "Zugriffsprotokollierung mit Vier-Augen-Prinzip bei Auswertung",
+    "kategorie": "VIDEO",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "risikokategorie": "Organisatorische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Jeder Zugriff auf aufgezeichnete Videodaten ist zu protokollieren. Die Protokollierung erfasst: (1) Zeitpunkt des Zugriffs, (2) Identität des zugreifenden Users, (3) Zweck des Zugriffs, (4) aufgerufene Aufzeichnung (Kamerastandort, Zeitraum), (5) Art der Nutzung (Ansehen, Export, Weitergabe, Löschung). Die Zugriffsprotokolle sind separat von den Videodaten zu speichern und dürfen nur von der Datenschutzaufsicht oder dem DSB eingesehen werden. Die Aufbewahrungsfrist für Zugriffsprotokolle beträgt mindestens 1 Jahr. Bei Auswertungen von Videoaufzeichnungen (z.B. bei Vorfällen) ist das Vier-Augen-Prinzip zu beachten: Die Auswertung darf nur von zwei berechtigten Personen gemeinsam durchgeführt werden. Die Auswertung ist zu dokumentieren.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Transparenz"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "Art. 5 Abs. 2 DSGVO (Rechenschaftspflicht)",
+            "Art. 32 DSGVO"
+        ],
+        "zusatzquellen": [
+            "BayLfD-OH (2020), S. 42",
+            "SDM D.3.2.2",
+            "Grundschutz++ DET.3.6 „Speicherkapazität“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.1.5.A10 „Zugriffsschutz für Protokollierungsdaten“ (S)"
+        ]
+    },
+    "abhängigkeiten": [
+        "TOM-ZUTRITT-001",
+        "TOM-PROTO-001"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true,
+        "koba_id": [
+            "ops.1.1.5.a10"
+        ]
+    },
+    "metadaten": {
+        "quelle": "BayLfD-OH (2020); SDM",
+        "erstellt_von": "Agent",
+        "erstellt_am": "2026-06-27T00:00",
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "Videoüberwachung",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Protokollierung und Vier-Augen-Prinzip",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung. BSI-Bezug: Grundschutz++ DET.3.6 „Speicherkapazität“ (SOLLTE, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "DET.3.6",
+                "titel": "Speicherkapazität",
+                "praktik": "Detektion",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 4,
+                "anforderungstext": "Detektion SOLLTE den für die Protokollierung zur Verfügung stehenden Speicherplatz [Parameter] überprüfen.",
+                "zuordnung_ueber": "OPS.1.1.5.A10",
+                "fundstelle": "Grundschutz++ DET.3.6 „Speicherkapazität“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [
+            {
+                "anforderung": "OPS.1.1.5.A10",
+                "titel": "Zugriffsschutz für Protokollierungsdaten",
+                "stufe": "Standard-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.1.5.A10 „Zugriffsschutz für Protokollierungsdaten“ (S)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 1,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "erkennend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Nichtverkettung"
+            ],
+            "regel": "R9",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
+    }
+}

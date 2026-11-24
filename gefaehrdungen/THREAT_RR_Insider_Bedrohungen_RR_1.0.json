@@ -16,6 +16,10 @@
         "TOM-ORG-017",
         "TOM-ORG-018"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

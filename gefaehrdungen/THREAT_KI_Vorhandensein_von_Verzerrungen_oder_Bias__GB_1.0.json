@@ -7,11 +7,15 @@
         "Zweckbindung",
         "Richtigkeit",
         "Integrität",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Wenn Künstliche Intelligenz personenbezogene Daten verarbeitet, besteht die Gefährdung, dass diese Daten bzw. das Ergebnis der Bearbeitung durch Verzerrungen oder einen Biss beeinträchtigt werden. Eine solche Verzerrung oder Bis könnte durch eine fehlerhafte oder einseitige Nutzung von Trainingsdaten entstehen.",
     "empfohlene_massnahmen": ["TOM-KI-009", "TOM-KI-006", "TOM-KI-007", "TOM-KI-010", "TOM-KI-013"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

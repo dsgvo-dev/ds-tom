@@ -5,12 +5,16 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Zwischen den Betroffenen und den Verantwortlichen besteht ein Über-/Unterordnungsverhältnis. Durch eine Auftragsverarbeitung verstärkt sich die grundsätzlich bereits vorhandene Gefährdung, wenn die Betroffenen gegenüber den Verantwortlichen in einem Über- und Unterordnungsverhältnis stehen. Die Betroffenen sind in besonderem Maß darauf angewiesen, dass die Verantwortlichen die Rechte und Freiheiten schützen.",
     "empfohlene_massnahmen": ["TOM-AV-003", "TOM-AV-005", "TOM-AV-002", "TOM-AV-004"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

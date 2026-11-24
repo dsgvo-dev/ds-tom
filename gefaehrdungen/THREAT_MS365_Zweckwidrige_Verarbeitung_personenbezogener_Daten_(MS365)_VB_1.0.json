@@ -7,12 +7,16 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Personenbezogene Daten von Betroffenen werden durch den Auftragnehmer Microsoft zweckwidrig verarbeitet, z.B. zu eigenen geschäftlichen Zwecken.",
     "empfohlene_massnahmen": ["TOM-MS365-008", "TOM-MS365-006", "TOM-MS365-009", "TOM-MS365-010"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

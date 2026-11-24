@@ -8,13 +8,25 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung",
         "Richtigkeit"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Personenbezogene Daten von Betroffenen werden verarbeitet (Bürger*innen/Beschäftigte). Neben der grundsätzlichen Gefährdung wirkt sich die Verarbeitung durch Auftragsverarbeiter in spezifischem Maß auf die Verarbeitung aus.",
-    "empfohlene_massnahmen": ["TOM-AV-003", "TOM-AV-005", "TOM-AV-002", "TOM-AV-001", "TOM-AV-004"],
+    "empfohlene_massnahmen": [
+        "TOM-AV-003",
+        "TOM-AV-005",
+        "TOM-AV-002",
+        "TOM-AV-001",
+        "TOM-AV-004",
+        "TOM-AV-006",
+        "TOM-AV-007"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

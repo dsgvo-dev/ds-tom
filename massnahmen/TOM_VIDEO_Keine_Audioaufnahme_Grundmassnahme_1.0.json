@@ -1,0 +1,94 @@
+{
+    "id": "TOM-VIDEO-004",
+    "name": "Keine Audioaufnahme (technisch deaktiviert)",
+    "kategorie": "VIDEO",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "risikokategorie": "Technische Mängel",
+    "risikoniveau": "Niedrig",
+    "beschreibung": "Audioaufnahmen (Ton) sind im Rahmen der Videoüberwachung grundsätzlich unzulässig. Die Audiofunktion aller Kamerageräte ist technisch dauerhaft zu deaktivieren. Bei Kameras mit integriertem Mikrofon ist dies durch Hardware-Jumper (Mainboard-Jumper), physische Trennung des Mikrofons oder Deaktivierung auf Firmware-Ebene umzusetzen. Bei IP-Kameras ist die Audio-Funktion im Kameramenü zu deaktivieren und die Deaktivierung zu protokollieren. Die Deaktivierung muss bei jeder Wartung oder Firmware-Aktualisierung überprüft werden.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Datenminimierung"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "Art. 5 Abs. 1 lit. c DSGVO",
+            "Art. 25 DSGVO",
+            "§ 201 Abs. 1 Nr. 1 StGB"
+        ],
+        "zusatzquellen": [
+            "DSK Kurzpapier Nr. 15",
+            "BayLfD-OH Kommunen (2022), Abschnitt I.2"
+        ]
+    },
+    "abhängigkeiten": [
+        "TOM-VIDEO-003"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
+    "metadaten": {
+        "quelle": "DSK KPNr. 15; BayLfD-OH Kommunen (2022)",
+        "erstellt_von": "Agent",
+        "erstellt_am": "2026-06-27T00:00",
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 1
+    },
+    "anlass": {
+        "wert": "Videoüberwachung",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "§ 201 Abs. 1 Nr. 1 StGB; Art. 5 Abs. 1 lit. c DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "§ 201 Abs. 1 Nr. 1 StGB",
+                "datei": "facts/gesetze/bund/stgb.md"
+            },
+            {
+                "norm": "Art. 5 Abs. 1 lit. c DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-005.md"
+            }
+        ],
+        "begruendung": "rechtlich bedingt, Norm fachlich ergänzen",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 4, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 2
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
+    }
+}

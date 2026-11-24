@@ -6,7 +6,7 @@
         "Rechtmäßigkeit",
         "Zweckbindung",
         "Speicherbegrenzung",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Personenbezogene Daten werden zu statistischen Zwecken verarbeitet. Dabei müssen personenbezogene Daten nach statistikrechtlichen Vorschriften und Grundsätzen behandelt werden. Dabei können Fehler auftreten, so dass z.B. Anonymisierungen nicht mehr Wirkung zeigen.",
@@ -18,6 +18,10 @@
         "TOM-SW-007",
         "TOM-SW-012"
     ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

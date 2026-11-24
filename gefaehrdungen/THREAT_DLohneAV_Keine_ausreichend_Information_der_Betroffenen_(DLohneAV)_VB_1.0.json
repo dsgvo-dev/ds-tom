@@ -5,11 +5,15 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten nicht informiert sind. ",
     "empfohlene_massnahmen": ["TOM-DLohneAV-003", "TOM-DLohneAV-001", "TOM-DLohneAV-004"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

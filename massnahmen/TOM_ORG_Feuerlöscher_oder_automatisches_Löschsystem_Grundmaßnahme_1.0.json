@@ -3,7 +3,6 @@
     "name": "Feuerlöscher oder automatisches Löschsystem",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "Haustechnik",
     "risikoniveau": "Mittel",
     "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine erforderliche technische Maßnahme ist das Vorhandensein von Feuerlöschern oder einem automatischen Löschsystem.",
@@ -12,20 +11,99 @@
     "anwendbarkeit": {
         "schutzziele": [
             "Verfügbarkeit",
-            "Vertraulichkeit",
             "Integrität"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ GEB.10.2 „Brandschutz“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ SENS.8.11 „Verwendung von Brandschutmitteln“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023: INF.1.A5 Handfeuerlöscher (Basis-Anforderung)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "inf.1.a5",
+            "inf.2.a9"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T19:05",
-        "aktualisiert_am": "2025-04-28T19:05",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "begruendung": "BSI: Stand der Technik bei normalem Sicherheitsniveau (SOLLTE); BSI IT-Grundschutz-Kompendium Edition 2023: INF.1.A5 Handfeuerlöscher (Basis-Anforderung)",
+        "hinweis": "Nach BSI Grundschutz++ Stand der Technik bei normalem Sicherheitsniveau (Modalverb SOLLTE): Grundschutz++ GEB.10.2 „Brandschutz“ (SOLLTE, Sicherheitsniveau normal (Stand der Technik)); Grundschutz++ SENS.8.11 „Verwendung von Brandschutmitteln“ (SOLLTE, Sicherheitsniveau normal (Stand der Technik)); im BSI IT-Grundschutz-Kompendium Edition 2023 INF.1.A5 Handfeuerlöscher (Basis-Anforderung). Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [
+            {
+                "anforderung": "GEB.10.2",
+                "titel": "Brandschutz",
+                "praktik": "Gebäudemanagement",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 2,
+                "anforderungstext": "Gebäudemanagement für Standorte SOLLTE Brandschutz nach den entsprechenden Normen verankern.",
+                "fundstelle": "Grundschutz++ GEB.10.2 „Brandschutz“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "SENS.8.11",
+                "titel": "Verwendung von Brandschutmitteln",
+                "praktik": "Sensibilisierung",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Sensibilisierung für Mitarbeitende SOLLTE zur korrekten Verwendung bereitgestellter Brandschutz-Hilfsmittel sensibilisieren.",
+                "fundstelle": "Grundschutz++ SENS.8.11 „Verwendung von Brandschutmitteln“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 3, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 1,
+            "Verfügbarkeit": 2,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "korrigierend",
+        "wirkrichtung": "Schaden",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

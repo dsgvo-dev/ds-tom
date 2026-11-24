@@ -3,7 +3,6 @@
     "name": "Passwortschutz und Bildschirmsperre ",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Bürgerbüro",
     "risikoniveau": "Niedrig",
     "beschreibung": "Alle Computer im Bürgerbüro müssen mit einem individuellen Passwort und einer automatischen Bildschirmsperre mit kurzer Inaktivitätszeit geschützt sein. Passwörter dürfen nicht offen aufbewahrt werden​.",
@@ -11,25 +10,98 @@
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
             "Vertraulichkeit",
-            "Integrität",
-            "Transparenz",
-            "Zweckbindung",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Integrität"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "BSI IT-Grundschutz-Kompendium Edition 2023, ORP.4.A8 „Regelung des Passwortgebrauchs“ (B)",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, ORP.4.A22 „Regelung zur Passwortqualität“ (B)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true,
+        "koba_id": [
+            "orp.4.a8",
+            "orp.4.a22"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-29T21:27",
-        "aktualisiert_am": "2025-04-29T21:27",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "organisationsweit, wenn mindestens eine VVT das Merkmal Bürgerbüro hat",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Passwort und Bildschirmsperre",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [
+            {
+                "anforderung": "ORP.4.A8",
+                "titel": "Regelung des Passwortgebrauchs",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, ORP.4.A8 „Regelung des Passwortgebrauchs“ (B)"
+            },
+            {
+                "anforderung": "ORP.4.A22",
+                "titel": "Regelung zur Passwortqualität",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, ORP.4.A22 „Regelung zur Passwortqualität“ (B)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Verfügbarkeit",
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Nichtverkettung",
+                "Zweckbindung"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

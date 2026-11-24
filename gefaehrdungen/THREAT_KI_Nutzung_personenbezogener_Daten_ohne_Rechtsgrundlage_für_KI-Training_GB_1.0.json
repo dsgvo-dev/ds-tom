@@ -5,6 +5,10 @@
     "bedrohungstyp": "GB",
     "beschreibung": "Bei der Nutzung personenbezogene Daten für das KI-Training besteht die Gefährdung, dass diese ohne ausreichende oder mangelhafte Rechtsgrundlagen verwendet werden (z.B. Nutzung von Trainingsdaten aus dem Internet oder Bestandsdaten ohne gültige Rechtsgrundlage).",
     "empfohlene_massnahmen": ["TOM-KI-015", "TOM-KI-009", "TOM-KI-007", "TOM-KI-012"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "",

@@ -5,6 +5,10 @@
     "bedrohungstyp": "GB",
     "beschreibung": "Bei der Verarbeitung personenbezogener Daten mittels KI besteht die Gefährdung, dass die Ergebnisse nur mangelhaft erklärbar und nicht transparent sind (z.B. Unklarheit, aus welchen Datenquellen eine diskriminierende Aussage zusammengesetzt wird).",
     "empfohlene_massnahmen": ["TOM-KI-007", "TOM-KI-006", "TOM-KI-008"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "",

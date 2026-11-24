@@ -3,7 +3,6 @@
     "name": "Prozess zur VVT-Etablierung und -pflege",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Die gesetzliche Pflicht zur Etablierung eines Verzeichnisses der Verarbeitungstätigkeiten nach Art. 30 DSGVO muss durch organisatorische Maßnahmen gesichert werden. Hierzu gehört die Festlegung von Zuständigkeiten.",
@@ -11,29 +10,107 @@
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
-            "Vertraulichkeit",
-            "Integrität",
             "Transparenz",
             "Rechtmäßigkeit",
             "Zweckbindung",
-            "Speicherbegrenzung",
-            "Intervernierbarkeit",
-            "Richtigkeit",
-            "Nichtverkettung",
-            "Erforderlichkeit"
+            "Speicherbegrenzung"
         ]
     },
     "compliance": {
-        "standards": [],
+        "standards": [
+            "Art. 30 DSGVO"
+        ],
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T14:29",
-        "aktualisiert_am": "2025-04-28T14:29",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Verfügbarkeit",
+                "Vertraulichkeit",
+                "Integrität",
+                "Transparenz",
+                "Rechtmäßigkeit",
+                "Zweckbindung",
+                "Speicherbegrenzung",
+                "Intervenierbarkeit",
+                "Richtigkeit",
+                "Nichtverkettung",
+                "Erforderlichkeit"
+            ],
+            "zuordnung": "RM",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "Art. 30 DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "Art. 30 DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-030.md"
+            }
+        ],
+        "begruendung": "Verzeichnis ist Pflicht",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 4, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 2,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 1,
+            "Speicherbegrenzung": 1,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit",
+                "Integrität",
+                "Verfügbarkeit",
+                "Intervenierbarkeit",
+                "Nichtverkettung",
+                "Richtigkeit"
+            ],
+            "regel": "R6",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

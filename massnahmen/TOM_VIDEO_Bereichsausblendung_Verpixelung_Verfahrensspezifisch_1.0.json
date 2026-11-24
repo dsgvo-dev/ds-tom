@@ -1,0 +1,93 @@
+{
+    "id": "TOM-VIDEO-002",
+    "name": "Bereichsausblendung und Verpixelung nicht benötigter Flächen",
+    "kategorie": "VIDEO",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "risikokategorie": "Technische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Kameraaufnahmen sind räumlich so zu beschränken, dass nur die für den Überwachungszweck erforderlichen Flächen erfasst werden. Nicht benötigte Bereiche (Nachbargrundstücke, öffentlicher Verkehrsraum, Kommunikationszonen wie Bänke) sind durch technische Maßnahmen auszublenden oder zu verpixeln. Konkret: (1) Kameraperspektive mechanisch fixieren (kein freies Schwenken). (2) Software-Seitenblenden setzen, um nicht benötigte Bildbereiche dauerhaft zu schwärzen/verpixeln. (3) Bei Aufnahmen, die den öffentlichen Verkehrsraum streifen, sind Kennzeichen vorbeifahrender Fahrzeuge unkenntlich zu machen. (4) Privathäuser und -grundstücke dürfen nicht erfasst werden. Die Maßnahmen sind bei der Inbetriebnahme zu dokumentieren und regelmäßig zu überprüfen (vierteljährlich). BayLfD-OH Kommunen (2022), Abschnitt II.3: Verhältnismäßigkeit — räumliche Beschränkung.",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Datenminimierung",
+            "Vertraulichkeit"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "Art. 5 Abs. 1 lit. c DSGVO (Datenminimierung)",
+            "Art. 25 DSGVO (Privacy by Design)",
+            "Art. 32 DSGVO"
+        ],
+        "zusatzquellen": [
+            "BayLfD-OH Videoüberwachung in Kommunen (2022), Abschnitt II.3",
+            "BayLfD-OH (2020), S. 42: Technische Schutzmaßnahmen"
+        ]
+    },
+    "abhängigkeiten": [
+        "TOM-VIDEO-003"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
+    "metadaten": {
+        "quelle": "BayLfD, OH Videoüberwachung in Kommunen (2022), Abschnitt I.5 und II.3; § 14 Abs. 1 NDSG — Erforderlichkeit",
+        "erstellt_von": "Agent",
+        "erstellt_am": "2026-06-27T00:00",
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "Videoüberwachung",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Bereichsausblendung",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 2
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Nichtverkettung"
+            ],
+            "regel": "R9",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
+    }
+}

@@ -5,11 +5,15 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Personenbezogene Daten von Betroffenen werden durch den Auftragnehmer zweckwidrig verarbeitet, z.B. zu eigenen Zwecken.",
     "empfohlene_massnahmen": ["TOM-DLohneAV-003", "TOM-DLohneAV-001", "TOM-DLohneAV-002"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

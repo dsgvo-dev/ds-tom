@@ -3,7 +3,6 @@
     "name": "Keine Speicherung außerhalb des Fachamts",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 1,
     "risikokategorie": "Bürgerbüro",
     "risikoniveau": "Niedrig",
     "beschreibung": "Daten dürfen nicht doppelt gespeichert werden – insbesondere nicht im Bürgerbüro selbst. Die Bearbeitung erfolgt nur in den zuständigen Fachämtern. Das Bürgerbüro darf keinen eigenen Datenbestand aufbauen",
@@ -11,13 +10,11 @@
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
             "Vertraulichkeit",
             "Integrität",
-            "Transparenz",
             "Zweckbindung",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Nichtverkettung",
+            "Datenminimierung"
         ]
     },
     "compliance": {
@@ -25,11 +22,75 @@
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-29T20:48",
-        "aktualisiert_am": "2025-04-29T20:48",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "schutzziele_ergaenzt": {
+            "am": "2026-11-17",
+            "ergaenzt": [
+                "Datenminimierung"
+            ],
+            "grund": "Frage 6 A: offensichtliches Hauptziel fehlte in der Ja/Nein-Zuordnung; als Stufe 2 ergänzt"
+        },
+        "wirkungspunktzahl_alt": 1
+    },
+    "anlass": {
+        "wert": "Bürgerbüro (Besonderheiten umstaende.besondere_lagen.buergerbuero, vollständig oder teilweise)",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "keine Doppelspeicherung",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 1,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 2
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Verfügbarkeit",
+                "Transparenz",
+                "Intervenierbarkeit"
+            ],
+            "regel": "R9",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

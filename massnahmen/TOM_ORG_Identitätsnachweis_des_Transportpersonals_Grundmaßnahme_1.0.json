@@ -2,8 +2,7 @@
     "id": "TOM-ORG-035",
     "name": "Identitätsnachweis des Transportpersonals",
     "kategorie": "ORG",
-    "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
     "risikokategorie": "Haustechnik",
     "risikoniveau": "Hoch",
     "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine denkbare Maßnahme ist die über die Sicherstellung der Zuverlässigkeit  hinaus ein Identitätsnachweis des Transportpersonals. Denkbar ist dies bei höheren Gefährdungslagen.",
@@ -18,14 +17,71 @@
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T18:58",
-        "aktualisiert_am": "2025-04-28T18:58",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "KANN",
+        "kriterium": "hoher Schutzbedarf",
+        "begruendung": "geht über die BSI-Anforderung des normalen Sicherheitsniveaus hinaus",
+        "hinweis": "Grundschutz++ verlangt beim Transport nur Vertraulichkeit und Integrität (ASST.4.2, SOLLTE). Ein Identitätsnachweis des Transportpersonals geht darüber hinaus; eine eigene BSI-Anforderung dazu gibt es nicht. Bezug: Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ (SOLLTE, Sicherheitsniveau normal (Stand der Technik)). Die Maßnahme gilt deshalb nur bei entsprechendem Schutzbedarf – nach der Vorgehensweise bei Schutzbedarf „hoch“ (Risikostufe „hoch“ oder „sehr hoch“) und wird nach dem Ergebnis der ergänzenden Risikoanalyse (Schritt 7) ausgewählt.",
+        "bsi": [
+            {
+                "anforderung": "ASST.4.2",
+                "titel": "Vertraulichkeit und Integrität beim Transport",
+                "praktik": "Informationen und Assets",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Informationen und Assets für Daten SOLLTE Vertraulichkeit und Integrität beim Transport verankern.",
+                "fundstelle": "Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 3, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
     }
 }

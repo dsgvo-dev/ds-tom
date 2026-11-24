@@ -3,7 +3,6 @@
     "name": "Technische und organisatorische Maßnahmen für das Homeoffice",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Homeoffice",
     "risikoniveau": "Niedrig",
     "beschreibung": "Neben den rein organisatorischen Maßnahmen für das Homeoffice wie Dienstvereinbarung oder vertraglichen Regelungen mit den Beschäftigten muss der Einsatz im Homeoffice durch weitere technische Maßnahmen wie zusätzliche Datenverschlüsselung, Signaturen etc. abgesichert werden.",
@@ -13,20 +12,85 @@
         "schutzziele": [
             "Verfügbarkeit",
             "Vertraulichkeit",
-            "Integrität",
-            "Zweckbindung"
+            "Integrität"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.2.4.A2 „Sicherheitstechnische Anforderungen an den Telearbeitsrechner“ (B)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true,
+        "koba_id": [
+            "ops.1.2.4.a2"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T15:13",
-        "aktualisiert_am": "2025-04-28T15:13",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "organisationsweit",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "technische Umsetzung Homeoffice",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [
+            {
+                "anforderung": "OPS.1.2.4.A2",
+                "titel": "Sicherheitstechnische Anforderungen an den Telearbeitsrechner",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.2.4.A2 „Sicherheitstechnische Anforderungen an den Telearbeitsrechner“ (B)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Zweckbindung"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

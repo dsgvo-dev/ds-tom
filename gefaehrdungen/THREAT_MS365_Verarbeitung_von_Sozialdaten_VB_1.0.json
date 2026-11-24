@@ -8,6 +8,10 @@
     "bedrohungstyp": "VB",
     "beschreibung": "Die Verarbeitung von Sozialdaten durch einen Auftragsverarbeiter ist nur unter Beachtung der Regelungen des § 80 SGB X möglich. Es bestehen besondere Gefährdungen.",
     "empfohlene_massnahmen": ["TOM-MS365-008", "TOM-MS365-009", "TOM-MS365-017", "TOM-MS365-018"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

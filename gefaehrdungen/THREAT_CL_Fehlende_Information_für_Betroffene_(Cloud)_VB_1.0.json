@@ -3,7 +3,7 @@
     "kategorie": "CL",
     "schutzziele": [
         "Transparenz",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung",
         "Zweckbindung",
         "Rechtmäßigkeit"
@@ -11,6 +11,10 @@
     "bedrohungstyp": "VB",
     "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten in einer Cloud-Software nicht informiert sind. Bei Diensten ohne Auftragsverarbeitung zwischen den Verantwortlichen und den Anbietern der Cloud-Software können Betroffene an der Geltendmachung ihrer Betroffenenrechte gehindert werden.",
     "empfohlene_massnahmen": ["TOM-CL-007", "TOM-CL-004", "TOM-CL-002", "TOM-CL-009", "TOM-CL-010"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

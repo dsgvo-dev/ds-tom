@@ -3,7 +3,6 @@
     "name": "Zuverlässiges Transportpersonal",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 1,
     "risikokategorie": "Haustechnik",
     "risikoniveau": "Niedrig",
     "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine denkbare Maßnahme ist die Sicherstellung, dass das eingesetzte Transportpersonal zuverlässig ist.",
@@ -18,14 +17,75 @@
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T18:56",
-        "aktualisiert_am": "2025-04-28T18:56",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 1
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "zuverlässiges Transportpersonal",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung. BSI-Bezug: Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ (SOLLTE, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "ASST.4.2",
+                "titel": "Vertraulichkeit und Integrität beim Transport",
+                "praktik": "Informationen und Assets",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Informationen und Assets für Daten SOLLTE Vertraulichkeit und Integrität beim Transport verankern.",
+                "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                "fundstelle": "Grundschutz++ ASST.4.2 „Vertraulichkeit und Integrität beim Transport“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
     }
 }

@@ -5,12 +5,16 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Microsoft ändert regelmäßig seine Vertragsbedingungen, insbesondere die sog. Data Protection Addendum (DPA). Diese  Änderungen werden nicht regelhaft Vertragsbestandteil, sondern müssen vom Kunden speziell einbezogen werden. ",
     "empfohlene_massnahmen": ["TOM-MS365-006", "TOM-MS365-008", "TOM-MS365-009"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

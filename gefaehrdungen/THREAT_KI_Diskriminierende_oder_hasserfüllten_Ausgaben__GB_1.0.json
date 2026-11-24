@@ -7,11 +7,15 @@
         "Zweckbindung",
         "Richtigkeit",
         "Integrität",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Bei der Verarbeitung personenbezogener Daten kann es zur Ausgabe von diskriminierenden oder hasserfüllten Ausgaben kommen (z.B. Ausschluss anhand einer Religionszugehörigkeit) oder eine erhöhte Fehlerrate bei in den Trainingsdaten unterrepräsentierten Gruppen.",
     "empfohlene_massnahmen": ["TOM-KI-009", "TOM-KI-006", "TOM-KI-007", "TOM-KI-012", "TOM-KI-013"],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

@@ -3,7 +3,6 @@
     "name": "Einsatz von anerkannt zertifizierten Systemen",
     "kategorie": "MS365",
     "maßnahmentyp": "Verfahrensspezifische Maßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Einsatz von anerkannt zertifizierten Systemen (Rechenzentrum, Service, Dienstleister), z.B. BSI C5, ISO 27001, ISO 27701, etc durch Microsoft.",
@@ -14,24 +13,117 @@
             "Verfügbarkeit",
             "Vertraulichkeit",
             "Integrität",
-            "Transparenz",
-            "Zweckbindung",
-            "Erforderlichkeit",
-            "Intervernierbarkeit",
-            "Richtigkeit",
-            "Nichtverkettung"
+            "Transparenz"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ DLS.3.1.1 „Audit oder Zertifikat“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.2.2.A13 „Nachweis einer ausreichenden Informationssicherheit bei der Cloud-Nutzung“ (S)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "ops.2.2.a13"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-05-09T14:39",
-        "aktualisiert_am": "2025-05-09T14:39",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Verfügbarkeit",
+                "Vertraulichkeit",
+                "Integrität",
+                "Transparenz",
+                "Zweckbindung",
+                "Erforderlichkeit",
+                "Intervenierbarkeit",
+                "Richtigkeit",
+                "Nichtverkettung"
+            ],
+            "zuordnung": "ENTF",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "MS365",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "zertifizierte Anbieter",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung. BSI-Bezug: Grundschutz++ DLS.3.1.1 „Audit oder Zertifikat“ (SOLLTE, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "DLS.3.1.1",
+                "titel": "Audit oder Zertifikat",
+                "praktik": "Dienstleistersteuerung",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 4,
+                "anforderungstext": "Dienstleistersteuerung für Outsourcing SOLLTE die Einhaltung der Sicherheitsvorgaben anhand eines [Parameter] [Parameter] überprüfen.",
+                "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                "fundstelle": "Grundschutz++ DLS.3.1.1 „Audit oder Zertifikat“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [
+            {
+                "anforderung": "OPS.2.2.A13",
+                "titel": "Nachweis einer ausreichenden Informationssicherheit bei der Cloud-Nutzung",
+                "stufe": "Standard-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.2.2.A13 „Nachweis einer ausreichenden Informationssicherheit bei der Cloud-Nutzung“ (S)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 2,
+            "Verfügbarkeit": 1,
+            "Transparenz": 1,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Intervenierbarkeit",
+                "Nichtverkettung",
+                "Zweckbindung",
+                "Richtigkeit"
+            ],
+            "regel": "R5",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

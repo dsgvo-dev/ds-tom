@@ -3,7 +3,6 @@
     "name": "Richtlinienmanagement",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "Organisatorische Mängel",
     "risikoniveau": "Niedrig",
     "beschreibung": "Regelmäßige Überprüfung und Anpassung der Sicherheitsrichtlinien.",
@@ -13,26 +12,120 @@
         "schutzziele": [
             "Vertraulichkeit",
             "Integrität",
-            "Transparenz",
-            "Verfügbarkeit",
-            "Rechtmäßigkeit",
-            "Zweckbindung",
-            "Erforderlichkeit",
-            "Speicherbegrenzung",
-            "Intervernierbarkeit",
-            "Richtigkeit"
+            "Verfügbarkeit"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ VRB.2.2 „Anpassung des ISMS“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, ISMS.1.A3 „Erstellung einer Leitlinie zur Informationssicherheit“ (B)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "isms.1.a3"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-03-20T14:40:17.903744Z",
-        "aktualisiert_am": "2025-04-28T06:24",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Vertraulichkeit",
+                "Integrität",
+                "Transparenz",
+                "Verfügbarkeit",
+                "Rechtmäßigkeit",
+                "Zweckbindung",
+                "Erforderlichkeit",
+                "Speicherbegrenzung",
+                "Intervenierbarkeit",
+                "Richtigkeit"
+            ],
+            "zuordnung": "RM",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rahmenfunktion",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Regelungen regelmäßig überprüfen",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden. BSI-Bezug: Grundschutz++ VRB.2.2 „Anpassung des ISMS“ (MUSS, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "VRB.2.2",
+                "titel": "Anpassung des ISMS",
+                "praktik": "Verbesserung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Verbesserung MUSS die Notwendigkeit zur Anpassung des ISMS hinsichtlich der Nicht-Konformitäten [Parameter] überprüfen.",
+                "zuordnung_ueber": "ISMS.1.A3",
+                "fundstelle": "Grundschutz++ VRB.2.2 „Anpassung des ISMS“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [
+            {
+                "anforderung": "ISMS.1.A3",
+                "titel": "Erstellung einer Leitlinie zur Informationssicherheit",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, ISMS.1.A3 „Erstellung einer Leitlinie zur Informationssicherheit“ (B)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 4, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "erkennend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Zweckbindung",
+                "Rechtmäßigkeit",
+                "Speicherbegrenzung",
+                "Richtigkeit"
+            ],
+            "regel": "R1",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

@@ -3,7 +3,6 @@
     "name": "Mindestmaßstab für TOM der Auftragsverarbeitung",
     "kategorie": "AV",
     "maßnahmentyp": "Verfahrensspezifische Maßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Mindestmaßstab an technischen und organisatorischen Maßnahmen für Auftragsverarbeitung (Anlage zum Vertrag zur Auftragsverarbeitung). Diese sind als Anlage zum Vertrag gem. Art. 28 Abs. 3 DSGVO festzulegen.",
@@ -14,22 +13,88 @@
             "Verfügbarkeit",
             "Vertraulichkeit",
             "Integrität",
-            "Rechtmäßigkeit",
-            "Zweckbindung",
-            "Intervernierbarkeit",
             "Nichtverkettung"
         ]
     },
     "compliance": {
-        "standards": [],
+        "standards": [
+            "Art. 28 Abs. 3 DSGVO",
+            "Art. 32 Abs. 1 DSGVO"
+        ],
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-05-02T07:12",
-        "aktualisiert_am": "2025-05-06T14:50",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "Auftragsverarbeitung",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "Art. 28 Abs. 3 DSGVO; Art. 32 Abs. 1 DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "Art. 28 Abs. 3 DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-028.md"
+            },
+            {
+                "norm": "Art. 32 Abs. 1 DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-032.md"
+            }
+        ],
+        "begruendung": "TOM des Auftragsverarbeiters sind Vertragsinhalt",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 1, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 2,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 1,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Intervenierbarkeit",
+                "Zweckbindung",
+                "Rechtmäßigkeit"
+            ],
+            "regel": "R5",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

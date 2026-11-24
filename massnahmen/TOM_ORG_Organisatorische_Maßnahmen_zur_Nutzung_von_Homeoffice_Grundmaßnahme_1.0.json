@@ -3,7 +3,6 @@
     "name": "Organisatorische Maßnahmen zur Nutzung von Homeoffice",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 1,
     "risikokategorie": "Homeoffice",
     "risikoniveau": "Niedrig",
     "beschreibung": "Die Verantwortliche muss technische und organisatorische Maßnahmen treffen, wenn Beschäftigte vom Homeoffice aus oder im Wege der mobilen Tätigkeit ihre Tätigkeit wahrnehmen, z.B. Dienstvereinbarung, individuelle Vereinbarungen.\n",
@@ -13,21 +12,119 @@
         "schutzziele": [
             "Vertraulichkeit",
             "Integrität",
-            "Rechtmäßigkeit",
-            "Zweckbindung",
-            "Nichtverkettung"
+            "Zweckbindung"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ GEB.5.1 „Lieferzugang“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ SENS.9.3 „Verwahrung außer Haus“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.2.4.A1 „Regelungen für Telearbeit“ (B)",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, INF.8.A1 „Sichern von dienstlichen Unterlagen am häuslichen Arbeitsplatz“ (B)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true,
+        "koba_id": [
+            "ops.1.2.4.a1",
+            "inf.8.a1"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T15:10",
-        "aktualisiert_am": "2025-04-28T15:10",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 1
+    },
+    "anlass": {
+        "wert": "organisationsweit",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rahmenfunktion",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Regelung Homeoffice",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden. BSI-Bezug: Grundschutz++ GEB.5.1 „Lieferzugang“ (SOLLTE, normal (Stand der Technik)); Grundschutz++ SENS.9.3 „Verwahrung außer Haus“ (SOLLTE, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "GEB.5.1",
+                "titel": "Lieferzugang",
+                "praktik": "Gebäudemanagement",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 4,
+                "anforderungstext": "Gebäudemanagement für Standorte SOLLTE einen Zugang für die Abwicklung von Lieferungen ohne unbefugten Zugang zum restlichen Standort installieren.",
+                "zuordnung_ueber": "INF.8.A1",
+                "fundstelle": "Grundschutz++ GEB.5.1 „Lieferzugang“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "SENS.9.3",
+                "titel": "Verwahrung außer Haus",
+                "praktik": "Sensibilisierung",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Sensibilisierung für Nutzende SOLLTE zur Verwahrung von IT-Systemen und Datenträgern beim mobilen Arbeiten anweisen.",
+                "zuordnung_ueber": "INF.8.A1",
+                "fundstelle": "Grundschutz++ SENS.9.3 „Verwahrung außer Haus“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [
+            {
+                "anforderung": "OPS.1.2.4.A1",
+                "titel": "Regelungen für Telearbeit",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, OPS.1.2.4.A1 „Regelungen für Telearbeit“ (B)"
+            },
+            {
+                "anforderung": "INF.8.A1",
+                "titel": "Sichern von dienstlichen Unterlagen am häuslichen Arbeitsplatz",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, INF.8.A1 „Sichern von dienstlichen Unterlagen am häuslichen Arbeitsplatz“ (B)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Nichtverkettung",
+                "Rechtmäßigkeit"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

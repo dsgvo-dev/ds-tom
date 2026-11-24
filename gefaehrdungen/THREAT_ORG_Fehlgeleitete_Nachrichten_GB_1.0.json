@@ -13,6 +13,10 @@
         "TOM-ORG-003",
         "TOM-ORG-033"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

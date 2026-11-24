@@ -3,7 +3,6 @@
     "name": "Diskretionszonen einrichten",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Bürgerbüro",
     "risikoniveau": "Niedrig",
     "beschreibung": "Der Empfangs- und Beratungsbereich muss so gestaltet sein, dass Dritte keine Einsicht in persönliche Anliegen oder Daten erhalten. Es sind abgeschottete Einzelberatungsplätze bereitzustellen​",
@@ -11,13 +10,7 @@
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
-            "Vertraulichkeit",
-            "Integrität",
-            "Transparenz",
-            "Zweckbindung",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Vertraulichkeit"
         ]
     },
     "compliance": {
@@ -25,11 +18,71 @@
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-29T21:27",
-        "aktualisiert_am": "2025-04-29T21:27",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "organisationsweit, wenn mindestens eine VVT das Merkmal Bürgerbüro hat",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Diskretionszonen",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Integrität",
+                "Verfügbarkeit",
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Nichtverkettung",
+                "Zweckbindung"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

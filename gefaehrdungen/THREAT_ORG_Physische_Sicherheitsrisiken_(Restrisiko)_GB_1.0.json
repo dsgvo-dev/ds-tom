@@ -4,23 +4,45 @@
     "schutzziele": [
         "Vertraulichkeit",
         "Zweckbindung",
-        "Integrität"
+        "Integrität",
+        "Verfügbarkeit"
     ],
     "bedrohungstyp": "GB",
-    "beschreibung": "Einbrüche, Diebstahl oder Vandalismus, die nicht vollständig verhindert werden können.",
+    "beschreibung": "Einbrüche, Diebstahl von Datenträgern oder Geräten, Vandalismus sowie Naturereignisse, die nicht vollständig verhindert werden können.",
     "empfohlene_massnahmen": [
         "TOM-ORG-021",
         "TOM-ORG-022",
         "TOM-ORG-023",
         "TOM-ORG-028",
         "TOM-ORG-003",
-        "TOM-ORG-042"
+        "TOM-ORG-042",
+        "TOM-ORG-024",
+        "TOM-ORG-026",
+        "TOM-ORG-052"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-25T20:48",
-        "aktualisiert_am": "2025-04-25T21:07",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "ergaenzung": {
+            "am": "2026-11-13",
+            "herkunft": "THREAT-RR-006",
+            "grund": "Vervollständigung aus dem inhaltsgleichen Standard-Restrisiko (Entscheidung DSB 13.11.2026); RR werden seit 30.10.2026 nicht als Gefährdung angewendet",
+            "beschreibung_vorher": "Einbrüche, Diebstahl oder Vandalismus, die nicht vollständig verhindert werden können.",
+            "schutzziele_ergaenzt": [
+                "Verfügbarkeit"
+            ],
+            "empfehlungen_ergaenzt": [
+                "TOM-ORG-024",
+                "TOM-ORG-026",
+                "TOM-ORG-052"
+            ]
+        }
     }
 }

@@ -6,7 +6,7 @@
         "Integrität",
         "Richtigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Der Verlust von Datenträgern wie Akten oder mobilen Geräten (Tablets, Smartphones, Notebooks) ist potenziell möglich. ",
@@ -15,13 +15,25 @@
         "TOM-ORG-033",
         "TOM-ORG-036",
         "TOM-ORG-041",
-        "TOM-ORG-003"
+        "TOM-ORG-003",
+        "TOM-ORG-035"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-25T20:39",
-        "aktualisiert_am": "2025-04-25T20:59",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "ergaenzung": {
+            "am": "2026-11-13",
+            "grund": "TOM-ORG-035 Identitätsnachweis des Transportpersonals ergänzt, wie die Schwester-Maßnahmen TOM-ORG-033/-034 (Entscheidung DSB 13.11.2026)",
+            "empfehlungen_ergaenzt": [
+                "TOM-ORG-035"
+            ]
+        }
     }
 }

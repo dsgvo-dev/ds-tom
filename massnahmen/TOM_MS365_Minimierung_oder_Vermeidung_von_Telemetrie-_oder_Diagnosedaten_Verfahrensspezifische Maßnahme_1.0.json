@@ -3,7 +3,6 @@
     "name": "Minimierung oder Vermeidung von Telemetrie- oder Diagnosedaten",
     "kategorie": "MS365",
     "maßnahmentyp": "Verfahrensspezifische Maßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "MS365 verarbeitet eine Vielzahl von Telemetrie- und Diagnosedaten, falls diese nicht eingeschränkt werden. Dies hat durch technische Maßnahmen, z.B. die Konfiguration der Dienste zu erfolgen und muss mit den Inhalten der Dienstvereinbarung abgestimmt werden.",
@@ -11,29 +10,115 @@
     "transfer_drittland": true,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
             "Vertraulichkeit",
-            "Integrität",
-            "Transparenz",
-            "Rechtmäßigkeit",
             "Zweckbindung",
-            "Erforderlichkeit",
-            "Speicherbegrenzung",
-            "Intervernierbarkeit",
-            "Richtigkeit",
-            "Nichtverkettung"
+            "Nichtverkettung",
+            "Datenminimierung"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ REA.2.4 „Diagnosedaten“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-05-09T14:19",
-        "aktualisiert_am": "2025-05-09T14:19",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Verfügbarkeit",
+                "Vertraulichkeit",
+                "Integrität",
+                "Transparenz",
+                "Rechtmäßigkeit",
+                "Zweckbindung",
+                "Erforderlichkeit",
+                "Speicherbegrenzung",
+                "Intervenierbarkeit",
+                "Richtigkeit",
+                "Nichtverkettung"
+            ],
+            "zuordnung": "DM",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "MS365",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Telemetrie begrenzen",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung. BSI-Bezug: Grundschutz++ REA.2.4 „Diagnosedaten“ (SOLLTE, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "REA.2.4",
+                "titel": "Diagnosedaten",
+                "praktik": "Sicherheitsvorfallsbehandlung",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Sicherheitsvorfallsbehandlung SOLLTE Diagnosemethoden für den Fall, dass der Vorfall sich mit den standardisiert erfassten Informationen nicht ausreichend analysieren lässt, verankern.",
+                "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                "fundstelle": "Grundschutz++ REA.2.4 „Diagnosedaten“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 1,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 2
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Integrität",
+                "Verfügbarkeit",
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Rechtmäßigkeit",
+                "Speicherbegrenzung",
+                "Richtigkeit"
+            ],
+            "regel": "R9",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

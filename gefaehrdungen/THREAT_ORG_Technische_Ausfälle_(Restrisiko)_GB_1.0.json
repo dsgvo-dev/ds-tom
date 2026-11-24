@@ -4,20 +4,42 @@
     "schutzziele": [
         "Vertraulichkeit",
         "Zweckbindung",
-        "Integrität"
+        "Integrität",
+        "Verfügbarkeit"
     ],
     "bedrohungstyp": "GB",
-    "beschreibung": "Hardware- oder Softwarefehler, die zu unbeabsichtigter Datenoffenlegung führen können.",
+    "beschreibung": "Hardware- oder Softwarefehler können zu unbeabsichtigter Datenoffenlegung, Datenverlust oder eingeschränkter Verfügbarkeit personenbezogener Daten führen.",
     "empfohlene_massnahmen": [
         "TOM-ORG-004",
         "TOM-ORG-003",
-        "TOM-ORG-005"
+        "TOM-ORG-005",
+        "TOM-ORG-053",
+        "TOM-ORG-054",
+        "TOM-ORG-048"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-25T20:47",
-        "aktualisiert_am": "2025-04-25T21:06",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "ergaenzung": {
+            "am": "2026-11-13",
+            "herkunft": "THREAT-RR-005",
+            "grund": "Vervollständigung aus dem inhaltsgleichen Standard-Restrisiko (Entscheidung DSB 13.11.2026); RR werden seit 30.10.2026 nicht als Gefährdung angewendet",
+            "beschreibung_vorher": "Hardware- oder Softwarefehler, die zu unbeabsichtigter Datenoffenlegung führen können.",
+            "schutzziele_ergaenzt": [
+                "Verfügbarkeit"
+            ],
+            "empfehlungen_ergaenzt": [
+                "TOM-ORG-053",
+                "TOM-ORG-054",
+                "TOM-ORG-048"
+            ]
+        }
     }
 }

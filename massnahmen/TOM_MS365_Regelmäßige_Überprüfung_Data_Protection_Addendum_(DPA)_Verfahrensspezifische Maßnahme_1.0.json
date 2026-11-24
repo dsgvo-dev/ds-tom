@@ -3,7 +3,6 @@
     "name": "Regelmäßige Überprüfung und Einbeziehung Data Protection Addendum (DPA)",
     "kategorie": "MS365",
     "maßnahmentyp": "Verfahrensspezifische Maßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Microsoft verändert regelmäßig die vertraglichen Inhalte des sog. Data Protection Addendum (DPA) (Vertragsergänzung zur Auftragsverarbeitung). Grundsätzlich finden nur die DPA Anwendung, die zum Zeitpunkt des Vertragsschlusses veröffentlicht wurden. Daher müssen die Verantwortlichen regelmäßig prüfen, ob Microsoft Änderungen an den DPA vornimmt und diese ggf. gegenüber Microsoft in den laufenden Vertrag einbeziehen.\n",
@@ -14,14 +13,10 @@
             "Verfügbarkeit",
             "Vertraulichkeit",
             "Integrität",
-            "Transparenz",
             "Rechtmäßigkeit",
             "Zweckbindung",
-            "Erforderlichkeit",
             "Speicherbegrenzung",
-            "Richtigkeit",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Intervenierbarkeit"
         ]
     },
     "compliance": {
@@ -29,11 +24,86 @@
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-05-09T13:43",
-        "aktualisiert_am": "2025-06-05T20:30",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Verfügbarkeit",
+                "Vertraulichkeit",
+                "Integrität",
+                "Transparenz",
+                "Rechtmäßigkeit",
+                "Zweckbindung",
+                "Erforderlichkeit",
+                "Speicherbegrenzung",
+                "Richtigkeit",
+                "Intervenierbarkeit",
+                "Nichtverkettung"
+            ],
+            "zuordnung": "RM",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "MS365",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rahmenfunktion",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "regelmäßige Überprüfung",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 4, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 1,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 2,
+            "Speicherbegrenzung": 1,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "erkennend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Transparenz",
+                "Nichtverkettung",
+                "Richtigkeit"
+            ],
+            "regel": "R3",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

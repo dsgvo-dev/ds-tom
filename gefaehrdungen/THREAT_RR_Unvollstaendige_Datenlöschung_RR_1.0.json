@@ -16,6 +16,10 @@
         "TOM-SW-008",
         "TOM-ORG-046"
     ],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

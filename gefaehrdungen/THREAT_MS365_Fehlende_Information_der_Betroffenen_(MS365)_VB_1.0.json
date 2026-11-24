@@ -6,11 +6,19 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit"
+        "Intervenierbarkeit"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Potenzielle Gefährdungen können sich daraus ergeben, dass die betroffenen Personen über die Verarbeitung ihrer personenbezogenen Daten in MS365 nicht informiert sind. ",
-    "empfohlene_massnahmen": ["TOM-MS365-002", "TOM-MS365-004", "TOM-MS365-007", "TOM-ORG-045"],
+    "empfohlene_massnahmen": [
+        "TOM-MS365-004",
+        "TOM-MS365-007",
+        "TOM-ORG-045"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

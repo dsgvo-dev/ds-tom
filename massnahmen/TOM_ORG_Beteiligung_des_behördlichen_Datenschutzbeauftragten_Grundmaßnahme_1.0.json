@@ -3,7 +3,6 @@
     "name": "Beteiligung des behördlichen Datenschutzbeauftragten",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Bürgerbüro",
     "risikoniveau": "Niedrig",
     "beschreibung": "Der behördliche Datenschutzbeauftragte ist in die Planung, Einrichtung und Kontrolle des Bürgerbüros mit einzubeziehen, insbesondere bei baulichen, technischen oder organisatorischen Maßnahmen",
@@ -11,25 +10,94 @@
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
-            "Vertraulichkeit",
-            "Integrität",
-            "Transparenz",
             "Zweckbindung",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Rechtmäßigkeit"
         ]
     },
     "compliance": {
-        "standards": [],
+        "standards": [
+            "Art. 38 Abs. 1 DSGVO"
+        ],
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-29T21:29",
-        "aktualisiert_am": "2025-04-29T21:29",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "schutzziele_ergaenzt": {
+            "am": "2026-11-17",
+            "ergaenzt": [
+                "Rechtmäßigkeit"
+            ],
+            "grund": "Frage 6 A: offensichtliches Hauptziel fehlte in der Ja/Nein-Zuordnung; als Stufe 2 ergänzt"
+        },
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "organisationsweit, wenn mindestens eine VVT das Merkmal Bürgerbüro hat",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "Art. 38 Abs. 1 DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "Art. 38 Abs. 1 DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-038.md"
+            }
+        ],
+        "begruendung": "Datenschutzbeauftragte einzubinden",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 2,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit",
+                "Integrität",
+                "Verfügbarkeit",
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Nichtverkettung"
+            ],
+            "regel": "R6",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

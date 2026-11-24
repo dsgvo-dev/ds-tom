@@ -7,12 +7,16 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung"
     ],
     "bedrohungstyp": "VB",
     "beschreibung": "Microsoft ändert regelmäßig Benennungen, Funktionen und Abläufe von Software-Komponenten oder Apps in MS365. Die personenbezogenen Daten werden durch diese geänderten Abläufe und ggf. fehlende Maßnahmen gefährdet.",
     "empfohlene_massnahmen": ["TOM-MS365-005", "TOM-MS365-006", "TOM-MS365-007"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

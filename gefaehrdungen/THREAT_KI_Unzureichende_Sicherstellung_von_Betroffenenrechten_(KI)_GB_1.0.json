@@ -5,12 +5,16 @@
         "Transparenz",
         "Rechtmäßigkeit",
         "Zweckbindung",
-        "Intervernierbarkeit",
+        "Intervenierbarkeit",
         "Nichtverkettung"
     ],
     "bedrohungstyp": "GB",
     "beschreibung": "Unzureichende Sicherstellung von Betroffenenrechten (z.B. durch zu wenig Protokollierung des KI-Einsatzes und damit die Unmöglichkeit, eine Beauskunftung nach Art. 15 DS-GVO durchzuführen)",
     "empfohlene_massnahmen": ["TOM-KI-007", "TOM-KI-008", "TOM-KI-009", "TOM-KI-012"],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",

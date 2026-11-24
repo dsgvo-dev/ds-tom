@@ -3,7 +3,6 @@
     "name": "Personenkontrolle",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Haustechnik",
     "risikoniveau": "Mittel",
     "beschreibung": "Die Verantwortlichen haben dafür Sorge zu tragen, dass personenbezogene Daten geschützt verarbeitet werden. Die Kontrolle der Personen, die ein Gebäude betreten, kann eine geeignete Maßnahme hierfür darstellen. ",
@@ -13,20 +12,99 @@
         "schutzziele": [
             "Verfügbarkeit",
             "Vertraulichkeit",
-            "Integrität",
-            "Zweckbindung"
+            "Integrität"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ GEB.3.3.3 „Besucheranmeldung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ GEB.3.1 „Überwachung von Zutrittspunkten“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023: ORP.1.A3 Beaufsichtigung oder Begleitung von Fremdpersonen (Basis-Anforderung)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "inf.1.a7",
+            "orp.1.a3"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T18:43",
-        "aktualisiert_am": "2025-04-28T18:43",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "begruendung": "BSI: Stand der Technik bei normalem Sicherheitsniveau (SOLLTE); BSI IT-Grundschutz-Kompendium Edition 2023: ORP.1.A3 Beaufsichtigung oder Begleitung von Fremdpersonen (Basis-Anforderung)",
+        "hinweis": "Nach BSI Grundschutz++ Stand der Technik bei normalem Sicherheitsniveau (Modalverb SOLLTE): Grundschutz++ GEB.3.3.3 „Besucheranmeldung“ (SOLLTE, Sicherheitsniveau normal (Stand der Technik)); Grundschutz++ GEB.3.1 „Überwachung von Zutrittspunkten“ (SOLLTE, Sicherheitsniveau normal (Stand der Technik)); im BSI IT-Grundschutz-Kompendium Edition 2023 ORP.1.A3 Beaufsichtigung oder Begleitung von Fremdpersonen (Basis-Anforderung). Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [
+            {
+                "anforderung": "GEB.3.3.3",
+                "titel": "Besucheranmeldung",
+                "praktik": "Gebäudemanagement",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Gebäudemanagement für Standorte SOLLTE Besuche durch [Parameter] autorisieren.",
+                "fundstelle": "Grundschutz++ GEB.3.3.3 „Besucheranmeldung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "GEB.3.1",
+                "titel": "Überwachung von Zutrittspunkten",
+                "praktik": "Gebäudemanagement",
+                "modalverb": "SOLLTE",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 3,
+                "anforderungstext": "Gebäudemanagement für Standorte SOLLTE Zutrittspunkte auf unbefugte Zutritte überwachen.",
+                "fundstelle": "Grundschutz++ GEB.3.1 „Überwachung von Zutrittspunkten“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 3, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Zweckbindung"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

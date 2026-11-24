@@ -3,7 +3,6 @@
     "name": "Sichere Aktenaufbewahrung und Datenvernichtung",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
     "risikokategorie": "Bürgerbüro",
     "risikoniveau": "Niedrig",
     "beschreibung": "Personenbezogene Unterlagen müssen in abschließbaren Schränken aufbewahrt und nach Dienstschluss gesichert werden. Sensible Daten sind mit einem Aktenvernichter zu entsorgen – nicht im Papierkorb​. Datenschutzrelevanter Datenmüll darf nicht auf dem Schreibtisch verwahrt werden, sondern außer Reichweite der Besucher*innen.",
@@ -13,23 +12,89 @@
         "schutzziele": [
             "Verfügbarkeit",
             "Vertraulichkeit",
-            "Integrität",
-            "Transparenz",
-            "Zweckbindung",
-            "Intervernierbarkeit",
-            "Nichtverkettung"
+            "Integrität"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "BSI IT-Grundschutz-Kompendium Edition 2023, INF.7.A7 „Geeignete Aufbewahrung dienstlicher Unterlagen und Datenträger“ (S)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": true,
+        "koba_id": [
+            "inf.7.a7",
+            "con.6.a2"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-29T21:28",
-        "aktualisiert_am": "2025-04-29T21:28",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "organisationsweit, wenn mindestens eine VVT das Merkmal Bürgerbüro hat",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Akten sicher aufbewahren",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [
+            {
+                "anforderung": "INF.7.A7",
+                "titel": "Geeignete Aufbewahrung dienstlicher Unterlagen und Datenträger",
+                "stufe": "Standard-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, INF.7.A7 „Geeignete Aufbewahrung dienstlicher Unterlagen und Datenträger“ (S)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 2,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Transparenz",
+                "Intervenierbarkeit",
+                "Nichtverkettung",
+                "Zweckbindung"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

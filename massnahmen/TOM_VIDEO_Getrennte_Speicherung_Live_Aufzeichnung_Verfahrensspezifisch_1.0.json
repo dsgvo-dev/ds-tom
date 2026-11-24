@@ -1,0 +1,86 @@
+{
+    "id": "TOM-VIDEO-001",
+    "name": "Getrennte Speicherung von Live-Bild und Aufzeichnungen",
+    "kategorie": "VIDEO",
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
+    "risikokategorie": "Technische Mängel",
+    "risikoniveau": "Mittel",
+    "beschreibung": "Live-Bild (Monitor) und aufgezeichnete Videodaten sind getrennt zu speichern. Das Live-Bild dient der unmittelbaren Beobachtung (verlängertes Auge) und wird nicht automatisch aufgezeichnet. Die Aufzeichnung erfolgt auf einem separaten System mit eigenem Zugriffsberechtigungskonzept. Dadurch wird das Risiko unbefugter Zugriffe auf aufgezeichnete Daten minimiert. Die Trennung ist technisch so umzusetzen, dass ein Zugriff auf die Aufzeichnung nicht über das Live-System möglich ist. Nur im Ereignisfall (konkrete Gefahr oder Straftat nach 14 Abs. 1 S. 3 NDSG) darf auf die Aufzeichnung zugegriffen werden. Der Zugriff ist zu protokollieren (siehe TOM-VIDEO-006).",
+    "organisationseinheit": "15",
+    "transfer_drittland": false,
+    "anwendbarkeit": {
+        "schutzziele": [
+            "Vertraulichkeit",
+            "Nichtverkettung"
+        ]
+    },
+    "compliance": {
+        "standards": [
+            "Art. 5 Abs. 1 lit. a DSGVO",
+            "Art. 25 DSGVO",
+            "Art. 32 DSGVO"
+        ],
+        "zusatzquellen": [
+            "SDM D.3.2.2",
+            "BayLfD-OH Video, S. 42: Getrennte Speicherung"
+        ]
+    },
+    "abhängigkeiten": [
+        "TOM-ZUTRITT-001",
+        "TOM-VIDEO-006"
+    ],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
+    "metadaten": {
+        "quelle": "BayLfD, OH Videoüberwachung (2020)",
+        "erstellt_von": "Agent",
+        "erstellt_am": "2026-06-27T00:00",
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "Videoüberwachung",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "SOLLTE",
+        "kriterium": "Stand der Technik",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "getrennte Speicherung",
+        "hinweis": "Stand der Technik bei normalem Schutzbedarf: Entfall nur mit nachvollziehbarer Begründung; dauerhafter Entfall erfordert eine Risikobetrachtung und die Übernahme des Restrisikos durch die Leitung.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 5, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 2,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
+    }
+}

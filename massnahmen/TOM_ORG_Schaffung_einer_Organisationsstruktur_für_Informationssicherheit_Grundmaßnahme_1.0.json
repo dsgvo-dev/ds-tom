@@ -3,7 +3,6 @@
     "name": "Schaffung einer Organisationsstruktur für Informationssicherheit",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Eine geeignete Organisationstruktur für Informationssicherheit ist  vorhanden und die Informationssicherheit ist in die organisationsweiten Prozesse und Abläufe integriert.",
@@ -20,14 +19,121 @@
         "standards": [
             "ISO 27001"
         ],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ ARCH.1.1.2 „Zuweisung der Aufgaben“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ UMS.1.1 „Ermittlung des Umsetzungsstatus“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ VRB.1.1 „Verfahren zur kontinuierlichen Verbesserung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ VRB.2.2 „Anpassung des ISMS“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "BSI IT-Grundschutz-Kompendium Edition 2023, ISMS.1.A6 „Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit“ (B)"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "isms.1.a6"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T06:33",
-        "aktualisiert_am": "2025-04-28T06:33",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rahmenfunktion",
+        "rechtsgrundlage": "",
+        "fundstellen_recht": [],
+        "begruendung": "Organisationsstruktur/Zuständigkeit",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden. BSI-Bezug: Grundschutz++ ARCH.1.1.2 „Zuweisung der Aufgaben“ (MUSS, normal (Stand der Technik)); Grundschutz++ UMS.1.1 „Ermittlung des Umsetzungsstatus“ (MUSS, normal (Stand der Technik)); Grundschutz++ VRB.1.1 „Verfahren zur kontinuierlichen Verbesserung“ (MUSS, normal (Stand der Technik)); Grundschutz++ VRB.2.2 „Anpassung des ISMS“ (MUSS, normal (Stand der Technik)).",
+        "bsi": [
+            {
+                "anforderung": "ARCH.1.1.2",
+                "titel": "Zuweisung der Aufgaben",
+                "praktik": "Architektur",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Architektur MUSS die mit den Verfahren und Regelungen verbundenen Aufgaben [Parameter] zuweisen.",
+                "zuordnung_ueber": "ISMS.1.A6",
+                "fundstelle": "Grundschutz++ ARCH.1.1.2 „Zuweisung der Aufgaben“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "UMS.1.1",
+                "titel": "Ermittlung des Umsetzungsstatus",
+                "praktik": "Umsetzung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Umsetzung MUSS den Umsetzungsstatus der Anforderungen im Anforderungspaket vollständig [Parameter] überprüfen.",
+                "zuordnung_ueber": "ISMS.1.A6",
+                "fundstelle": "Grundschutz++ UMS.1.1 „Ermittlung des Umsetzungsstatus“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "VRB.1.1",
+                "titel": "Verfahren zur kontinuierlichen Verbesserung",
+                "praktik": "Verbesserung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Verbesserung MUSS ein Verfahren zur kontinuierlichen Verbesserung des ISMS verankern.",
+                "zuordnung_ueber": "ISMS.1.A6",
+                "fundstelle": "Grundschutz++ VRB.1.1 „Verfahren zur kontinuierlichen Verbesserung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "VRB.2.2",
+                "titel": "Anpassung des ISMS",
+                "praktik": "Verbesserung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Verbesserung MUSS die Notwendigkeit zur Anpassung des ISMS hinsichtlich der Nicht-Konformitäten [Parameter] überprüfen.",
+                "zuordnung_ueber": "ISMS.1.A6",
+                "fundstelle": "Grundschutz++ VRB.2.2 „Anpassung des ISMS“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [
+            {
+                "anforderung": "ISMS.1.A6",
+                "titel": "Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit",
+                "stufe": "Basis-Anforderung",
+                "fundstelle": "BSI IT-Grundschutz-Kompendium Edition 2023, ISMS.1.A6 „Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit“ (B)"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 4, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 1,
+            "Verfügbarkeit": 1,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
     }
 }

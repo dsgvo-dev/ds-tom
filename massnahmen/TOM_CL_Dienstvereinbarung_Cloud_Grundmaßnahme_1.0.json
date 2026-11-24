@@ -3,7 +3,6 @@
     "name": "Dienstvereinbarung Cloud",
     "kategorie": "CL",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
     "beschreibung": "Vor der Einführung einer Cloud-Software muss geprüft werden, ob während der Nutzung von Cloud-Software-Lösungen Beschäftigtendaten verarbeitet werden sollen und ob diese ggf. auswertbar sind. Dann muss eine grundlegende Dienstvereinbarung geschlossen werden. Alternativ kann pro Cloud-Software eine spezifische Dienstvereinbarung notwendig oder sinnvoll sein. ",
@@ -11,26 +10,92 @@
     "transfer_drittland": true,
     "anwendbarkeit": {
         "schutzziele": [
-            "Verfügbarkeit",
-            "Vertraulichkeit",
-            "Integrität",
             "Transparenz",
             "Rechtmäßigkeit",
             "Zweckbindung",
-            "Intervernierbarkeit",
             "Nichtverkettung"
         ]
     },
     "compliance": {
-        "standards": [],
+        "standards": [
+            "§ 67 Abs. 1 Nr. 2 NPersVG",
+            "Art. 88 Abs. 1 DSGVO"
+        ],
         "zusatzquellen": []
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-05-05T07:42",
-        "aktualisiert_am": "2025-05-05T10:52",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-13T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "Cloud",
+        "zusaetzliche_bedingung": "Bedingung: ein Betriebsmittel erzeugt eigene personenbezogene Daten (Account-/Protokolldaten der Beschäftigten); Besonderheiten umstaende.betriebsmittel[].eigene_personenbezogene_daten.erzeugt"
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "§ 67 Abs. 1 Nr. 2 NPersVG; Art. 88 Abs. 1 DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "§ 67 Abs. 1 Nr. 2 NPersVG",
+                "datei": "facts/gesetze/land/npersvg.md"
+            },
+            {
+                "norm": "Art. 88 Abs. 1 DSGVO",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-088.md"
+            }
+        ],
+        "begruendung": "Pflicht nur, wenn mitbestimmungspflichtig",
+        "hinweis": "Gesetzliche Pflicht bzw. organisatorischer Rahmen: Die Maßnahme ist bei Vorliegen des Anlasses umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden.",
+        "bsi": [],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 2, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 1,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 1,
+            "Zweckbindung": 2,
+            "Rechtmäßigkeit": 2,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit",
+                "Integrität",
+                "Verfügbarkeit",
+                "Intervenierbarkeit"
+            ],
+            "regel": "R3",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

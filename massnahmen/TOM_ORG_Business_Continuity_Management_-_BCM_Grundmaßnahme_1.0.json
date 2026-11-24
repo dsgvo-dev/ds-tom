@@ -1,31 +1,199 @@
 {
     "id": "TOM-ORG-005",
-    "name": "Business Continuity Management - BCM",
+    "name": "Notfallvorsorge und Business Continuity Management (BCM)",
     "kategorie": "ORG",
     "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 3,
     "risikokategorie": "",
     "risikoniveau": "Niedrig",
-    "beschreibung": "Grundlegende organisatorische Maßnahmen für die Informationssicherheit sind zu schaffen. Grundlage hierfür sind die Regelungen des BSI Grundschutzes. Unter anderem sind organisatorische Maßnahmen nach dem Standard 200-4 vorzunehmen (Business Continuity Management - BCM).",
+    "beschreibung": "Die Verantwortliche verankert Verfahren und Regelungen zur Vorsorge für Notfälle der Informationssicherheit: Zuständigkeiten, ein Notfallhandbuch mit Maßnahmen bei Ausfällen und Störungen sowie Wiederanlauf- und Wiederherstellungsverfahren, damit Verfügbarkeit und Zugang zu den personenbezogenen Daten nach einem physischen oder technischen Zwischenfall rasch wiederhergestellt werden können (Art. 32 Abs. 1 lit. b und c DSGVO). Die Regelungen werden regelmäßig und anlassbezogen überprüft. Der Umfang des Notfallmanagements nach BSI-Standard 200-4 (Business Continuity Management, z. B. Geschäftsfortführungspläne, Notfallübungen) richtet sich nach dem Schutzbedarf.",
     "organisationseinheit": "1",
     "transfer_drittland": false,
     "anwendbarkeit": {
         "schutzziele": [
             "Verfügbarkeit",
-            "Vertraulichkeit",
             "Integrität"
         ]
     },
     "compliance": {
-        "standards": [],
-        "zusatzquellen": []
+        "standards": [
+            "Art. 32 Abs. 1 lit. b DSGVO",
+            "Art. 32 Abs. 1 lit. c DSGVO",
+            "BSI-Standard 200-4"
+        ],
+        "zusatzquellen": [
+            "Grundschutz++ NOT.1.1 „Verfahren und Regelungen“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ NOT.3.2 „Geschäftsfortführungsplan“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ NOT.1.2 „Regelmäßige Überprüfung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T06:37",
-        "aktualisiert_am": "2025-04-28T06:37",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "aenderung_org005": {
+            "am": "2026-11-13",
+            "grund": "SOLLTE → MUSS, Text präzisiert (Entscheidung DSB)",
+            "vorher": {
+                "name": "Business Continuity Management - BCM",
+                "beschreibung": "Grundlegende organisatorische Maßnahmen für die Informationssicherheit sind zu schaffen. Grundlage hierfür sind die Regelungen des BSI Grundschutzes. Unter anderem sind organisatorische Maßnahmen nach dem Standard 200-4 vorzunehmen (Business Continuity Management - BCM).",
+                "verbindlichkeit": {
+                    "stufe": "MUSS",
+                    "kriterium": "Rechtspflicht",
+                    "rechtsgrundlage": "Art. 32 Abs. 1 lit. b DSGVO; Art. 32 Abs. 1 lit. c DSGVO",
+                    "fundstellen_recht": [
+                        {
+                            "norm": "Art. 32 Abs. 1 lit. b DSGVO (Belastbarkeit)",
+                            "datei": "facts/gesetze/eu/dsgvo/artikel-032.md"
+                        },
+                        {
+                            "norm": "Art. 32 Abs. 1 lit. c DSGVO (rasche Wiederherstellung)",
+                            "datei": "facts/gesetze/eu/dsgvo/artikel-032.md"
+                        }
+                    ],
+                    "begruendung": "Rechtspflicht zur Notfallvorsorge (Art. 32 Abs. 1 lit. b, c DSGVO); BSI Grundschutz++ NOT.1.1 und NOT.1.2: MUSS. Das erweiterte Notfallmanagement nach BSI 200-4 (NOT.3.2 Geschäftsfortführungsplan: KANN, erhöht) folgt dem Schutzbedarf.",
+                    "hinweis": "Gesetzliche Pflicht: Die Maßnahme ist umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden. BSI-Bezug: Grundschutz++ NOT.1.1 „Verfahren und Regelungen“ (MUSS, normal), NOT.1.2 „Regelmäßige Überprüfung“ (MUSS, normal); erweitertes BCM: NOT.3.2 „Geschäftsfortführungsplan“ (KANN, erhöht).",
+                    "bsi": [
+                        {
+                            "anforderung": "NOT.1.1",
+                            "titel": "Verfahren und Regelungen",
+                            "praktik": "Notfallplanung",
+                            "modalverb": "MUSS",
+                            "sicherheitsniveau": "normal (Stand der Technik)",
+                            "aufwand": 0,
+                            "anforderungstext": "Notfallplanung MUSS Verfahren und Regelungen zur Vorsorge für Notfälle der Informationssicherheit verankern.",
+                            "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                            "fundstelle": "Grundschutz++ NOT.1.1 „Verfahren und Regelungen“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+                        },
+                        {
+                            "anforderung": "NOT.1.2",
+                            "titel": "Regelmäßige Überprüfung",
+                            "praktik": "Notfallplanung",
+                            "modalverb": "MUSS",
+                            "sicherheitsniveau": "normal (Stand der Technik)",
+                            "aufwand": 0,
+                            "anforderungstext": "Notfallplanung MUSS die Verfahren und Regelungen [Parameter] und anlassbezogen auf Aktualität überprüfen.",
+                            "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                            "fundstelle": "Grundschutz++ NOT.1.2 „Regelmäßige Überprüfung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+                        },
+                        {
+                            "anforderung": "NOT.3.2",
+                            "titel": "Geschäftsfortführungsplan",
+                            "praktik": "Notfallplanung",
+                            "modalverb": "KANN",
+                            "sicherheitsniveau": "erhöht",
+                            "aufwand": 5,
+                            "anforderungstext": "Notfallplanung KANN einen Geschäftsfortführungsplan für zeitkritische Geschäftsprozesse dokumentieren.",
+                            "zuordnung_ueber": "Titelabgleich, nur erweitertes BCM",
+                            "fundstelle": "Grundschutz++ NOT.3.2 „Geschäftsfortführungsplan“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+                        }
+                    ],
+                    "bsi_kompendium": [],
+                    "festgelegt_von": "Datenschutzbeauftragter",
+                    "festgelegt_am": "2026-11-13",
+                    "grundlage": "Entscheidung DSB 13.11.2026 (TOM-ORG-005: A), Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+                }
+            }
+        },
+        "wirkungspunktzahl_alt": 3
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "MUSS",
+        "kriterium": "Rechtspflicht",
+        "rechtsgrundlage": "Art. 32 Abs. 1 lit. b DSGVO; Art. 32 Abs. 1 lit. c DSGVO",
+        "fundstellen_recht": [
+            {
+                "norm": "Art. 32 Abs. 1 lit. b DSGVO (Belastbarkeit)",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-032.md"
+            },
+            {
+                "norm": "Art. 32 Abs. 1 lit. c DSGVO (rasche Wiederherstellung)",
+                "datei": "facts/gesetze/eu/dsgvo/artikel-032.md"
+            }
+        ],
+        "begruendung": "Rechtspflicht zur Notfallvorsorge (Art. 32 Abs. 1 lit. b, c DSGVO); BSI Grundschutz++ NOT.1.1 und NOT.1.2: MUSS. Das erweiterte Notfallmanagement nach BSI 200-4 (NOT.3.2 Geschäftsfortführungsplan: KANN, erhöht) folgt dem Schutzbedarf.",
+        "hinweis": "Gesetzliche Pflicht: Die Maßnahme ist umzusetzen und kann nicht durch die Übernahme eines Restrisikos ersetzt werden. BSI-Bezug: Grundschutz++ NOT.1.1 „Verfahren und Regelungen“ (MUSS, normal), NOT.1.2 „Regelmäßige Überprüfung“ (MUSS, normal); erweitertes BCM: NOT.3.2 „Geschäftsfortführungsplan“ (KANN, erhöht).",
+        "bsi": [
+            {
+                "anforderung": "NOT.1.1",
+                "titel": "Verfahren und Regelungen",
+                "praktik": "Notfallplanung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Notfallplanung MUSS Verfahren und Regelungen zur Vorsorge für Notfälle der Informationssicherheit verankern.",
+                "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                "fundstelle": "Grundschutz++ NOT.1.1 „Verfahren und Regelungen“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "NOT.1.2",
+                "titel": "Regelmäßige Überprüfung",
+                "praktik": "Notfallplanung",
+                "modalverb": "MUSS",
+                "sicherheitsniveau": "normal (Stand der Technik)",
+                "aufwand": 0,
+                "anforderungstext": "Notfallplanung MUSS die Verfahren und Regelungen [Parameter] und anlassbezogen auf Aktualität überprüfen.",
+                "zuordnung_ueber": "Titelabgleich (keine Zuordnung in der BSI-Tabelle)",
+                "fundstelle": "Grundschutz++ NOT.1.2 „Regelmäßige Überprüfung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "NOT.3.2",
+                "titel": "Geschäftsfortführungsplan",
+                "praktik": "Notfallplanung",
+                "modalverb": "KANN",
+                "sicherheitsniveau": "erhöht",
+                "aufwand": 5,
+                "anforderungstext": "Notfallplanung KANN einen Geschäftsfortführungsplan für zeitkritische Geschäftsprozesse dokumentieren.",
+                "zuordnung_ueber": "Titelabgleich, nur erweitertes BCM",
+                "fundstelle": "Grundschutz++ NOT.3.2 „Geschäftsfortführungsplan“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "bsi_kompendium": [],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Entscheidung DSB 13.11.2026 (TOM-ORG-005: A), Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 1,
+            "Verfügbarkeit": 2,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "korrigierend",
+        "wirkrichtung": "Schaden",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Vertraulichkeit"
+            ],
+            "regel": "R8",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }

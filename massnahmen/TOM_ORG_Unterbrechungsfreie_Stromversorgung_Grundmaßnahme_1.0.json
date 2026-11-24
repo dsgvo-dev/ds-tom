@@ -2,8 +2,7 @@
     "id": "TOM-ORG-053",
     "name": "Unterbrechungsfreie Stromversorgung",
     "kategorie": "ORG",
-    "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
     "risikokategorie": "Haustechnik",
     "risikoniveau": "Mittel",
     "beschreibung": "Über technische und organisatorische Maßnahmen kann das Schutzniveau der Informationssicherheit erhöht werden. Eine mögliche Maßnahme ist die Prüfung und ggf. Beschaffung einer unterbrechungsfreien Stromversorgung für erhöhte Bedrohungslagen bzw. erhöhten Anforderungen an die Verfügbarkeit und Integrität.",
@@ -17,14 +16,85 @@
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ GEB.9.1.3 „Redundante Stromversorgung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json",
+            "Grundschutz++ ARCH.8.3 „Redundante Server“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": true,
+        "datenschutz": false,
+        "koba_id": [
+            "inf.2.a3",
+            "sys.1.1.a15"
+        ]
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-28T19:10",
-        "aktualisiert_am": "2025-04-28T19:10",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "KANN",
+        "kriterium": "hoher Schutzbedarf",
+        "begruendung": "BSI ordnet die Anforderung dem erhöhten Sicherheitsniveau zu (KANN).",
+        "hinweis": "Nach BSI Grundschutz++ ist diese Anforderung dem Sicherheitsniveau „erhöht“ zugeordnet (Modalverb KANN): Grundschutz++ GEB.9.1.3 „Redundante Stromversorgung“ (KANN, Sicherheitsniveau erhöht); Grundschutz++ ARCH.8.3 „Redundante Server“ (KANN, Sicherheitsniveau erhöht). Sie gilt daher nur bei entsprechendem Schutzbedarf – nach der Vorgehensweise bei Schutzbedarf „hoch“ (Risikostufe „hoch“ oder „sehr hoch“) und wird nach dem Ergebnis der ergänzenden Risikoanalyse (Schritt 7) ausgewählt.",
+        "bsi": [
+            {
+                "anforderung": "GEB.9.1.3",
+                "titel": "Redundante Stromversorgung",
+                "praktik": "Gebäudemanagement",
+                "modalverb": "KANN",
+                "sicherheitsniveau": "erhöht",
+                "aufwand": 5,
+                "anforderungstext": "Gebäudemanagement für Standorte KANN eine redundante Stromversorgung für [Parameter] installieren.",
+                "fundstelle": "Grundschutz++ GEB.9.1.3 „Redundante Stromversorgung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            },
+            {
+                "anforderung": "ARCH.8.3",
+                "titel": "Redundante Server",
+                "praktik": "Architektur",
+                "modalverb": "KANN",
+                "sicherheitsniveau": "erhöht",
+                "aufwand": 5,
+                "anforderungstext": "Architektur für Anwendungen KANN für die Funktionsfähigkeit der Anwendung erforderliche Hostsysteme redundant installieren.",
+                "fundstelle": "Grundschutz++ ARCH.8.3 „Redundante Server“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 3, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 0,
+            "Integrität": 1,
+            "Verfügbarkeit": 2,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 0,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 0
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "Eintritt",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung"
     }
 }

@@ -2,8 +2,7 @@
     "id": "TOM-SW-010",
     "name": "Frühzeitige Pseudonymisierung personenbezogener  Daten",
     "kategorie": "SW",
-    "maßnahmentyp": "Grundmaßnahme",
-    "wirkungspunktzahl": 2,
+    "maßnahmentyp": "Verfahrensspezifische Maßnahme",
     "risikokategorie": "",
     "risikoniveau": "Mittel",
     "beschreibung": "Zu der datenschutzkonformen Schaffung oder Beschaffung von Software gehören datenschutzrechtliche Grundvorgaben. Software muss es ermöglichen, dass personenbezogene Daten so frühzeitig wie möglich pseudonymisiert werden können. ",
@@ -12,23 +11,100 @@
     "anwendbarkeit": {
         "schutzziele": [
             "Zweckbindung",
-            "Intervernierbarkeit",
-            "Erforderlichkeit",
-            "Richtigkeit",
-            "Speicherbegrenzung",
-            "Vertraulichkeit"
+            "Vertraulichkeit",
+            "Datenminimierung"
         ]
     },
     "compliance": {
         "standards": [],
-        "zusatzquellen": []
+        "zusatzquellen": [
+            "Grundschutz++ ASST.3.7 „Pseudonymisierung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+        ]
     },
     "abhängigkeiten": [],
+    "klassifizierung": {
+        "informationssicherheit": false,
+        "datenschutz": true,
+        "koba_id": []
+    },
     "metadaten": {
         "quelle": "Intern",
         "erstellt_von": "Datenschutzbeauftragter",
         "erstellt_am": "2025-04-30T18:28",
-        "aktualisiert_am": "2025-04-30T18:28",
-        "version": "1.0"
+        "aktualisiert_am": "2026-11-24T00:00",
+        "version": "1.0",
+        "schutzziele_umstellung": {
+            "am": "2026-11-13",
+            "vorher": [
+                "Zweckbindung",
+                "Intervenierbarkeit",
+                "Erforderlichkeit",
+                "Richtigkeit",
+                "Speicherbegrenzung",
+                "Vertraulichkeit"
+            ],
+            "zuordnung": "DM",
+            "grund": "Frage 8 = C, Festlegung DSB Paket 6: „Erforderlichkeit“ entfällt als Schutzziel; Datenmaß → Datenminimierung (Art. 5 Abs. 1 lit. c DSGVO), Rechtsgrundlage → Rechtmäßigkeit (Art. 6 DSGVO)"
+        },
+        "wirkungspunktzahl_alt": 2
+    },
+    "anlass": {
+        "wert": "alle VVT",
+        "zusaetzliche_bedingung": ""
+    },
+    "verbindlichkeit": {
+        "stufe": "KANN",
+        "kriterium": "hoher Schutzbedarf",
+        "begruendung": "BSI ordnet die Anforderung dem erhöhten Sicherheitsniveau zu (KANN).",
+        "hinweis": "Nach BSI Grundschutz++ ist diese Anforderung dem Sicherheitsniveau „erhöht“ zugeordnet (Modalverb KANN): Grundschutz++ ASST.3.7 „Pseudonymisierung“ (KANN, Sicherheitsniveau erhöht). Sie gilt daher nur bei entsprechendem Schutzbedarf – nach der Vorgehensweise bei Schutzbedarf „hoch“ (Risikostufe „hoch“ oder „sehr hoch“) und wird nach dem Ergebnis der ergänzenden Risikoanalyse (Schritt 7) ausgewählt.",
+        "bsi": [
+            {
+                "anforderung": "ASST.3.7",
+                "titel": "Pseudonymisierung",
+                "praktik": "Informationen und Assets",
+                "modalverb": "KANN",
+                "sicherheitsniveau": "erhöht",
+                "aufwand": 5,
+                "anforderungstext": "Informationen und Assets für Informationen KANN die Pseudonymisierung vor der Weitergabe verankern.",
+                "fundstelle": "Grundschutz++ ASST.3.7 „Pseudonymisierung“ – BSI, Stand-der-Technik-Bibliothek, Anwenderkatalog Grundschutz++ (Stand 19.11.2026, Commit dc44ea4), lokal facts/BSI/Stand-der-Technik-Bibliothek/control_layer/Grundschutz++/Grundschutz++-resolved_catalog.json"
+            }
+        ],
+        "festgelegt_von": "Datenschutzbeauftragter",
+        "festgelegt_am": "2026-11-13",
+        "grundlage": "Festlegung DSB Paket 3, Bericht BERICHT-2026-11-11-tom-wirksamkeit.md"
+    },
+    "wirkung": {
+        "stufen": {
+            "Vertraulichkeit": 1,
+            "Integrität": 0,
+            "Verfügbarkeit": 0,
+            "Transparenz": 0,
+            "Intervenierbarkeit": 0,
+            "Nichtverkettung": 0,
+            "Zweckbindung": 1,
+            "Rechtmäßigkeit": 0,
+            "Speicherbegrenzung": 0,
+            "Richtigkeit": 0,
+            "Datenminimierung": 2
+        },
+        "art": "vorbeugend",
+        "wirkrichtung": "beides",
+        "eingestuft_von": "Datenschutzbeauftragter",
+        "eingestuft_am": "2026-11-17",
+        "grundlage": "Frage 6 A (Entscheidung 12.11.2026), zweiter Schritt; Stufe 2 = Schutzziel steht im Mittelpunkt, 1 = wirkt mit, 0 = wirkt nicht; aus der Ja/Nein-Zuordnung abgeleitet",
+        "status": "bestätigt",
+        "bestaetigt_von": "Martin",
+        "bestaetigt_am": "2026-11-22",
+        "grundlage_bestaetigung": "Vorlage VORLAGE-2026-11-22-tom-einstufung-frage6a.md, alle Fragen nach Empfehlung",
+        "stufe1_ausgeduennt": {
+            "am": "2026-11-22",
+            "gestrichen": [
+                "Intervenierbarkeit",
+                "Speicherbegrenzung",
+                "Richtigkeit"
+            ],
+            "regel": "R9",
+            "grundlage": "VORLAGE-2026-11-22-tom-stufe1-ausduennen.md"
+        }
     }
 }
